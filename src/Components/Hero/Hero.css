@@ -1,0 +1,97 @@
+.containerHero{
+    position: relative;
+    height: 30rem;
+    width: 53.3rem;
+    border-radius: 1rem;
+    margin-top: 1.5rem; 
+    z-index: 10;
+}
+/* Imagen de fondo */
+.hero{
+   /*  max-width: 1200px; */
+  /*   min-width: 1100px; */
+    display:flex;
+    position:absolute;
+    width: 100%;
+
+}
+
+.imgHero{
+    object-fit: cover;
+    width: 100%; 
+    height: 100%;
+    border-radius: 1rem;
+
+}
+
+
+
+/* Overlay */
+.overlay{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .2;
+    border-radius: 1rem;
+    z-index: 10;
+
+}
+
+
+/* Filtro de búsqueda */
+.contentImg {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    z-index: 20;
+    color: #ffffff; 
+
+}
+
+.textImg{
+    font-size: 25px;
+    line-height: 2px;
+    font-weight: 900;
+    cursor: default;
+}
+.subTextImg{
+    font-size: 14px;
+    line-height: 1px;
+    font-weight: 500;
+    opacity: .7;
+    cursor: default;
+}
+
+.containerInput {
+    position: relative;
+}
+
+.inputImg {
+    margin-top: 20px;
+    border-radius: .3rem;
+    padding-left: .75rem;
+    /* padding-right: .75rem; */
+    border: 0px;
+    outline: 0px;
+    width: 387px;
+    height: 1.8rem;
+    max-width: 70vh;
+    
+}
+.inputImg::placeholder{
+    font-size: 12px;
+    color: #4B5563; 
+}
+
+.iconSearch {
+    position: absolute;
+    top: 26px;
+    right: 18px;
+    color: black;
+    cursor: pointer;
+}

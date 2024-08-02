@@ -1,0 +1,42 @@
+/* Titles */
+
+.titlesFeatured{
+    color: white;
+    line-height: 4px;
+    padding-top: 1.5rem;
+    cursor: default;
+}
+
+.titlesFeatured h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.titlesFeatured span{
+    font-size: 14px;
+    font-weight: 400;
+    opacity: .6;
+}
+
+/* Cards */
+
+.containerCards{
+   margin-top: 1rem; 
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr)); 
+   gap: 1rem;
+}
+
+
+@media (min-width: 1280px) { 
+    .containerCards{
+        grid-template-columns: repeat(3, minmax(0, 1fr)); 
+        
+    }
+}
+@media (max-width: 640px) { 
+    .containerCards{
+        grid-template-columns: repeat(1, minmax(0, 1fr)); 
+        
+    }
+}

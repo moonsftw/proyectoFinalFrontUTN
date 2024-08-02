@@ -1,0 +1,10 @@
+.containerDiscover {
+    background-color: var(--discover-bg-color);
+    display: none;
+}
+
+@media (min-width: 640px){
+    .containerDiscover{
+        display: flex;
+    }
+}

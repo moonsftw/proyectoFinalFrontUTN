@@ -1,0 +1,14 @@
+
+@import './../../index.css';
+
+.containerGroup {
+    background-color: var(--group-bg-color);
+    display: none;
+
+}
+
+@media (min-width: 640px){
+    .containerGroup{
+        display: flex;
+    }
+}
