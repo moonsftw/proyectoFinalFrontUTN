@@ -1,0 +1,41 @@
+*{
+    box-sizing: content-box;
+}
+.containerTopic{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    /* gap: 8px; */
+    font-weight: 600; 
+    border-radius: .4rem;
+    padding: 0 0;
+    cursor: pointer;
+    margin-top: 1px;
+    background-color: #303136;
+    border: none;
+    opacity: .6;
+    width: 100%
+}
+
+.containerTopic:hover{
+    
+    background-color: #7289dc;
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+    opacity: 1;
+    
+}
+
+.containerTopic:active{
+    background-color: #7289dcc2;
+   
+}
+
+.containerIconTopic{
+    padding: 1rem;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+}

@@ -1,80 +1,132 @@
 .containerCard{
-    width: 287.92px;   
+    /* width: 287.92px;    */
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
-    position: relative;
+    /* position: relative; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Banner  */
 
 .bannerCard{
-    height: 12rem;
-    margin-top: 10px;
     display: flex;
-    object-fit: cover;
+    width: fit-content;
+    height: 10rem;
+    /* margin-top: 10px; */
+    
 }
  .bannerCard img {
-    border-top-left-radius: 1.5rem;
-    border-top-right-radius: 1.5rem;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    object-fit: cover;
+    width: 100%;
 }
 
 /* Profile Pic */
 
-.containerProfilePic{
-    background-color:#292b2f ;
+.containerContent{
+/*     position: relative;
+    top: -2rem;
+    left: 1rem;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    background-color:#292b2f ; */
     position: relative;
-    height: 10rem;
+    background-color: #292b2f;
+    width: fit-content;
+    height: 13.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem; 
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem; 
 }
 
 .profilePic{
-    position: relative;
-    object-fit:cover;
-    margin: 2px;
+    position: absolute;
+    top: -2rem;
+    left: 1rem;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    border-radius: 1rem;
+    padding: 0.25rem; 
     background-color: #292b2f;
+  /*   object-fit:cover;
+    margin: 2px;
+    background-color: #292b2f; */
    
 }
 .profilePic img{
-    width: 4rem;   
+ /*    width: 4rem;   
     height: 4rem;
     position: relative;
     top: -35px;
     left: 10px;
     border-radius: 1rem;
     padding: .25rem;
-    background-color: #292b2f;
+    background-color: #292b2f; */
+/*     position: relative;
+    display: flex;
+    object-fit: cover; 
+    border-radius: 1rem;
+    width: 4rem; */
+    object-fit: cover;
+    border-radius: 1rem;
+
 }
 
 /* Title */
 .containerTitle{
-    position:absolute;
+ /*    position:absolute;
     top: 55%;
     left: 1rem;
     color: white;
     padding-top: 2.25rem;
     font-weight: 700;
+    font-size: 17px; */
+    color: white;
+    font-weight: 700; 
     font-size: 17px;
+    padding-top: 2.5rem; 
+
 }
 
 /* Description */
 
 .containerDescription{
-    position:absolute;
+/*     position:absolute;
     top: 63%;
     left: 1rem;
     color: white;
     padding-top: 2.25rem;
     font-weight: 400;
     font-size: 14px;
-    opacity: .6;
+    opacity: .6; */
+    color: #9CA3AF; 
+    font-weight: 500; 
+    font-size: 17px;
+    /* padding-top: 2.25rem; */
 }
 
 /* Size */
 .containerSize{
-    position:absolute;
+/*     position:absolute;
     top: 80%;
     left: 1rem;
     color: white;
     padding-top: 2.25rem;
     font-weight: 400;  
     font-size: 11px;
-    opacity: .4;
+    opacity: .4; */
+    color: #9CA3AF; 
+    font-weight: 500; 
+    font-size: 13.5px;
+    padding-top: 0.75rem; 
+    padding-bottom: 0.75rem; 
 }

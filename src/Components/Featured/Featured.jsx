@@ -1,13 +1,16 @@
 import React from "react";
 import "./Featured.css";
 import profilePic from "/lmfao.jpg";
-import bgPic from "/background.webp";
+
+import bg02 from '/bg02.jpg';
+import bg03 from '/bg03.jpg';
+import bg04 from '/bg04.jpg';
 import Card from "../Card/Card";
 
 const Featured = () => {
   const cards = [
     {
-      bg: bgPic,
+      bg: bg02,
       profile: profilePic,
       title: "Fire Emblem Heroes",
       description:
@@ -16,7 +19,7 @@ const Featured = () => {
       id: 1,
     },
     {
-      bg: bgPic,
+      bg: bg03,
       profile: profilePic,
       title: "Fire Emblem Heroes",
       description:
@@ -25,7 +28,7 @@ const Featured = () => {
       id: 2,
     },
     {
-      bg: bgPic,
+      bg: bg04,
       profile: profilePic,
       title: "Fire Emblem Heroes",
       description:
@@ -34,7 +37,7 @@ const Featured = () => {
       id: 3,
     },
     {
-      bg: bgPic,
+      bg: bg03,
       profile: profilePic,
       title: "Fire Emblem Heroes",
       description:
@@ -43,7 +46,7 @@ const Featured = () => {
       id: 4,
     },
     {
-      bg: bgPic,
+      bg: bg04,
       profile: profilePic,
       title: "Fire Emblem Heroes",
       description:
@@ -52,13 +55,40 @@ const Featured = () => {
       id: 5,
     },
     {
-      bg: bgPic,
+      bg: bg02,
       profile: profilePic,
       title: "Fire Emblem Heroes",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
       size:<p>85532 Online  &#x2022; 232061 Members</p>,
       id: 6,
+    },
+    {
+      bg: bg02,
+      profile: profilePic,
+      title: "Fire Emblem Heroes",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
+      size:<p>85532 Online  &#x2022; 232061 Members</p>,
+      id: 7,
+    },
+    {
+      bg: bg02,
+      profile: profilePic,
+      title: "Fire Emblem Heroes",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
+      size:<p>85532 Online  &#x2022; 232061 Members</p>,
+      id: 8,
+    },
+    {
+      bg: bg02,
+      profile: profilePic,
+      title: "Fire Emblem Heroes",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
+      size:<p>85532 Online  &#x2022; 232061 Members</p>,
+      id: 9,
     },
   ];
   return (

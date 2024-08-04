@@ -1,34 +1,26 @@
-import React from 'react'
-import './Card.css'
-const Card = ({size, description, title, profile, bg}) => {
+import React from "react";
+import "./Card.css";
+const Card = ({ size, description, title, profile, bg }) => {
   return (
-    <div className='containerCard'>
-        {/* Banner  */} 
-        <div className="bannerCard">
-            <img src={bg} alt="banner image" />
-        </div>
-        <div className='containerProfilePic'>
+    <div className="containerCard">
+      {/* Banner  */}
+      <div className="bannerCard">
+        <img src={bg} alt="banner image" />
+      </div>
+      <div className="containerContent">
         {/* Profile Pic */}
-            <div className="profilePic">  
-                <img src={profile} alt="" />
-            </div>
+        <div className="profilePic">
+          <img src={profile} alt="" />
         </div>
-
         {/* Title */}
-        <div className="containerTitle">
-            <p>{title}</p>
-        </div>
+        <p className="containerTitle">{title}</p>
         {/* Description */}
-        <div className="containerDescription">
-            <p>{description}</p>
-        </div>
+        <p className="containerDescription">{description}</p>
         {/* Size */}
-        <div className="containerSize">
-            <p>{size}</p>
-        </div>
-
+        <p className="containerSize">{size}</p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

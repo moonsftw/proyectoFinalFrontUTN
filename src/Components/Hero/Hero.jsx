@@ -1,19 +1,17 @@
 import React from "react";
 import "./Hero.css";
-import {FiSearch, CiSearch} from '../../assets/icons'
+import { FiSearch } from "../../assets/icons";
 const Hero = () => {
   return (
     <div className="containerHero">
       {/* Imagen de fondo */}
       <div className="hero">
-        <img className="imgHero" src="./bg-image.png" alt="" />
+        <img className="imgHero" src="./hero2.webp" alt="" />
       </div>
       {/* Overlay */}
-      <div>
-        <div className="overlay">
-            
-        </div>
-      </div>
+
+      <div className="overlay"></div>
+
       {/* Filtro de búsqueda */}
       <div className="contentImg">
         <p className="textImg">Encuentra tu comunidad en Discord</p>
@@ -26,8 +24,7 @@ const Hero = () => {
             type="search"
             placeholder="Buscar comunidad"
           />
-          <FiSearch className="iconSearch"/>
-          {/* <CiSearch /> */}
+          <FiSearch className="iconSearch" />
         </div>
       </div>
     </div>

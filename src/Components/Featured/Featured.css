@@ -1,5 +1,7 @@
 /* Titles */
-
+*{
+    box-sizing: content-box;
+}
 .titlesFeatured{
     color: white;
     line-height: 4px;
@@ -25,18 +27,21 @@
    display: grid;
    grid-template-columns: repeat(2, minmax(0, 1fr)); 
    gap: 1rem;
+   justify-items: center;
 }
 
 
-@media (min-width: 1280px) { 
+@media (min-width: 1500px) { 
     .containerCards{
         grid-template-columns: repeat(3, minmax(0, 1fr)); 
+        justify-items: center;
         
     }
 }
-@media (max-width: 640px) { 
+@media (max-width: 1150px) { 
     .containerCards{
-        grid-template-columns: repeat(1, minmax(0, 1fr)); 
-        
+        grid-template-columns: 1fr; 
+       /*  width: 30rem; */
+  
     }
 }
