@@ -7,6 +7,7 @@ import img4 from "/img4.png";
 import dc from "/dc.png";
 import { FiPlus } from "react-icons/fi";
 import { AiFillCompass } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Groups = () => {
   const groups = [img1, img2, img3, img4];
@@ -15,9 +16,11 @@ const Groups = () => {
       {/* Groups */}
       <div className="groups">
         {/* Discord */}
+        <Link to={"/"}>
         <div className="iconDiscord">
           <img src={dc} alt="icon discord" className="discord" />
         </div>
+        </Link>
         {/* Compass */}
         <div className="iconCompass">
           <AiFillCompass className="compass" />

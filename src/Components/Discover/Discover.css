@@ -9,11 +9,9 @@
     min-height: fit-content;
     /* padding: 1rem; */
     /* padding-left: 1rem; */
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: baseline;
-    display: none;
 }
 /* 
 @media (min-width: 640px){

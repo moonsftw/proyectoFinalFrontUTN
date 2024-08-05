@@ -7,6 +7,7 @@ import bg03 from '/bg03.jpg';
 import bg04 from '/bg04.jpg';
 import Card from "../Card/Card";
 
+
 const Featured = () => {
   const cards = [
     {
@@ -15,7 +16,7 @@ const Featured = () => {
       title: "Fire Emblem Heroes",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
-      size: <p>85532 Online  &#x2022; 232061 Members</p>,
+      size: "<p>85532 Online  -; 232061 Members",
       id: 1,
     },
     {
@@ -24,7 +25,7 @@ const Featured = () => {
       title: "Fire Emblem Heroes",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
-      size:<p>85532 Online  &#x2022; 232061 Members</p>,
+      size:"85532 Online  -; 232061 Members",
       id: 2,
     },
     {
@@ -33,7 +34,7 @@ const Featured = () => {
       title: "Fire Emblem Heroes",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
-      size:<p>85532 Online  &#x2022; 232061 Members</p>,
+      size:"85532 Online  -; 232061 Members",
       id: 3,
     },
     {
@@ -42,7 +43,7 @@ const Featured = () => {
       title: "Fire Emblem Heroes",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
-      size:<p>85532 Online  &#x2022; 232061 Members</p>,
+      size:"85532 Online  -; 232061 Members",
       id: 4,
     },
     {
@@ -51,7 +52,7 @@ const Featured = () => {
       title: "Fire Emblem Heroes",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
-      size:<p>85532 Online  &#x2022; 232061 Members</p>,
+      size:"85532 Online  -; 232061 Members",
       id: 5,
     },
     {
@@ -60,7 +61,7 @@ const Featured = () => {
       title: "Fire Emblem Heroes",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
-      size:<p>85532 Online  &#x2022; 232061 Members</p>,
+      size:"85532 Online  -; 232061 Members",
       id: 6,
     },
     {
@@ -69,7 +70,7 @@ const Featured = () => {
       title: "Fire Emblem Heroes",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
-      size:<p>85532 Online  &#x2022; 232061 Members</p>,
+      size:"85532 Online  -; 232061 Members",
       id: 7,
     },
     {
@@ -78,7 +79,7 @@ const Featured = () => {
       title: "Fire Emblem Heroes",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
-      size:<p>85532 Online  &#x2022; 232061 Members</p>,
+      size:"85532 Online  -; 232061 Members",
       id: 8,
     },
     {
@@ -87,7 +88,7 @@ const Featured = () => {
       title: "Fire Emblem Heroes",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores",
-      size:<p>85532 Online  &#x2022; 232061 Members</p>,
+      size:"85532 Online ; 232061 Members",
       id: 9,
     },
   ];

@@ -1,26 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 
 import './App.css'
-import { Discover, Groups, MainContent } from './Components'
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './Components/Home/Home';
+import CardPage from './Components/CardPage/CardPage';
+import { Landing } from './Components/Landing/Landing';
+
 
 
 function App() {
   
 
   return (
-    <>
-      {/* Contacto + Grupos */}
-      <Groups /> 
-      {/* Discover */}
-      <Discover />
-      {/* Principal */}
-      <MainContent />
-      {/* Hero */}
-      {/* Featured */}
-
-
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/card" element={<CardPage />} />
+      </Routes>
+    </Router>
   )
 }
 
