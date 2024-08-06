@@ -8,4 +8,4 @@ No sé que font usar
 
 Quizás algo por mejorar es la parte de los botones de audio, settings del sector de perfil. Le puse que al hacer hover aumente de tamaño pero creo que esa no es la manera de hacerlo. Ya voy a buscar info sobre eso.
 
-https://youtu.be/Z4cRxN1JPME?si=nXL2Cu9QV0XfGAXr&t=2387
+https://youtu.be/Z4cRxN1JPME?si=suad8vPBTdbuzkDq&t=3672

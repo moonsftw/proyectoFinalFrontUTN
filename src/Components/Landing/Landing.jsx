@@ -3,6 +3,9 @@ import "./Landing.css";
 import { IoMdDownload } from "react-icons/io";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { IoChevronDownSharp } from "react-icons/io5";
+import { BsTwitterX } from "react-icons/bs";
+import { FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
 
 export const Landing = () => {
   return (
@@ -101,14 +104,14 @@ export const Landing = () => {
         ></path>
       </svg>
       <section className="voice-channel">
-      <div className="row container">
+        <div className="row container">
           <img src="/section-2.svg" alt="" className="grid-image order-2" />
           <div className="text-group order-1">
-            <h2 className="title secondary-title">
-              Where handing out is easy
-            </h2>
+            <h2 className="title secondary-title">Where handing out is easy</h2>
             <p className="text-group-description">
-              Grab a seat in a voice channel when you're free. Friends in your server can see you're around and instantly pop in to talk without having to call.
+              Grab a seat in a voice channel when you're free. Friends in your
+              server can see you're around and instantly pop in to talk without
+              having to call.
             </p>
           </div>
         </div>
@@ -127,14 +130,14 @@ export const Landing = () => {
         ></path>
       </svg>
       <section className="moderation-tools">
-      <div className="row container">
+        <div className="row container">
           <img src="/section-3.svg" alt="" className="grid-image order-2" />
           <div className="text-group order-1">
-            <h2 className="title secondary-title">
-              From a few to a fandoom
-            </h2>
+            <h2 className="title secondary-title">From a few to a fandoom</h2>
             <p className="text-group-description">
-              Get a community of any size running with moderation tools and custom member access. Give members special powers, set up private channels, and more.
+              Get a community of any size running with moderation tools and
+              custom member access. Give members special powers, set up private
+              channels, and more.
             </p>
           </div>
         </div>
@@ -155,38 +158,52 @@ export const Landing = () => {
       <section className="video-call">
         <div className="row container">
           <div className="text-group">
-          <h2 className="title secondary-title">
+            <h2 className="title secondary-title">
               Reliable tech for staying close
             </h2>
             <p className="text-group-description">
-              Low-latency voice and video feels like you're in the same room. Wave hello over video, watch friends stream their games, or gather up and have a drawing session with screen share.
+              Low-latency voice and video feels like you're in the same room.
+              Wave hello over video, watch friends stream their games, or gather
+              up and have a drawing session with screen share.
             </p>
           </div>
           <img src="/section-4.svg" alt="" className="grid-image" />
-
         </div>
       </section>
       <section className="download">
         <div className="row container remove-grid">
-          <img src="/sparkles.svg" alt="" className="sparkles"/>
-          <h2>Ready to start your journey</h2>
+          <img src="/sparkles.svg" alt="" className="sparkles" />
+          <h2>Ready to start your journey?</h2>
           <a href="#" className="btn btn-large btn-brand">
-          <IoMdDownload className="btn-download" />
-          Download for Windows
+            <IoMdDownload className="btn-download" />
+            Download for Windows
           </a>
         </div>
       </section>
-      <footer className="main-footer">  
+      <footer className="main-footer">
         <div className="row container">
           <div className="info-boc">
-            <h4 className="footer-title">
-              Your place to talk
-            </h4>
+            <h4 className="footer-title">Your place to talk</h4>
             <div className="languages">
               <img src="/flag.png" alt="" />
-              <span>English, USA</span><IoChevronDownSharp />
+              <span>English, USA</span>
+              <IoChevronDownSharp />
             </div>
-            
+            <div className="social-media">
+              <a href="#" className="sm-link">
+                <BsTwitterX />
+              </a>
+              <a href="#" className="sm-link">
+                <FaInstagram />
+                
+              </a>
+              <a href="#" className="sm-link">
+                <FaFacebookSquare />
+              </a>
+              <a href="#" className="sm-link">
+                <FaYoutube />
+              </a>
+            </div>
           </div>
         </div>
       </footer>
