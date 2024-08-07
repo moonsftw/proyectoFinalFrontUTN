@@ -14,7 +14,7 @@ export const Landing = () => {
         <header className="main-header container">
           <nav className="main-nav">
             <a href="#" className="logo">
-              <img src="/logo.svg" alt="" />
+              <img src="/modernLogo.svg" alt="" />
             </a>
             <ul className="nav-list">
               <li className="nav-item">
@@ -44,8 +44,8 @@ export const Landing = () => {
               </li>
             </ul>
             <div className="nav-items-right">
-              <a href="#" className="btn btn-small btn-light btn-login">
-                Login
+              <a href="#" className="btn-login">{/* btn btn-small btn-light  */}
+                Open Discord
               </a>
               <span className="mobile-toggle">
                 <IoMenu className="btn-open" />
@@ -56,22 +56,26 @@ export const Landing = () => {
         </header>
         <div className="row container">
           <div className="hero-content-wrap">
-            
             <div className="heroContainer">
-
-            <h1 className="title primary-title">
-              GROUP CHAT THAT'S ALL FUN & GAMES
-            </h1>
-            <p className="hero-description">
-              Discord is great for playing games and chilling with friends, or
-              even building a worldwide community. Customize your own space to
-              talk, play, and hang out.
-            </p>
+              {/* <div className="containerPrimaryTitle"> */}
+                <h1 className="title primary-title">
+                  GROUP CHAT THAT'S ALL FUN & GAMES
+                </h1>
+              {/* </div> */}
+              {/* <div className="containerHeroDescription"> */}
+                <p className="hero-description">
+                  Discord is great for playing games and chilling with friends,
+                  or even building a worldwide community. Customize your own
+                  space to talk, play, and hang out.
+                </p>
+             {/*  </div> */}
             </div>
-            <img src="664daa37ea162cadf9603500_Art.webp" alt="" />
+            <div className="hero-image">
+              <img src="664daa37ea162cadf9603500_Art.webp" alt="" />
+            </div>
           </div>
           <div className="hero-btn-group">
-            <div className="btn btn-large btn-light">
+            <div className="containerBtnDownload"> {/* btn btn-large btn-light */}
               <IoMdDownload className="btn-download" />
               Download for Windows
             </div>
@@ -265,7 +269,6 @@ export const Landing = () => {
       <footer className="main-footer">
         <div className="row container">
           <div className="info-box">
-            
             <div className="languages">
               <img src="/flag.png" alt="" />
               <span>English</span>
