@@ -366,10 +366,12 @@ video{
 .title-probando{
     font-size: 27px;
     font-family: var(--main-font-family-bold);
+    text-align: left;
 }
 .parrafo-probando{
     font-size: 20px;
     font-family: var(--main-font-family-semi-bold);
+    text-align: left;
 }
 
 
