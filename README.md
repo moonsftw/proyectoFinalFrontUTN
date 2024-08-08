@@ -14,3 +14,4 @@ Usé este video para hacer la animación:[Infinite Scroll](https://www.youtube.c
 
 El diseño original es de [Discord](https://discord.com/)
 
+Para la animacion de la pagina de verificación me ayudé con el siguient [recurso](https://codesandbox.io/s/animacion-mostrarocultar-elementos-react-oyj7b?file=/src/App.js)
