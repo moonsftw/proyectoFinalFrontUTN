@@ -8,4 +8,9 @@ No sé que font usar
 
 Quizás algo por mejorar es la parte de los botones de audio, settings del sector de perfil. Le puse que al hacer hover aumente de tamaño pero creo que esa no es la manera de hacerlo. Ya voy a buscar info sobre eso.
 
-https://youtu.be/Z4cRxN1JPME?si=suad8vPBTdbuzkDq&t=3672
+La parte del footer y algunos efectos de los botones me ayudé con este video: [Clone Discord](https://youtu.be/Z4cRxN1JPME?si=suad8vPBTdbuzkDq&t=3672)
+
+Usé este video para hacer la animación:[Infinite Scroll](https://www.youtube.com/watch?v=Reu0hHbis5w)
+
+El diseño original es de [Discord](https://discord.com/)
+

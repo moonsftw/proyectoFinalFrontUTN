@@ -1,7 +1,6 @@
 import React from "react";
-import Groups from "../Groups/Groups";
-import Discover from "../Discover/Discover";
-import { MainContent } from "..";
+import {Groups, Discover, MainContent} from "../../Components"
+
 import './Home.css'
 const Home = () => {
   return (

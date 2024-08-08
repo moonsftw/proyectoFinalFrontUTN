@@ -29,11 +29,14 @@
   src: url('./../../assets/fonts/ggsansSemibold.ttf') format('ttf');
 }
 
-/* * {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-}  */
+} 
+*{
+  margin: 0;
+}
 
 /* html {
   font-size: 62.5%;
@@ -65,6 +68,9 @@
     font-size: 62.5%;
 }
  */
+ .container-landing{
+  background-color: #20269a;
+ }
 a {
   text-decoration: none;
   display: inline-block;
@@ -411,7 +417,86 @@ video{
     grid-column: span var(--num-of-grid-columns);
     margin-top: 2.4rem;
 }
+/* Animate */
 
+.wrapper{
+  /* border: 1px solid black; */
+
+  height: 100px;
+  max-width: screen;
+  margin-inline: auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #465eff 0%, #6892ff 100%);
+/*   margin: 5rem 0; */
+}
+
+
+@keyframes scrollleft {
+  to {
+    left: -200px;
+  }
+}
+.item{
+  width: 200px;
+  height: 100px;
+
+  border-radius: 6px;
+  position: absolute;
+  left: 100%;
+  animation-name: scrollleft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2.5rem;
+  font-family: var(--main-font-family-bold);
+  font-weight: 900;
+}
+
+.item1{
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+  
+}
+.item2{
+  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+  
+}
+.item3{
+  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+  
+}
+.item4{
+  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+  
+}
+.item5{
+  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+  
+}
+.item6{
+  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+  
+}
+.item7{
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+  
+}
+.item8{
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+  
+}
+
+
+.textAnimate{
+  color: white;
+}
+.wrapper img{
+  width: 50px;
+}
 /* Download */
 .download{
   /*   background-color: var(--off-white-clr); */
@@ -419,6 +504,7 @@ video{
     margin: 0;
     padding: 0;
     background-color: #20269a;
+    color: white;
 
 
 }
@@ -434,28 +520,37 @@ video{
     height: auto;
     /* min-width: 400px; */
     text-align: center;
-    background-color: #fff;
+    background-color: #20269a;
 }
 
 /* 
 .sparkles{
     display: inline-block;
 } */
+.download-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 20rem;
+  padding-bottom: 20px;
+  margin: 0;
+  color: white;
 
+  /* @media min-width 768px order: 2; o sacarlo*/
+}
 .download .remove-grid h2{
-    /* width: 45rem; */
-/*     width: fit-content;
+      
+    width: fit-content;
     display: flex;
-    color: red;
     justify-content: center;
     font-size: 3.2rem;
-    font-family: var(--main-font-family-medium);
-    color: white; */
-   /*  padding-top: 1.6rem; */
+    font-family: var(--main-font-family-bold);
+    font-weight: 900;
+    color: white; 
+   /*  padding-top: 1.6rem; */ 
 }
-.title-download{
-  color: red,
-}
+
 
 .btn-brand{
     background-color: var(--brand-clr);
@@ -467,6 +562,10 @@ video{
 
 .download .btn-brand{
     margin-top: 4rem;
+    background-color: #5865f2;
+    width: 15rem;
+    display: flex;
+    justify-content: center;
 }
 .btn-brand:hover{
     background-color: #8ea1e1;
@@ -532,7 +631,7 @@ video{
     margin-bottom: 4rem;
     font-size: 1.6rem;
     grid-column: span 2;
-    line-height: 12px;;
+    line-height: normal;
 }
 
 .footer-links-group .footer-title{
@@ -617,7 +716,7 @@ video{
 
       } */
 }
-@media screen and (min-width: 1024px){
+@media (min-width: 1024px){
     :root {
         --num-of-grid-columns: 12;
         --section-spacing: 12rem 4rem;
@@ -693,5 +792,25 @@ video{
       .video-call .text-group{
         grid-column: 2/span10;
       }
+      .title-download{
+        width: 24rem;
+       
+      }
+      .footer-links-group{
+        line-height: 12px;
+      }
+      .main-footer .logo{
+        width: 10rem;
+      }
+      .download .remove-grid h2{
+        width: 55rem;
+        line-height: 3.5rem;
+      }
  
+}
+@media (max-width: 1024px){
+
+.wrapper{
+  display: none;
+}
 }
