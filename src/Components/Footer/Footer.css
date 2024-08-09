@@ -1,0 +1,126 @@
+.main-footer{
+    color: var(--light-clr);
+    padding: 8rem 2.4rem 6.4rem;
+}
+.not-found{
+    background-color: #23272a;
+}
+.found{
+    background: linear-gradient(135deg, #ffffff4d, #ffffff0d), linear-gradient(261deg, #2e1a8e, #0e0e5c);
+}
+.main-footer .row{
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(var(--num-of-grid-columns), 1fr);
+    gap: 0 2rem;
+    padding: var(--section-spacing);
+    padding: 0;
+}
+
+.info-box{
+    grid-column: span 4;
+    margin-bottom: 5.6rem;
+}
+
+.footer-title{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.info-box .footer-title{
+    font-family: var(--main-font-family-medium);
+}
+
+.languages{
+    margin: 2.4rem 0;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.languages img{
+    width: 2.4rem;
+}
+
+.languages span{
+    margin: 0 .8rem;
+
+}
+.sm-link{
+    font-size: 1.3rem;
+    color: inherit;
+    margin-right: 1.4rem;
+}
+.spacer{
+    display: none;
+}
+
+.footer-links-group{
+    margin-bottom: 4rem;
+    font-size: 1.6rem;
+    grid-column: span 2;
+    line-height: normal;
+}
+
+.footer-links-group .footer-title{
+    padding-top: .8rem;
+}
+
+.footer-link{
+    display: block;
+    margin-top: 1.2rem;
+    color: inherit;   
+}
+
+.footer-link:hover{
+    text-decoration: underline;
+}
+
+.divider{
+    grid-column: 1/-1;
+    height: 1px;
+    background-color: white;
+    margin-bottom: 3.2rem;
+}
+
+ .remove-grid{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-brand{
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 16px;
+    background-color: var(--brand-clr);
+    color: var(--light-clr);
+    font-weight: 700;
+    border-radius: 4rem;
+    height: 30px;
+    width: 7rem;
+    border: none;
+}
+.btn-brand:hover{
+    box-shadow: 0 .8rem 1.5rem rgba(0, 0, 0, .2);
+    
+}
+
+
+@media (min-width: 1024px){
+      .footer-links-group{
+        line-height: 12px;
+      }
+      .main-footer .logo{
+        width: 10rem;
+      }
+      .download .remove-grid h2{
+        width: 55rem;
+        line-height: 3.5rem;
+      }
+ 
+}
