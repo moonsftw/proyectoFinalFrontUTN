@@ -1,0 +1,81 @@
+.container-register{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: center;
+    background-color: #313338;
+}
+.container-register > img {
+    width: 9rem;
+    padding: 30px 0;
+}
+.container-register h2 {
+    color: white;
+    padding-bottom: 40px;
+}
+.container-register form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0 20px;
+    width: 100%;
+    gap: 20px;
+}
+.container-register .inputCheck{
+    color: white;
+    opacity: .5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    padding-top: 1rem;
+}
+.container-register form div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    width: 100%;
+}
+.container-register form div label{
+    color: white;
+    font-size: 12px;
+    opacity: .7;
+}
+.container-register form div input{
+    background-color: #1e1f22;
+    border: none;
+    outline: none;
+    color: white;
+    width: 100%;
+    height: 2.4rem;
+    border-radius: 5px;
+} 
+.container-register > form > button{
+    background-color: #444c95;
+    font-weight: 700;
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border-radius: 3px;
+}
+.alreadyAccount{
+    width: 100%;
+    padding-left: 12px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: baseline;
+   
+}
+.alreadyAccount > a {
+    color: #00a8fc;
+    font-size: 14px;
+}
