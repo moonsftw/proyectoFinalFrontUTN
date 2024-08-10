@@ -33,8 +33,8 @@ const Register = () => {
           <button>Continue</button>
         </form>
         <div className="inputCheck">
-          <input type="checkbox" />
-          <label htmlFor="">
+          <input type="checkbox" id="check" name="check" className="check" />
+          <label htmlFor="check">
             I have read and agree to Discord's Terms of Service and Privacy
             Policy
           </label>

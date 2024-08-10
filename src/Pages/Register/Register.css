@@ -10,7 +10,6 @@
 }
 .container-form{
     width: 100%;
-
     display: flex;
     flex-direction: column;
     justify-content: normal;
@@ -44,7 +43,7 @@
     align-items: center;
     gap: 10px;
     font-size: 12px;
-    padding-top: 1rem;
+    padding-top: 1rem; 
 }
 .container-form form div{
     display: flex;
@@ -75,6 +74,17 @@
     border: none;
     padding: 15px;
     border-radius: 3px;
+}
+
+.check{
+    accent-color: #5865f2;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.inputCheck > label {
+    cursor: pointer;
 }
 .alreadyAccount{
     width: 100%;
