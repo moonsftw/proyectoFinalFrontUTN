@@ -1,21 +1,32 @@
 .container-register{
-    width: 100%;
+    background-color: #313338;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-form-register{
     height: 100vh;
+}
+.container-form{
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: normal;
     align-items: center;
-    background-color: #313338;
+   
 }
-.container-register > img {
+
+.container-register > .img-logo-register > img {
     width: 9rem;
     padding: 30px 0;
 }
-.container-register h2 {
+.container-form h2 {
     color: white;
     padding-bottom: 40px;
 }
-.container-register form{
+.container-form form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +35,7 @@
     width: 100%;
     gap: 20px;
 }
-.container-register .inputCheck{
+.container-form .inputCheck{
     color: white;
     opacity: .5;
     display: flex;
@@ -35,19 +46,19 @@
     font-size: 12px;
     padding-top: 1rem;
 }
-.container-register form div{
+.container-form form div{
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 10px;
     width: 100%;
 }
-.container-register form div label{
+.container-form form div label{
     color: white;
     font-size: 12px;
     opacity: .7;
 }
-.container-register form div input{
+.container-form form div input{
     background-color: #1e1f22;
     border: none;
     outline: none;
@@ -56,7 +67,7 @@
     height: 2.4rem;
     border-radius: 5px;
 } 
-.container-register > form > button{
+.container-form > form > button{
     background-color: #444c95;
     font-weight: 700;
     color: white;
@@ -78,4 +89,37 @@
 .alreadyAccount > a {
     color: #00a8fc;
     font-size: 14px;
+}
+
+@media screen and (min-width: 1024px){
+    .container-register{
+        display: flex;
+        flex-direction: column;
+        justify-content: normal;
+        align-items: first baseline;
+        height: 100vh;
+        background-image: url(/backgroundLogin.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .container-form-register{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .img-logo-register{
+        padding-left: 2rem
+    }
+    .container-form{
+        width: 480px;
+        height: 702px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #313338;
+        border-radius: 5px;
+    }
 }

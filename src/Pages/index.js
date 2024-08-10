@@ -1,10 +1,10 @@
 import CardPage from "./CardPage/CardPage"
 import Home from "./Home/Home"
 import Landing  from "./Landing/Landing"
+import Login from "./Login/Login"
 import NotFound from "./NotFound/NotFound"
 import Register from "./Register/Register"
 import Verification from "./Verification/Verification"
-
 
 export{
     CardPage,
@@ -12,5 +12,6 @@ export{
     Landing,
     NotFound,
     Verification,
-    Register
+    Register,
+    Login
 }
