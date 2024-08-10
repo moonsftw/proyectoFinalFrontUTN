@@ -26,7 +26,7 @@ const Login = () => {
           <div>
             <label htmlFor="">PASSWORD</label>
             <input type="text" />
-          <a href="">Forgot your password?</a>
+            <a href="">Forgot your password?</a>
           </div>
           <button>Continue</button>
         </form>
