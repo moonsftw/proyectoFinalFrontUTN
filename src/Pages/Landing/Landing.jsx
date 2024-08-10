@@ -136,7 +136,7 @@ const Landing = () => {
               Download for Windows
             </a>
           </div>
-          <img src="/lastBanner.webp" alt="" />
+          <img src="/lastBanner.webp" alt="" className="download-image"/>
         </div>
       </section>
 
