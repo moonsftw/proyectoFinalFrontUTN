@@ -6,7 +6,7 @@ const VideoCards = (props) => {
     <>
       {props.props.map((videoCard) => {
         return (
-          <div className="container-cards-video ">
+          <div className="container-cards-video" key={videoCard.id}>
             <section className="cards-video">
               <div>
                 <div className="video">

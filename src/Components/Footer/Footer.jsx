@@ -13,7 +13,7 @@ import GroupLinks from "../GroupLinks/GroupLinks";
 const Footer = (props) => {
   return (
     <footer className={`main-footer ${props.className}`}>
-      <div className="row container">
+      <div className="container-footer">
         <div className="info-box">
           <div className="languages">
             <img src="/flag.png" alt="" />

@@ -43,23 +43,13 @@
   font-family: var(--main-font-family-light);
 }
 
-.container-landing{
-  background-color: #20269a;
- }
-a {
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1rem;
-}
 
-img {
-  max-width: 100%;
-} 
+
+
+
 
 .heroLanding{
   background: linear-gradient(150deg, #101255, #305eec);
-  opacity: 1;
-
 }
 
 .main-header{
@@ -73,10 +63,11 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem .5rem;
 }
 .logo{
-    width: 6rem;
+  display: flex;  
+  width: 6rem;
 }
 
 .nav-list{
@@ -91,18 +82,23 @@ img {
     box-shadow: 0 .8rem 1.5rem rgba(0, 0, 0, .2);
 }
 
-.row{
+.main-hero{
+  background-image: url(/backgroundLogin.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .hero-content-wrap{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .heroContainer{
@@ -110,7 +106,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 20rem;
+    max-width: 26rem;
     padding: 0;
     margin: 0;
     color: white;
@@ -124,23 +120,22 @@ img {
 .containerHeroDescription{
     height:auto;
 }
-.title{
-    font-family: var(--main-font-family-bold);
+.hero-description{
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  text-align: center;
 }
 .primary-title{
-    display: flex;
+    font-family: var(--main-font-family-bold);
     font-size: 27px;
     font-weight: 900;
     line-height: 110%;
     text-align: center;
-    padding-bottom:0;
+    width: 90%;
+    padding-top: 2rem;
+
 }
-.hero-description{
-    margin-top: 2.4rem;
-    font-size: 1rem;
-    text-align: center;
-    padding-top:0;
-}
+
 .hero-btn-group{
     display: flex;
     flex-direction: column;
@@ -150,7 +145,15 @@ img {
     margin: 2rem 0;
 }
 .hero-image{
-    width: 80%;
+ /*    width: 800px;
+    height: 600px; */
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;   
+}
+.hero-image > img{
+    width: 100%;
 }
 
 .containerBtnDownload{
@@ -197,17 +200,17 @@ img {
 
 .wrapper{
   width: 100%;
-  max-width: 1536px;
   margin-inline: auto;
   position: relative;
-  height: 100px;
-  margin-top: 5rem;
+  height: 140px;
   overflow: hidden;
+  background: linear-gradient(1180deg, #4359ff, #5a7cff);
+  
 }
 
 .item{
   width: 200px;
-  height: 100px;
+  height: 140px;
   position: absolute;
   left: 100%;
   animation-name: scrollleft;
@@ -218,9 +221,10 @@ img {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-family: var(--main-font-family-bold);
   font-weight: 900;
+  letter-spacing: 10px;
 }
 
 .item1{
@@ -272,6 +276,7 @@ img {
     color: white;
     max-width: 100%;
     
+    
 
 }
 
@@ -286,6 +291,7 @@ img {
     height: auto;
     text-align: center;
     background-color: #20269a;
+
 }
 
 
@@ -339,18 +345,18 @@ img {
     opacity: 1;
   }
   85%, 100%{
-    opacity: 0;
+    opacity: .1;
   }
 }
 
 @keyframes scaled {
-  from {scale: .8; }
-  to {scale: 1.2; }
+  from {scale: .9; }
+  to {scale: 1.1; }
 }
 
 @keyframes zoomImage{
   from {scale: .9;}
-  to {scale: 1.4;}
+  to {scale: 1.2;}
 }
 
 @media (min-width: 1024px){
@@ -358,26 +364,42 @@ img {
     --num-of-grid-columns: 12;
     --section-spacing: 12rem 4rem;
   }
+  .nav-list{
+    display: flex;
+}
+  .main-hero{
+    animation: disapeard linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
+    height: 80vh;
+  }
   .hero-content-wrap{
     flex-direction: row;
   } 
   .heroContainer{
     order: 0; 
+
   }
   .primary-title{
-    font-size: 42px;
+    padding-top: 0rem;
+    text-align: left; 
+    width: 100%;
+    font-size: 3.1rem;
+    
   }
   .hero-description{
-    font-size: 24px;
+    font-size: 1.5rem;
+    text-align: left; 
+    width: 26rem; 
   }
   .hero-btn-group{
     flex-direction: row;
   }
-  .heroLanding{
-    animation: disapeard linear forwards;
-    animation-timeline: view();
-    animation-range: exit;
+  .hero-image{
+    width: 800px;
+    height: 600px;
   }
+  
   .btn-dark{
     border-radius: 1.8rem;
     display: flex;
@@ -419,7 +441,7 @@ img {
     width: 55rem;
     line-height: 3.5rem;
   }
-  .download{
+  .download .remove-grid{
     animation: zoomImage linear forwards;
     animation-timeline: view();
     animation-range: enter;

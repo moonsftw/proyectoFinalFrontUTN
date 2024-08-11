@@ -1,11 +1,8 @@
 import React from "react";
 import "./Landing.css";
 import { IoMdDownload } from "./../../assets/icons";
-import Header from "../../Components/Header/Header";
-import Footer from "../../Components/Footer/Footer";
-import VideoCards from "../../Components/VideoCards/VideoCards";
-import { DATA_VIDEO_CARDS_1 } from "../../Data/videoCards1";
-import { DATA_VIDEO_CARDS_2 } from "../../Data/videoCards2";
+import { Footer, Header, VideoCards } from "../../Components";
+import { DATA_VIDEO_CARDS_1, DATA_VIDEO_CARDS_2 } from "../../Data";
 
 const Landing = () => {
   const videoCards1 = DATA_VIDEO_CARDS_1;
@@ -14,7 +11,7 @@ const Landing = () => {
     <div className="container-landing">
       <section className="heroLanding">
         <Header className="main-header" />
-        <div className="row container">
+        <div className="main-hero">
           <div className="hero-content-wrap">
             <div className="heroContainer">
               <h1 className="title primary-title">
