@@ -1,5 +1,6 @@
 import CardPage from "./CardPage/CardPage"
 import Home from "./Home/Home"
+import InviteInvalid from "./InvideInvalid/InviteInvalid"
 import Landing  from "./Landing/Landing"
 import Login from "./Login/Login"
 import NotFound from "./NotFound/NotFound"
@@ -13,5 +14,6 @@ export{
     NotFound,
     Verification,
     Register,
-    Login
+    Login,
+    InviteInvalid
 }

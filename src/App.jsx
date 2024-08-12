@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 
-import { Home, Landing, Login, NotFound, Register, Verification  } from './Pages';
+import { Home, InviteInvalid, Landing, Login, NotFound, Register, Verification  } from './Pages';
 
 
 
@@ -22,6 +22,7 @@ function App() {
         <Route path="/register" element={<Register/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/*" element={<NotFound />} />
+        <Route path="/invite" element={<InviteInvalid />} />
 
        {/*  <Route path="/card" element={<CardPage />} /> */}
       </Routes>
