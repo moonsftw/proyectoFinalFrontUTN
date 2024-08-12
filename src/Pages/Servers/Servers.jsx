@@ -41,12 +41,12 @@ const Servers = () => {
       </div>
       <div className="filter-servers">
         <div className="servers-category">
-          <div><AiFillCompass /> All</div>
-          <div><GiConsoleController /> Gaming</div>
-          <div><FiMonitor /> Entertainment</div>
-          <div><FaGraduationCap /> Education</div>
-          <div><TbAtom /> Science & Tech</div>
-          <div><BsMusicNoteBeamed /> Music</div>
+          <button><AiFillCompass /> All</button>
+          <button><GiConsoleController /> Gaming</button>
+          <button><FiMonitor /> Entertainment</button>
+          <button><FaGraduationCap /> Education</button>
+          <button><TbAtom /> Science & Tech</button>
+          <button><BsMusicNoteBeamed /> Music</button>
         </div>
         <div className="servers-match">
           {servers.map((server) => {
