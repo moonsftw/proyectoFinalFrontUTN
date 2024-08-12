@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="containerHero">
       {/* Imagen de fondo */}
       <div className="hero">
-        <img className="imgHero" src="./hero2.webp" alt="" />
+        <img className="imgHero" src="/hero2.webp" alt="" />
       </div>
       {/* Overlay */}
 
@@ -16,6 +16,7 @@ const Hero = () => {
       <div className="contentImg">
         <p className="textImg">Encuentra tu comunidad en Discord</p>
         <span className="subTextImg">
+          
           Juegos, música, estudio, seguro hay un lugar para vos
         </span>
         <div className="containerInput">

@@ -5,6 +5,7 @@ import Landing  from "./Landing/Landing"
 import Login from "./Login/Login"
 import NotFound from "./NotFound/NotFound"
 import Register from "./Register/Register"
+import Servers from "./Servers/Servers"
 import Verification from "./Verification/Verification"
 
 export{
@@ -15,5 +16,6 @@ export{
     Verification,
     Register,
     Login,
-    InviteInvalid
+    InviteInvalid,
+    Servers
 }

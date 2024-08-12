@@ -14,7 +14,7 @@ const InviteInvalid = () => {
       >
         <div className='welcomeBack'>
 
-          <img src="/inviteInvalid.svg" alt="" />
+        <img src="/inviteInvalid.svg" alt="" />
         <h2> Invite Invalid</h2>
         <p>This invite may be expired, or you might not have permission to join.</p>
         </div>
