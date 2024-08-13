@@ -1,5 +1,6 @@
 import React from "react";
 import { DATA_FOOTER } from "../../Data/footer";
+import { Link } from "react-router-dom";
 const GroupLinks = () => {
     const footerLinks = DATA_FOOTER;
   return (
@@ -10,9 +11,9 @@ const GroupLinks = () => {
             <h5 className="footer-title">{footerLink.title}</h5>
             {footerLink.links.map((link) => {
               return (
-                <a href="#" className="footer-link" key={link}>
+                <Link href="#" className="footer-link" key={link}>
                   {link}
-                </a>
+                </Link>
               );
             })}
           </div>

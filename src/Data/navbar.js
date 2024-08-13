@@ -1,28 +1,38 @@
 export const ITEMS_NAV_BAR = [
     {
         id: 1,
-        title: 'Download',
-        url: '/'
+        title: "Download",
+        url: "/"
     },
     {
         id: 2,
-        title: 'Why Discord',
-        url: '/'
+        title: "Nitro",
+        url: "/"
     },
     {
         id: 3,
-        title: 'Nitro',
-        url: '/'
+        title: "Discover",
+        url: "/servers"
     },
     {
         id: 4,
-        title: 'Safety',
-        url: '/'
+        title: "Safety",
+        url: "/"
     },
     {
         id: 5,
-        title: 'Support',
-        url: '/'
+        title: "Support",
+        url: "/"
+    },
+    {
+        id: 6,
+        title: "Blog",
+        url: "/"
+    },
+    {
+        id: 7,
+        title: "Careers",
+        url: "/"
     },
 
 ]

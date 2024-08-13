@@ -10,6 +10,7 @@
 }
 .nav-list{
     display: none;
+    
 }
 .nav-items-right{
     display: flex;
@@ -28,6 +29,7 @@
     border-radius: 4rem;
     height: 30px;
     width: 7rem;
+    text-decoration: none;
 }
 .btn-login:hover{
     box-shadow: 0 .8rem 1.5rem rgba(0, 0, 0, .2);
@@ -51,14 +53,17 @@
     } 
     .nav-list{
         display: flex;
-        list-style: none;
+        
     }
+    
     .nav-link{
         font-size: 16px;
         color: #FFF;
         margin: 0 1rem;
         padding: 1rem;
         font-weight: bold;
+        text-decoration: none;
+       
     }
     .nav-link:hover{
         text-decoration: underline;

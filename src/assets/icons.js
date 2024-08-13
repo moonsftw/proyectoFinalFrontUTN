@@ -8,6 +8,7 @@ import { FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import { AiFillCompass } from "react-icons/ai";
 import { GiConsoleController } from "react-icons/gi";
+import { FaRegCircleCheck } from "react-icons/fa6";
 import {
   BsMusicNoteBeamed,
   BsFillPlayCircleFill,
@@ -19,6 +20,7 @@ import { FiMonitor } from "react-icons/fi";
 import { MdKeyboardVoice } from "react-icons/md";
 import { FaHeadphones } from "react-icons/fa";
 import { IoSettingsSharp } from "react-icons/io5";
+import { GiAbstract010 } from "react-icons/gi";
 
 
-export {CiSearch, FiSearch, IoMdDownload, IoMenu,IoClose, IoChevronDownSharp, BsTwitterX, FaInstagram, FaYoutube, FaTiktok, FaFacebookSquare,AiFillCompass, GiConsoleController, BsMusicNoteBeamed, BsFillPlayCircleFill, BsFillEmojiSmileFill, FaGraduationCap, TbAtom, FiMonitor, MdKeyboardVoice, FaHeadphones, IoSettingsSharp}
+export {GiAbstract010, FaRegCircleCheck, CiSearch as search, FiSearch, IoMdDownload, IoMenu,IoClose, IoChevronDownSharp, BsTwitterX, FaInstagram, FaYoutube, FaTiktok, FaFacebookSquare,AiFillCompass, GiConsoleController, BsMusicNoteBeamed, BsFillPlayCircleFill, BsFillEmojiSmileFill, FaGraduationCap, TbAtom, FiMonitor, MdKeyboardVoice, FaHeadphones, IoSettingsSharp}

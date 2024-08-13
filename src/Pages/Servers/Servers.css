@@ -133,6 +133,7 @@
     border-radius: 5px;
     font-size: 15px;
     font-weight: 400;
+    text-transform: capitalize;
 }
 .servers-category > button:hover{
     background-color: #ebebeb;
@@ -170,6 +171,8 @@
 .server-content-descrip-details{
     opacity: .6;
 }
+
+
 .server-content-descrip-insignias > span{
     background-color: #ebebeb;
     padding: 5px;

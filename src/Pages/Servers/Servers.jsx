@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Servers.css";
-import { DISCORD_SERVERS as servers } from "../../Data/servers";
+import {
+  DISCORD_SERVERS as servers,
+  SERVER_CATEGORIES as categories,
+} from "../../Data";
 import { Header } from "../../Components";
-import { CiSearch, AiFillCompass, FaGraduationCap,FiMonitor, TbAtom, GiConsoleController, BsMusicNoteBeamed } from "./../../../src/assets/icons";
-
+/* import { CiSearch, AiFillCompass, FaGraduationCap,FiMonitor, TbAtom, GiConsoleController, BsMusicNoteBeamed } from "./../../../src/assets/icons"; */
+import * as icons from "./../../../src/assets/icons";
+import CardServer from "../../Components/CardServer/CardServer";
 const Servers = () => {
+  const [category, setCategory] = useState("all");
+
+  useEffect((event) => {}, [category]);
   return (
     <>
       <div className="hero-servers">
@@ -36,52 +43,27 @@ const Servers = () => {
       <div className="server-input">
         <input type="text" placeholder="Explore Communitities" />
         <button>
-          <CiSearch className="server-input-search-icon" />
+          {/* <CiSearch className="server-input-search-icon" /> */}
+          <icons.search className="server-input-search-icon" />
         </button>
       </div>
       <div className="filter-servers">
         <div className="servers-category">
-          <button><AiFillCompass /> All</button>
-          <button><GiConsoleController /> Gaming</button>
-          <button><FiMonitor /> Entertainment</button>
-          <button><FaGraduationCap /> Education</button>
-          <button><TbAtom /> Science & Tech</button>
-          <button><BsMusicNoteBeamed /> Music</button>
+          {categories.map((category) => {
+            return (
+              <button
+                key={category.id}
+                name={category.name}
+                onClick={(e) => setCategory(e.target.name)}
+              >
+                <icons.AiFillCompass/>{category.name}
+              </button>
+            );
+          })}
         </div>
         <div className="servers-match">
           {servers.map((server) => {
-            return (
-              <div className="server" key={server.id}>
-                <div className="server-img-banner">
-                  <img src={server.banner} alt="" />
-                </div>
-                <div className="server-content">
-                  <div className="server-content-logo">
-                    <img
-                      src={server.logo}
-                      alt=""
-                      
-                    />
-                    <h1>{server.title}</h1>
-                  </div>
-                  <div className="server-content-descrip">
-                    <p>{server.description}</p>
-                    <div className="server-content-descrip-details">
-                      <span>{server.online}</span>
-                      <span>{server.members}</span>
-                    </div>
-                    <div className="server-content-descrip-insignias">
-                      {server.verified && (
-                        <span className="verified">Verified</span>
-                      ) }
-                      {server.partnered && (
-                        <span className="partnered">Partnered</span>
-                      ) }
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
+            return <CardServer server={server} />;
           })}
         </div>
       </div>
