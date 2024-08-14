@@ -46,7 +46,7 @@ export const restar = (a, b) => {
 
 # Orden:
 
-En 
+En [NotFound.jsx](./src/Pages/NotFound/NotFound.jsx) está la logica de no encontré ese link
 
 >[!IMPORTANT]
 >
