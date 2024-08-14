@@ -16,7 +16,7 @@ El diseño original es de [Discord](https://discord.com/)
 
 Para la animacion de la pagina de verificación me ayudé con el siguient [recurso](https://codesandbox.io/s/animacion-mostrarocultar-elementos-react-oyj7b?file=/src/App.js)
 
-Para la animación de scroll usé el video de (Kevin Powell)[https://youtu.be/UmzFk68Bwdk?si=8JuufQY34P0u-WRI]
+Para la animación de scroll usé el video de [Kevin Powell](https://youtu.be/UmzFk68Bwdk?si=8JuufQY34P0u-WRI)
 
 Un problema que noto en la mitad del proyecto es que al no saber bien cual será mi producto final tiendo a repetir en todo. En el tema de los estilos sobre todo. Creo que podría hacer estilos globales y no repetir tantos estilos.
 
@@ -42,4 +42,13 @@ export const sumar = (a, b) => {
 export const restar = (a, b) => {
     return a - b
 }
+
+
+# Orden:
+
+En 
+
+>[!IMPORTANT]
+>
+>ESTO ES UN PROYECTO PERSONAL PARA PRESENTAR EN LA DIPLOMATURA TAL, SOLO ME GUIÉ DEL DISEÑO DE LA PÁGINA DE DISCORD, NO BUSCO COPIAR CON MALAS INTENCIONES, SOLO SOY UN ESTUDIANTE QUE ADMIRA A DISCORD
 
