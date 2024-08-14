@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 
-import { Home, InviteInvalid, Landing, Login, NotFound, Register, Servers, Verification  } from './Pages';
+import { Comunidad, Home, InviteInvalid, Landing, Login, NotFound, Register, Servers, Verification  } from './Pages';
 
 
 
@@ -24,6 +24,7 @@ function App() {
         <Route path="/*" element={<NotFound />} />
         <Route path="/invite" element={<InviteInvalid />} />
         <Route path="/servers" element={<Servers />} />
+        <Route path="/server" element={<Comunidad />} />
 
        {/*  <Route path="/card" element={<CardPage />} /> */}
       </Routes>

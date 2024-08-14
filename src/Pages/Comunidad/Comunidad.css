@@ -1,0 +1,29 @@
+.comunidad-container .main-header{
+    background-color: #404eed
+}
+.comunidad-container{
+    position: absolute;
+}
+
+.comunidad-1{
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #404eed;
+    width: 100%;
+    padding-bottom: 10rem;
+    
+}
+.comunidad-2{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    
+}
+.comunidad-img{
+    position: relative;
+    top: 0;
+    right: 0;
+}

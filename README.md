@@ -1,3 +1,7 @@
+>[!IMPORTANT]
+>
+>ESTO ES UN PROYECTO PERSONAL PARA PRESENTAR EN LA DIPLOMATURA TAL, SOLO ME GUIÉ DEL DISEÑO DE LA PÁGINA DE DISCORD, NO BUSCO COPIAR CON MALAS INTENCIONES, SOLO SOY UN ESTUDIANTE QUE ADMIRA A DISCORD
+
 Primeras complicaciones:
 manejar la imagen del hero y de cada uno de los banner. Sin perder la forma de la imagen. Aún no logro resolver centrar el input de la imagen del Hero. Solo se centra en mobile.
 Quiero que la sección de grupos y discover desaparezcan suavemente cuando achico la pantalla. Que no haga un "salto" la página
@@ -20,11 +24,11 @@ Para la animación de scroll usé el video de [Kevin Powell](https://youtu.be/Um
 
 Un problema que noto en la mitad del proyecto es que al no saber bien cual será mi producto final tiendo a repetir en todo. En el tema de los estilos sobre todo. Creo que podría hacer estilos globales y no repetir tantos estilos.
 
-**clase 1**: npm create vite@latest
+## clase 1: npm create vite@latest
 componentes siempre con mayuscula, archivos .jsx, ya que utilizan "sintaxis" tipo HTML, que ya no se llamar html sino JSX
 archivos de funciones o datos usamos .js
 
-**clase 2**:
+## clase 2:
 solo un export default por archivo, y al importarlo no hace falta utilizar llaves, podemos darle cualquier nombre pero no es una buena práctica
 
 y cuando usamos el export const, al importarlo en otro archivo debemos utilizar llaves y si quermos renombrarlo utilizamos la palabra reservada **as**
@@ -43,12 +47,15 @@ export const restar = (a, b) => {
     return a - b
 }
 
+props.children: código que irá dentro del componente que estamos creando
+
+metodos avanzados: .map(() => {})
+
+html en js no existe, es un jsx
 
 # Orden:
 
 En [NotFound.jsx](./src/Pages/NotFound/NotFound.jsx) está la logica de no encontré ese link
 
->[!IMPORTANT]
->
->ESTO ES UN PROYECTO PERSONAL PARA PRESENTAR EN LA DIPLOMATURA TAL, SOLO ME GUIÉ DEL DISEÑO DE LA PÁGINA DE DISCORD, NO BUSCO COPIAR CON MALAS INTENCIONES, SOLO SOY UN ESTUDIANTE QUE ADMIRA A DISCORD
+
 
