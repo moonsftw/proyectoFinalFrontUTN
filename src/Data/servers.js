@@ -1,4 +1,4 @@
-export const DISCORD_SERVERS = [
+                export const DISCORD_SERVERS = [
     {
         id: 1,
         category: "gaming",

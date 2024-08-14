@@ -4,14 +4,54 @@ import {
   DISCORD_SERVERS as servers,
   SERVER_CATEGORIES as categories,
 } from "../../Data";
-import { Header } from "../../Components";
+import { ArticleList, ButtonList, Header } from "../../Components";
 /* import { CiSearch, AiFillCompass, FaGraduationCap,FiMonitor, TbAtom, GiConsoleController, BsMusicNoteBeamed } from "./../../../src/assets/icons"; */
 import * as icons from "./../../../src/assets/icons";
 import CardServer from "../../Components/CardServer/CardServer";
 const Servers = () => {
-  const [category, setCategory] = useState("all");
+  const allCategories = ['all', ...new Set(servers.map((server) => server.category))];
 
-  useEffect((event) => {}, [category]);
+  const [newCategories , setNewCategories] = useState(allCategories);
+  const [cardsServers, setCardsServers] = useState(servers);
+  const [categorySeleccionada, setCategorySeleccionada] = useState({
+    all: true,
+    gaming: false,
+    entertainment: false,
+    education: false,
+    music: false,
+    science: false,
+  });
+  const [datosFiltrados, setDatosFiltrados] = useState([]);
+
+  const filterCategory = (category) => {
+    if(category === 'all'){
+      setCardsServers(servers)
+      return
+    }
+    const filteredData = servers.filter((card) => card.category === category);
+    setCardsServers(filteredData)
+  }
+
+  const handleOnCheckbox = (e) => {
+    setCategorySeleccionada({
+      ...categorySeleccionada,
+      [e.target.value]: e.target.checked,
+      all: false,
+    });
+    if (e.target.checked) {
+      const resultadoCategory = servers.filter((server) => {
+        return server.category === e.target.value;
+      });
+      setDatosFiltrados([...datosFiltrados, ...resultadoCategory]);
+    } else {
+      const resultadoCategory = datosFiltrados.filter((server) => {
+        return server.category !== e.target.value;
+      });
+      setDatosFiltrados([...resultadoCategory]);
+    }
+   
+  };
+ 
   return (
     <>
       <div className="hero-servers">
@@ -48,23 +88,33 @@ const Servers = () => {
         </button>
       </div>
       <div className="filter-servers">
-        <div className="servers-category">
+        {/* <div className="servers-category">
           {categories.map((category) => {
             return (
-              <button
-                key={category.id}
-                name={category.name}
-                onClick={(e) => setCategory(e.target.name)}
-              >
-                <icons.AiFillCompass/>{category.name}
-              </button>
+              <div className="" key={category.id}>
+                <input
+                  onChange={handleOnCheckbox}
+                  type="checkbox"
+                  name="categories"
+                  id={category.id}
+                  value={category.name}
+                />
+                <label htmlFor={category.name}>{category.name}</label>
+              </div>
             );
           })}
-        </div>
+        </div> */}
+        <ButtonList categories={newCategories} filterCategory={filterCategory}/>
         <div className="servers-match">
-          {servers.map((server) => {
+          {/* <ArticleList server={cardsServers} /> */}
+          {
+            cardsServers.map((cardServer) => <CardServer server={cardServer} key={cardServer.id}/> )
+          }
+          {/* { categorySeleccionada.all ?  servers.map((server) => {
+            return <CardServer server={server} key={server.id}/>;
+          }) : datosFiltrados.map((server) => {
             return <CardServer server={server} />;
-          })}
+          }) } */}
         </div>
       </div>
     </>

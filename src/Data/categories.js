@@ -22,7 +22,7 @@ export const SERVER_CATEGORIES = [
     },
     {
         id: 4,
-        name: "science & tech",
+        name: "science",
         icon: "<TbAtom />",
     },
     {

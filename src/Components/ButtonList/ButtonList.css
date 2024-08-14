@@ -1,0 +1,25 @@
+.categories{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    padding-top: 1.5rem;
+    gap: 10px;
+}
+.categories .btn-category{
+    background-color: #fff;
+    color: black;
+    border-radius: 5px;
+    text-transform: capitalize;
+    text-align: left;
+}
+.categories .btn-category:hover{
+    background-color: #d9d9d9;
+    
+}
+.categories .btn-category:active{
+    background-color: #cecbcb;  
+}
+.categories .btn-category:focus{
+    background-color: #d9d9d9; 
+}

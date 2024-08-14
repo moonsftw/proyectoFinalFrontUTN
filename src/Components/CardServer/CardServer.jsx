@@ -15,7 +15,7 @@ const CardServer = ({server}) => {
         <div className="server-content-descrip">
           <p>{server.description}</p>
           <div className="server-content-descrip-details">
-            <span>{server.online}</span>
+            <span>{server.online}</span>·
             <span>{server.members}</span>
           </div>
           <div className="server-content-descrip-insignias">

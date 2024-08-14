@@ -1,7 +1,7 @@
 .hero-servers{
     position: relative;
     height: 400px;
-    z-index: -2;
+    z-index: 2;
 }
 
 .hero-server-img{
@@ -15,13 +15,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
+    z-index: -2;
 }
 .hero-server-img > .izq-servers{
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 0;
+    z-index: -1;
     width:400px
 }
 .hero-server-img > .dcha-servers{
@@ -29,7 +29,7 @@
     bottom: 0;
     right: 0;
     width:400px;
-    z-index: 0;
+    z-index: -1;
 }
 .hero-server-img-content{
     position: relative;
@@ -40,15 +40,15 @@
     justify-content: center;
     align-items: center;
     color: white;
-    z-index: -1;
+    z-index: -2;
 }
 .hero-server-img-content > .title-img{
-    font-size: 34px;
+    font-size: 54px;
     font-weight: 900;
-    width: 300px;
+    width: 450px;
     text-align: center;
     text-transform: uppercase;
-    line-height: 30px;
+    line-height: 48px;
     padding-bottom: 20px;
 }
 
@@ -123,22 +123,37 @@
     padding: 1rem;
    
 }
-.servers-category > button{
+.servers-category > div{
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     opacity: .7;
     background-color: #fff;
     color: black;
-    padding: .6rem;
+   /*  padding: .6rem; */
     border-radius: 5px;
     font-size: 15px;
     font-weight: 400;
     text-transform: capitalize;
 }
-.servers-category > button:hover{
+.servers-category > div > label {
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    padding: .6rem;
+}
+.servers-category > div > input{
+    width: 20px;
+    height: 30px;
+    border-radius: 10px;
+    
+}
+
+.servers-category > div:hover{
     background-color: #ebebeb;
 }
-.servers-category > button:focus{
+.servers-category > div:focus{
     background-color: #ebebeb;
 }
 .filter-servers .servers-match .server-content{
