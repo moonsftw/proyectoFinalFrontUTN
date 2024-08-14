@@ -1,29 +1,58 @@
-.comunidad-container .main-header{
-    background-color: #404eed
-}
-.comunidad-container{
-    position: absolute;
+.comunidad-container {
+    width: 100%;
+    height: 1500px;
+    position: relative;
+    gap: 100px;
 }
 
-.comunidad-1{
-    position: relative;
-    top: 0;
-    left: 0;
-    background-color: #404eed;
-    width: 100%;
-    padding-bottom: 10rem;
-    
+.comunidad-section-1 {
+    border: 10px solid blue;
+    background-color: blue;
+    height: 100px;
 }
-.comunidad-2{
+
+.comunidad-section-2 {
+    background-color: blue;
+    position: absolute;
+    height: 100px;
+    width: 100%;
+}
+
+.comunidad-section-3 {
+    position: absolute;
+    height: 400px;
+    width: 100%;
+}
+
+.comunidad-section-4 {
+    border: 10px solid red;
+    width: 70%;
+    height: 1050px;
+    position: absolute;
+    bottom: 0%;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.comunidad-container-banner {
     position: relative;
+    height: 360px;
+    border: 10px solid black;
+
+}
+.comunidad-container-banner > .comunidad-banner {
+    position: absolute; 
+    left: 10%;
+    border-radius: 10px;
+}
+
+.comunidad-container-banner > .comunidad-logo{
+    width: 100px;
+    position: absolute;
+    left: 15%;
     bottom: 0;
-    left: 0;
-    background-color: #fff;
-    width: 100%;
-    
-}
-.comunidad-img{
-    position: relative;
-    top: 0;
-    right: 0;
+    border: 10px solid white;
+    border-radius: 15px;
 }
