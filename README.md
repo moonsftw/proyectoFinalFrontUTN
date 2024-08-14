@@ -20,14 +20,14 @@ Para la animación de scroll usé el video de (Kevin Powell)[https://youtu.be/Um
 
 Un problema que noto en la mitad del proyecto es que al no saber bien cual será mi producto final tiendo a repetir en todo. En el tema de los estilos sobre todo. Creo que podría hacer estilos globales y no repetir tantos estilos.
 
-*clase 1*: npm create vite@latest
+**clase 1**: npm create vite@latest
 componentes siempre con mayuscula, archivos .jsx, ya que utilizan "sintaxis" tipo HTML, que ya no se llamar html sino JSX
 archivos de funciones o datos usamos .js
 
-*clase 2*:
+**clase 2**:
 solo un export default por archivo, y al importarlo no hace falta utilizar llaves, podemos darle cualquier nombre pero no es una buena práctica
 
-y cuando usamos el export const, al importarlo en otro archivo debemos utilizar llaves y si quermos renombrarlo utilizamos la palabra reservada *as*
+y cuando usamos el export const, al importarlo en otro archivo debemos utilizar llaves y si quermos renombrarlo utilizamos la palabra reservada **as**
 
 se puede utilizar el export cuando declaramos o al final del archivo con un export {nombre_funcion/variable}, lo importante es usar solo uno de los dos
 
