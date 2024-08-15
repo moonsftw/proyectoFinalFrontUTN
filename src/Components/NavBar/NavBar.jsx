@@ -15,7 +15,7 @@ const NavBar = () => {
           {itemsNav.map((item) => {
             return (
               <li className="nav-item" key={item.id}>
-                <Link to={item.url} className="nav-link">
+                <Link to={item.url} className={`${item.className} nav-link`}>
                   {item.title}
                 </Link>
               </li>

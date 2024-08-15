@@ -57,5 +57,13 @@ html en js no existe, es un jsx
 
 En [NotFound.jsx](./src/Pages/NotFound/NotFound.jsx) está la logica de no encontré ese link
 
+## clase 3
+Desestructuración
+key en los map
+se puede hacer un fetch a archivos json locales
+renderizado condicional { condicion ? verdadero : falso} (esto es un operador ternario)
+{ condicion && mostrar_solo_si_la_condicion_es_verdadera } (esto se conoce como operador corto circuito)
+
+## clas 4 React (estados)[https://zoom-fepp.s3.amazonaws.com/81889724473/81889724473-meeting-b2d634a7-2b3a-496c-be9f-878003f47d49.mp4] 55:11
 
 

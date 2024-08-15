@@ -145,17 +145,24 @@
   font-weight: 500;
 }
 @media (min-width: 1024px) {
+/*   .comunidad-section-3 {
+    max-width: 2000px;
+  } */
   .comunidad-section-4 {
     flex-direction: row;
+   /*  max-width: 1800px; */
   }
   .comunidad-container-banner {
     height: 24.5rem;
+    /* max-width: 2000px; */
   }
   .comunidad-info-container {
-    width: 75%;
+    width: 100%;
+    /* padding-left: 31rem; */
   }
   .comunidad-container {
     height: 105rem;
+
   }
   .comunidad-title-container > .comunidad-logo {
     display: none;
@@ -171,6 +178,9 @@
   }
   .comunidad-container-banner > .comunidad-banner {
     object-fit: cover;
+    /* left: 50%; */
+    left: 10%;
+    
   }
   .comunidad-online,
   .comunidad-members {
@@ -194,6 +204,7 @@
     visibility: visible;
     width: 100px;
     position: absolute;
+    /* left: 55%; */
     left: 15%;
     bottom: 0;
     border: 10px solid white;

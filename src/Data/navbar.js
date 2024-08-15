@@ -2,37 +2,50 @@ export const ITEMS_NAV_BAR = [
     {
         id: 1,
         title: "Download",
-        url: "/"
+        url: "/",
+        className: 'not-work'
     },
     {
         id: 2,
         title: "Nitro",
-        url: "/"
+        url: "/",
+        className: 'not-work'
+
     },
     {
         id: 3,
         title: "Discover",
-        url: "/servers"
+        url: "/servers",
+        className: 'work'
+
     },
     {
         id: 4,
         title: "Safety",
-        url: "/"
+        url: "/",
+        className: 'not-work'
+
     },
     {
         id: 5,
         title: "Support",
-        url: "/"
+        url: "/",
+        className: 'not-work'
+
     },
     {
         id: 6,
         title: "Blog",
-        url: "/"
+        url: "/",
+        className: 'not-work'
+
     },
     {
         id: 7,
         title: "Careers",
-        url: "/"
+        url: "/",
+        className: 'not-work'
+
     },
 
 ]

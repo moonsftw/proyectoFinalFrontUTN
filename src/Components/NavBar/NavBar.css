@@ -63,7 +63,10 @@
         padding: 1rem;
         font-weight: bold;
         text-decoration: none;
-       
+    }
+    .not-work{
+        opacity: .5;
+        cursor: not-allowed;
     }
     .nav-link:hover{
         text-decoration: underline;
