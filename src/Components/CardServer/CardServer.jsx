@@ -7,7 +7,7 @@ const CardServer = ({ servers, handleInputServers }) => {
 
   return servers.map((server) => {
     return (
-      <Link to={`/server/${server.id}`} key={server.id}>
+      <Link to={`/server/${server.id}`} key={server.id} className="link-a-comunidad">
         <div className="server" key={server.id}>
           <div className="server-img-banner">
             <img src={server.banner} alt="" />
