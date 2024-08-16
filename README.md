@@ -6,6 +6,9 @@
 ># VER
 >[Improve your form validation hints without JS - Kevin Powell](https://youtube.com/watch?v=s2ThIxm7FyA&t=20s)
 
+
+[Como utilizar markdown](https://experienceleague.adobe.com/es/docs/contributor/contributor-guide/writing-essentials/markdown#:~:text=En%20Markdown%2C%20un%20p%C3%A1rrafo%20no,text%20is%20**bold**.)
+
 Primeras complicaciones:
 manejar la imagen del hero y de cada uno de los banner. Sin perder la forma de la imagen. Aún no logro resolver centrar el input de la imagen del Hero. Solo se centra en mobile.
 Quiero que la sección de grupos y discover desaparezcan suavemente cuando achico la pantalla. Que no haga un "salto" la página
