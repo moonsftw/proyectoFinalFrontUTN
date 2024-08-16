@@ -1,10 +1,36 @@
 import React from "react";
 import "./Register.css";
+import Form from "../../Components/Form/Form";
+import { Link } from "react-router-dom";
 const Register = () => {
+  const formContent = [
+  {
+    id:1,
+    label: "email",
+    type: "email",
+  },
+  {
+    id:2,
+    label: "display",
+    type: "text",
+  },
+  {
+    id:3,
+    label: "username",
+    type: "text",
+  },
+  {
+    id:4,
+    label: "password",
+    type: "password",
+  },
+  ]
+
   return (
     <section className="container-register">
       <div className="img-logo-register">
-        <img src="/modernLogo.svg" alt="" />
+        <Link to={"/"} className="img"><img src="/modernLogo.svg" alt="logo" /></Link>
+      
       </div>
       <div className="container-form-register">
 
@@ -13,25 +39,7 @@ const Register = () => {
       "
       >
         <h2>Create an account</h2>
-        <form action="">
-          <div>
-            <label htmlFor="">EMAIL</label>
-            <input type="text" />
-          </div>
-          <div>
-            <label htmlFor="">DISPLAY NAME</label>
-            <input type="text" />
-          </div>
-          <div>
-            <label htmlFor="">USERNAME</label>
-            <input type="text" />
-          </div>
-          <div>
-            <label htmlFor="">PASSWORD</label>
-            <input type="text" />
-          </div>
-          <button>Continue</button>
-        </form>
+        <Form formContent={formContent}/>
         <div className="inputCheck">
           <input type="checkbox" id="check" name="check" className="check" />
           <label htmlFor="check">
@@ -40,7 +48,7 @@ const Register = () => {
           </label>
         </div>
         <div className="alreadyAccount">
-          <a href="">Already have an account?</a>
+          <Link to={"/login"} className="link-alreadyAccount">Already have an account?</Link>
         </div>
       </div>
       

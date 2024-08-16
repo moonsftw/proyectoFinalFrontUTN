@@ -17,7 +17,7 @@
    
 }
 
-.container-register > .img-logo-register > img {
+.container-register > .img-logo-register > .img > img {
     width: 9rem;
     padding: 30px 0;
 }
@@ -56,6 +56,7 @@
     color: white;
     font-size: 12px;
     opacity: .7;
+    text-transform: uppercase;
 }
 .container-form form div input{
     background-color: #1e1f22;
@@ -74,6 +75,7 @@
     border: none;
     padding: 15px;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 .check{
@@ -96,7 +98,7 @@
     align-items: baseline;
    
 }
-.alreadyAccount > a {
+.alreadyAccount > .link-alreadyAccount {
     color: #00a8fc;
     font-size: 14px;
 }

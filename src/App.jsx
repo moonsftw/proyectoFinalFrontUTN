@@ -12,8 +12,14 @@ import { Comunidad, Home, InviteInvalid, Landing, Login, NotFound, Register, Ser
 
 function App() {
   
+  async function getData() {
+    const response =  fetch("../Data/Data/serverJSON");
+   
+    console.log(response);
+}
+getData()
+return (
 
-  return (
     <Router>
       <Routes>
         <Route path="/" element={<Landing />} />

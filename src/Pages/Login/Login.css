@@ -18,7 +18,7 @@
    
 }
 
-.container-login > .img-logo-login > img {
+.container-login > .img-logo-login > .img > img {
     width: 9rem;
     padding: 30px 0;
 }
@@ -85,7 +85,7 @@
     display: flex;
     gap: 10px;
 }
-.container-login a {
+.container-login .link-register {
     color: #00a8fc;
     font-size: 14px;
 }

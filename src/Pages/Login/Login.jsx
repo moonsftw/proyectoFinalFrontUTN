@@ -1,10 +1,31 @@
 import React from 'react'
 import "./Login.css"
+import Form from '../../Components/Form/Form'
+import { Link } from 'react-router-dom'
 const Login = () => {
+  const contentLogin = [
+    {
+      id: 1,
+      label: "email",
+      type: "email",
+      isLink: false,
+      link: "#",
+      anchor:"",
+    },
+    {
+      id: 2,
+      label: "password",
+      type: "password",
+      isLink: true,
+      link: "",
+      anchor:"Forgot your password?",
+    }
+  ]
+
   return (
     <section className="container-login">
       <div className="img-logo-login">
-        <img src="/modernLogo.svg" alt="" />
+        <Link to={"/"} className='img'><img src="/modernLogo.svg" alt="logo" /></Link>
       </div>
       <div className="container-form-login">
 
@@ -17,23 +38,10 @@ const Login = () => {
         <h2>Welcome Back!</h2>
         <p>We're so excited to see you again!</p>
         </div>
-        <form action="">
-          <div>
-            <label htmlFor="">EMAIL</label>
-            <input type="text" />
-          </div>
-       
-          <div>
-            <label htmlFor="">PASSWORD</label>
-            <input type="text" />
-            <a href="">Forgot your password?</a>
-          </div>
-          <button>Continue</button>
-        </form>
-        
+        <Form formContent={contentLogin}/>
         <div className="needAccount">
           <p>Need an account?</p>
-          <a href="">Register</a>
+          <Link to={"/register"} className='link-register'>Register</Link>
         </div>
       </div>
       

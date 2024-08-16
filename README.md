@@ -2,6 +2,10 @@
 >
 >ESTO ES UN PROYECTO PERSONAL PARA PRESENTAR EN LA DIPLOMATURA TAL, SOLO ME GUIÉ DEL DISEÑO DE LA PÁGINA DE DISCORD, NO BUSCO COPIAR CON MALAS INTENCIONES, SOLO SOY UN ESTUDIANTE QUE ADMIRA A DISCORD
 
+>[!NOTA]
+># VER
+>[Improve your form validation hints without JS - Kevin Powell](https://youtube.com/watch?v=s2ThIxm7FyA&t=20s)
+
 Primeras complicaciones:
 manejar la imagen del hero y de cada uno de los banner. Sin perder la forma de la imagen. Aún no logro resolver centrar el input de la imagen del Hero. Solo se centra en mobile.
 Quiero que la sección de grupos y discover desaparezcan suavemente cuando achico la pantalla. Que no haga un "salto" la página
@@ -66,4 +70,13 @@ renderizado condicional { condicion ? verdadero : falso} (esto es un operador te
 
 ## clas 4 React [estados](https://zoom-fepp.s3.amazonaws.com/81889724473/81889724473-meeting-b2d634a7-2b3a-496c-be9f-878003f47d49.mp4) 55:11
 
+useState retorna un array por eso lo desestructuramos para declararlo
+los estados son inmutables, para modificarlo usamo la funcion (set..)
+const [ valorInicial, fnModificarValorInicial ] = useState(valor)
+al usar la fnModificarValorInicial el componente donde se creo el estado se re-renderiza junto con sus "hijos"
+
+propiedades hidden={condicion} y disabled={condicion}, creo que el disabled funciona solo con button y cuando no tiene ningúne stilo. y el hidden no sé bien como funciona, porque a veces desaparece y a veces no
+
+formSchema, hice el form con map tanto el de login como el register e hice un component con la prop formContent
+...formValues  clonar el estado inicial, que no es lo mismo que el spread operator que sirve para extender
 
