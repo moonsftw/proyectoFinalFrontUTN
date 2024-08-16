@@ -71,7 +71,7 @@ se puede hacer un fetch a archivos json locales
 renderizado condicional { condicion ? verdadero : falso} (esto es un operador ternario)
 { condicion && mostrar_solo_si_la_condicion_es_verdadera } (esto se conoce como operador corto circuito)
 
-## clas 4 React [estados](https://zoom-fepp.s3.amazonaws.com/81889724473/81889724473-meeting-b2d634a7-2b3a-496c-be9f-878003f47d49.mp4) 55:11
+## clase 4 React [estados](https://zoom-fepp.s3.amazonaws.com/81889724473/81889724473-meeting-b2d634a7-2b3a-496c-be9f-878003f47d49.mp4) 55:11
 
 useState retorna un array por eso lo desestructuramos para declararlo
 los estados son inmutables, para modificarlo usamo la funcion (set..)
@@ -83,3 +83,18 @@ propiedades hidden={condicion} y disabled={condicion}, creo que el disabled func
 formSchema, hice el form con map tanto el de login como el register e hice un component con la prop formContent
 ...formValues  clonar el estado inicial, que no es lo mismo que el spread operator que sirve para extender
 
+# Clase 5 - React Router
+
+npm i react-router-dom
+
+<BrowserRouter>
+    <Routes>
+        <Route path='' element={} />
+    </Routes>
+</BrowserRouter>
+
+<Link></Link> es mejor usarlo ya que no hay que renderizar el componente completo, usa renderizado condicional, es mucho más economico que usar el anchor <a></a>
+
+path='/detail/:producto_id' esto es un parámetro de búsqueda
+
+useParams()  

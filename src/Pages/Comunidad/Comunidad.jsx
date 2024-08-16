@@ -2,27 +2,18 @@ import React from "react";
 import "./Comunidad.css";
 import { Footer, Header } from "../../Components";
 import * as icons from "./../../assets/icons";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { DISCORD_SERVERS as servers} from "../../Data";
 
 const Comunidad = () => {
-  const pruebaServer = [
-    {
-      id: 1,
-      category: "gaming",
-      title: "Blox Fruits",
-      description:
-        "The official community for the popular Roblox game known as Blox Fruits.",
-      online: "353,279 Online",
-      members: "1,750,000 Members",
-      verified: true,
-      partnered: false,
-      banner: "/servers/banners/bloxFtruits.jpg",
-      logo: "/servers/logos/bloxFtruits.jpg",
-      about:
-        'This community is for the popular game called "Blox Fruits" on the ROBLOX platform. You can join this server if you would like to talk to other passionate players about the game, post fanart, find trades, or complete raids with others. With 1M+ members and growing, this is the best place for anything to do about Blox Fruits!',
-      languages: "english",
-    },
-  ];
+  const parametros = useParams();
+  const obtenerServerId = (id) => {
+    return servers.find((server) => Number(server.id) === Number(id));
+  }
+
+  const comunidad = obtenerServerId(parametros.id)
+  console.log(comunidad)
+
   return (
     <>
       <main className="comunidad-container">
@@ -34,39 +25,39 @@ const Comunidad = () => {
         <section className="comunidad-container-banner">
           <img
             className="comunidad-banner"
-            src={pruebaServer[0].banner}
+            src={comunidad.banner}
             alt=""
           />
-          <img className="comunidad-logo" src={pruebaServer[0].logo} alt="" />
+          <img className="comunidad-logo" src={comunidad.logo} alt="" />
         </section>
         <section className="comunidad-section-4">
           <div className="comunidad-info-container">
             <div className="comunidad-title-container">
               <img
                 className="comunidad-logo"
-                src={pruebaServer[0].logo}
+                src={comunidad.logo}
                 alt=""
               />
-              {pruebaServer[0].verified && (
+              {comunidad.verified && (
                 <icons.FaRegCircleCheck className="check" />
               )}
-              <h1 className="comunidad-title">{pruebaServer[0].title}</h1>
+              <h1 className="comunidad-title">{comunidad.title}</h1>
             </div>
             <p className="comunidad-description">
-              {pruebaServer[0].description}
+              {comunidad.description}
             </p>
             <div className="comunidad-online-members-container">
               <div className="dot-online"></div>
-              <span className="comunidad-online">{pruebaServer[0].online}</span>
+              <span className="comunidad-online">{comunidad.online}</span>
               <div className="dot-members"></div>
               <span className="comunidad-members">
-                {pruebaServer[0].members}
+                {comunidad.members}
               </span>
             </div>
             <div className="comunidad-line"></div>
             <h2 className="comunidad-about">About</h2>
             <p className="comunidad-about-description">
-              {pruebaServer[0].about}
+              {comunidad.about}
             </p>
             <h2 className="comunidad-languages">Supported Languages</h2>
             <p className="comunidad-languages-description">English</p>

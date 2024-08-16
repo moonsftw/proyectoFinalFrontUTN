@@ -55,39 +55,48 @@
 .hero-server-img-content > .text-img{
     font-size: 14px;
     font-weight: 600;
+    padding-bottom: 20px;
 }
-.server-input{
+.hero-server-img-content > form  {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
-    padding: 2px ;
-    box-shadow: 0 .8rem 1.5rem rgba(0, 0, 0, .2); 
-    border: none;
-    gap: 10px;
-    background-color: rgba(0, 0, 0, .08);
+    align-items: center;
+    height: 50px;
+    gap: 0;
+
 }
-.server-input > input{
-    width: 70%;
-    height: 30px;
-    background-color: rgba(0, 0, 0, .08);
-    border: none;
-    border-radius: 5px;
-    padding: 0 20px;
+.hero-server-img-content > form > div {
+    width: 30%;
+    
 }
-.server-input > button {
-    width: 5%;
+.hero-server-img-content > form > div > input{
     height: 40px;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 20px;
+    background-color: #ebebeb;
+    color: black;
+}
+.hero-server-img-content > form > button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #444c95;
-    color: white;
-    border: none;
+    width: 50px;
+    height: 40px;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #ebebeb;
+    
 }
-.server-input > button > .server-input-search-icon{
-   font-size: 20px;
+
+.hero-server-img-content > form > button > .server-input-search-icon {
+    font-size: 20px;
+    color: #000;
 }
+    
 
 .server{
     display: flex;

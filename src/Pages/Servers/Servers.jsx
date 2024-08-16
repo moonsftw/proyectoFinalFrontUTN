@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./Servers.css";
-import {
-  DISCORD_SERVERS as servers,
-  SERVER_CATEGORIES as categories,
-} from "../../Data";
+import { DISCORD_SERVERS as servers } from "../../Data";
 import { ArticleList, ButtonList, Header } from "../../Components";
-/* import { CiSearch, AiFillCompass, FaGraduationCap,FiMonitor, TbAtom, GiConsoleController, BsMusicNoteBeamed } from "./../../../src/assets/icons"; */
+
 import * as icons from "./../../../src/assets/icons";
 import CardServer from "../../Components/CardServer/CardServer";
 const Servers = () => {
-  const allCategories = ['all', ...new Set(servers.map((server) => server.category))];
+  const allCategories = [
+    "all",
+    ...new Set(servers.map((server) => server.category)),
+  ];
 
-  const [newCategories , setNewCategories] = useState(allCategories);
+  const [newCategories, setNewCategories] = useState(allCategories);
   const [cardsServers, setCardsServers] = useState(servers);
   const [categorySeleccionada, setCategorySeleccionada] = useState({
     all: true,
@@ -21,18 +21,29 @@ const Servers = () => {
     music: false,
     science: false,
   });
-  const [datosFiltrados, setDatosFiltrados] = useState([]);
+  /*  const [datosFiltrados, setDatosFiltrados] = useState([]); */
 
   const filterCategory = (category) => {
-    if(category === 'all'){
-      setCardsServers(servers)
-      return
+    if (category === "all") {
+      setCardsServers(servers);
+      return;
     }
     const filteredData = servers.filter((card) => card.category === category);
-    setCardsServers(filteredData)
-  }
+    setCardsServers(filteredData);
+  };
+  const handleInputServers = (e) => {
+    e.preventDefault();
+    setCardsServers(
+      servers.filter(
+        (server) =>
+          console.log(
+            e.target.value
+          ) /* server.title.includes(e.target.value) */
+      )
+    );
+  };
 
-  const handleOnCheckbox = (e) => {
+  /*   const handleOnCheckbox = (e) => {
     setCategorySeleccionada({
       ...categorySeleccionada,
       [e.target.value]: e.target.checked,
@@ -49,9 +60,8 @@ const Servers = () => {
       });
       setDatosFiltrados([...resultadoCategory]);
     }
-   
-  };
- 
+  }; */
+
   return (
     <>
       <div className="hero-servers">
@@ -78,43 +88,28 @@ const Servers = () => {
           <p className="text-img">
             From gaming, to music, to learning, there's a place for you
           </p>
+          <form>
+            <div>
+              <input
+                type="text"
+                placeholder="Explore Communities"
+                name={"searchServer"}
+                id={"searchServer"}
+              />
+            </div>
+            <button>
+              <icons.search className="server-input-search-icon" />
+            </button>
+          </form>
         </div>
       </div>
-      <div className="server-input">
-        <input type="text" placeholder="Explore Communitities" />
-        <button>
-          {/* <CiSearch className="server-input-search-icon" /> */}
-          <icons.search className="server-input-search-icon" />
-        </button>
-      </div>
       <div className="filter-servers">
-        {/* <div className="servers-category">
-          {categories.map((category) => {
-            return (
-              <div className="" key={category.id}>
-                <input
-                  onChange={handleOnCheckbox}
-                  type="checkbox"
-                  name="categories"
-                  id={category.id}
-                  value={category.name}
-                />
-                <label htmlFor={category.name}>{category.name}</label>
-              </div>
-            );
-          })}
-        </div> */}
-        <ButtonList categories={newCategories} filterCategory={filterCategory}/>
+        <ButtonList
+          categories={newCategories}
+          filterCategory={filterCategory}
+        />
         <div className="servers-match">
-          {/* <ArticleList server={cardsServers} /> */}
-          {
-            cardsServers.map((cardServer) => <CardServer server={cardServer} key={cardServer.id}/> )
-          }
-          {/* { categorySeleccionada.all ?  servers.map((server) => {
-            return <CardServer server={server} key={server.id}/>;
-          }) : datosFiltrados.map((server) => {
-            return <CardServer server={server} />;
-          }) } */}
+          <CardServer servers={cardsServers} />
         </div>
       </div>
     </>
