@@ -9,6 +9,7 @@ import {
 } from "./../../assets/icons";
 import "./Footer.css";
 import GroupLinks from "../GroupLinks/GroupLinks";
+import { Link } from "react-router-dom";
 
 const Footer = (props) => {
   return (
@@ -43,8 +44,19 @@ const Footer = (props) => {
         <div className="divider"></div>
       </div>
       <div className="remove-grid">
-        <img src="/modernLogo.svg" alt="" className="logo" />
-        <button className="btn-brand">Open Discord</button>
+        
+          <img src="/modernLogo.svg" alt="" className="logo-up" onClick={() => window.scrollTo(0, 0)}/>
+        
+        {localStorage.getItem("formValues") ? (
+          <Link to={"/@me"} className="btn-brand">
+            Open Discord
+          </Link>
+        ) : (
+          <Link to={"/register"} className="btn-brand">
+            Login
+          </Link>
+        )}
+        {/* <button className="btn-brand">Open Discord</button> */}
       </div>
     </footer>
   );

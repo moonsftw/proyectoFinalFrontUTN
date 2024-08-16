@@ -38,12 +38,13 @@
    line-height: 0;
 }
 
-.button-verificationRequired button {
+.button-verificationRequired > button {
     border: none;
     padding: 10px;
     background-color: #5865f2;
     color: white;
     cursor: pointer;
+    width: 200px;
 }
 
 @media (min-width: 1024px){

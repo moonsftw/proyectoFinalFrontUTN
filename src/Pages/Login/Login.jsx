@@ -38,7 +38,7 @@ const Login = () => {
         <h2>Welcome Back!</h2>
         <p>We're so excited to see you again!</p>
         </div>
-        <Form formContent={contentLogin}/>
+        <Form formContent={contentLogin} path={"/home"}/>
         <div className="needAccount">
           <p>Need an account?</p>
           <Link to={"/register"} className='link-register'>Register</Link>

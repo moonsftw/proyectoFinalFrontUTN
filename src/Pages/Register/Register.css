@@ -67,7 +67,14 @@
     height: 2.4rem;
     border-radius: 5px;
 } 
-.container-form > form > button{
+/* .container-form > form > .link-submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+} */
+.container-form > form  > button{
     background-color: #444c95;
     font-weight: 700;
     color: white;

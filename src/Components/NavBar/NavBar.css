@@ -1,77 +1,78 @@
-.main-nav{
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+}
+.logo > img {
+  width: 8rem;
+}
+.nav-list {
+  display: none;
+}
+.nav-items-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn-login {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 16px;
+  background-color: #fff;
+  color: #23272a;
+  font-weight: 700;
+  border-radius: 4rem;
+  height: 30px;
+  width: 7rem;
+  text-decoration: none;
+}
+.btn-login:hover {
+  box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.2);
+  color: #7289da;
+}
+.mobile-toggle {
+  display: flex;
+  font-size: 3.6rem;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-open {
+  font-size: 40px;
+}
+.btn-close {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .logo > img {
+    width: 10rem;
+  }
+  .main-nav {
+    justify-content: space-around;
+  }
+  .nav-list {
     display: flex;
-    align-items: center;
-    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    color: #fff;
+    margin: 0 1rem;
     padding: 1rem;
-    width: 100%; 
-}
-.logo{
-    width: 8rem;
-}
-.nav-list{
-    display: none;
-    
-}
-.nav-items-right{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.btn-login{
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3px 16px;
-    background-color:#FFF;
-    color: #23272A;
-    font-weight: 700;
-    border-radius: 4rem;
-    height: 30px;
-    width: 7rem;
+    font-weight: bold;
     text-decoration: none;
-}
-.btn-login:hover{
-    box-shadow: 0 .8rem 1.5rem rgba(0, 0, 0, .2);
-    color: #7289DA;
-}
-.mobile-toggle{
-    display: flex;
-    font-size: 3.6rem;
-    color: #FFF;
-    cursor: pointer;
-}
-.btn-open{
-    font-size: 40px;
-}
-.btn-close{
+  }
+  .not-work {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  .btn-open {
     display: none;
-}
-@media (min-width: 1024px){
-    .main-nav{
-        justify-content: space-around;
-    } 
-    .nav-list{
-        display: flex;
-        
-    }
-    
-    .nav-link{
-        font-size: 16px;
-        color: #FFF;
-        margin: 0 1rem;
-        padding: 1rem;
-        font-weight: bold;
-        text-decoration: none;
-    }
-    .not-work{
-        opacity: .5;
-        cursor: not-allowed;
-    }
-    .nav-link:hover{
-        text-decoration: underline;
-    }
-    .btn-open{
-        display:none;
-    }
+  }
 }

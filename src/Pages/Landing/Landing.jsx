@@ -2,11 +2,13 @@ import React from "react";
 import "./Landing.css";
 import { IoMdDownload } from "./../../assets/icons";
 import { Footer, Header, VideoCards } from "../../Components";
-import { DATA_VIDEO_CARDS_1, DATA_VIDEO_CARDS_2 } from "../../Data";
+import {
+  DATA_VIDEO_CARDS_1 as videoCards1,
+  DATA_VIDEO_CARDS_2 as videoCards2,
+} from "../../Data";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
-  const videoCards1 = DATA_VIDEO_CARDS_1;
-  const videoCards2 = DATA_VIDEO_CARDS_2;
   return (
     <div className="container-landing">
       <section className="heroLanding">
@@ -33,9 +35,14 @@ const Landing = () => {
               <IoMdDownload className="btn-download" />
               Download for Windows
             </div>
-            <div className="btn btn-large btn-dark">
-              Open Discord in your browser
-            </div>
+
+            {localStorage.getItem("formValues") && (
+              <Link to={"/@me"}>
+                <div className="btn btn-large btn-dark">
+                  Open Discord in your browser
+                </div>
+              </Link>
+            )}
           </div>
         </div>
       </section>
@@ -70,7 +77,7 @@ const Landing = () => {
               Download for Windows
             </a>
           </div>
-          <img src="/lastBanner.webp" alt="" className="download-image"/>
+          <img src="/lastBanner.webp" alt="" className="download-image" />
         </div>
       </section>
 

@@ -98,3 +98,11 @@ npm i react-router-dom
 path='/detail/:producto_id' esto es un parámetro de búsqueda
 
 useParams()  
+
+# Clase 5 - React Contenxt
+const navigation = useNavigate() para redireccionar
+navigation("/")
+
+import { createContext, useContext } from "react";
+
+const GlobalContext = createContext();

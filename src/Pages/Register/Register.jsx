@@ -39,7 +39,7 @@ const Register = () => {
       "
       >
         <h2>Create an account</h2>
-        <Form formContent={formContent}/>
+        <Form formContent={formContent} path={"/"}/>
         <div className="inputCheck">
           <input type="checkbox" id="check" name="check" className="check" />
           <label htmlFor="check">
