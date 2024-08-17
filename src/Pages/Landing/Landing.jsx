@@ -4,13 +4,21 @@ import { IoMdDownload } from "./../../assets/icons";
 import { Footer, Header, VideoCards } from "../../Components";
 import { VIDEOS_CARDS } from "../../Data";
 import { Link } from "react-router-dom";
+import {motion as m } from "framer-motion";
+import { GiDuration } from "react-icons/gi";
 
 const Landing = () => {
   const [videos1, videos2] = VIDEOS_CARDS;
   
 
   return (
-    <div className="container-landing">
+    <m.div 
+      initial={{opacity:0}} 
+      animate={{opacity:1}} 
+      exit={{opacity:0}} 
+      transition={{duration: 1.75}}
+      className="container-landing"
+    >
       <section className="heroLanding">
         <Header className="main-header" />
         <div className="main-hero">
@@ -82,7 +90,7 @@ const Landing = () => {
       </section>
 
       <Footer className="found" />
-    </div>
+    </m.div>
   );
 };
 export default Landing;

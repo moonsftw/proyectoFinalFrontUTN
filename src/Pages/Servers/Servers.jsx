@@ -2,10 +2,18 @@ import React, { useEffect, useState } from "react";
 import "./Servers.css";
 import { DISCORD_SERVERS as servers } from "../../Data";
 import { ArticleList, ButtonList, Header } from "../../Components";
+import {motion as m } from "framer-motion";
 
 import * as icons from "./../../../src/assets/icons";
 import CardServer from "../../Components/CardServer/CardServer";
+import { useGlobalContext } from "../../Context/GlobalContext";
+
+
+
 const Servers = () => {
+ /*  const {handleChangeSearchTerm, searchTerm, servers} = useGlobalContext(); */
+  const [searchTerm, setSearchTerm] = useState("");
+
   const allCategories = [
     "all",
     ...new Set(servers.map((server) => server.category)),
@@ -33,14 +41,14 @@ const Servers = () => {
   };
   const handleInputServers = (e) => {
     e.preventDefault();
-    setCardsServers(
+   /*  setCardsServers(
       servers.filter(
         (server) =>
           console.log(
             e.target.value
-          ) /* server.title.includes(e.target.value) */
+          ) 
       )
-    );
+    ); */
   };
 
   /*   const handleOnCheckbox = (e) => {
@@ -61,9 +69,20 @@ const Servers = () => {
       setDatosFiltrados([...resultadoCategory]);
     }
   }; */
+  const handleChangeSearchTerm = (e) => {
+    setSearchTerm(e.target.value);
+  };
+  useEffect(() => {
+    console.log(searchTerm)
+    if(searchTerm != ""){
+        setCardsServers(cardsServers.filter(server => server.title.toLowerCase().includes(searchTerm.toLowerCase())));
+    } else {
+        setCardsServers(servers);
+    }
+  }, [searchTerm]);
 
   return (
-    <>
+    <m.main initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 1 }}>
       <div className="hero-servers">
         <Header className="main-header" />
         <div className="hero-server-img">
@@ -95,6 +114,8 @@ const Servers = () => {
                 placeholder="Explore Communities"
                 name={"searchServer"}
                 id={"searchServer"}
+                onChange={handleChangeSearchTerm}
+                value={searchTerm}
               />
             </div>
             <button>
@@ -112,7 +133,7 @@ const Servers = () => {
           <CardServer servers={cardsServers} />
         </div>
       </div>
-    </>
+    </m.main>
   );
 };
 

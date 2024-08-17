@@ -116,7 +116,20 @@ Errores en formulario, diccionario de errores
 renderizado condicional
 
 new FormData(), lo usamos para recopilar la info del form ver uso en [handleCreateUsuario](./src/Context/GlobalContext.jsx)
+
+valores random para id >>> librería npm i uuid
+import { v4 as uuid } from 'uuid'
+const nuevo_id = uuid();
+
+npm i framer-motion [developedbyed](https://www.youtube.com/watch?v=S4HYwsBRpRs)
+
+Dark mode
+
+[Code Complete](https://www.youtube.com/watch?v=sy-rRtT84CQ)
+npm install use-local-storage (para ver las preferencias del sistema del usuario)
 # Clase 8 - Use effects - Vercel
+
+
 
 # Clase 9 - Repaso final
 

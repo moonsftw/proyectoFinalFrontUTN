@@ -1,21 +1,39 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import { handleCreateUsuario } from "./../Helpers/form";
+import { DISCORD_SERVERS as servers } from "./../Data";
+
+/* import {handleChangeSearchTerm} from './../Helpers/serversFn' */
 
 const GlobalContext = createContext();
 
-export const GlobalContextProvider = ({children}) => {
+export const GlobalContextProvider = ({ children }) => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [cardsServers, setCardsServers] = useState(servers);
 
-    const handleCreateUsuario = (e) => {
-        e.preventDefault();
-        const formulario = e.target;
-        console.log(e.target)
+  const handleChangeSearchTerm = (e) => {
+    setSearchTerm(e.target.value);
+  };
+  useEffect(() => {
+    if(searchTerm != ""){
+        setCardsServers(cardsServers.filter(server => server.title.toLowerCase().includes(searchTerm.toLowerCase())));
+    } else {
+        setCardsServers(servers);
     }
-    return (
-        <GlobalContext.Provider value={{handleCreateUsuario}}>
-            {children}
-        </GlobalContext.Provider>
-    )
-}
+  }, [searchTerm]);
+  return (
+    <GlobalContext.Provider
+      value={{
+        handleCreateUsuario,
+        handleChangeSearchTerm,
+        searchTerm,
+        servers,
+      }}
+    >
+      {children}
+    </GlobalContext.Provider>
+  );
+};
 
 export const useGlobalContext = () => {
-    return useContext(GlobalContext);
-}
+  return useContext(GlobalContext);
+};
