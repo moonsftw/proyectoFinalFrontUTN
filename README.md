@@ -127,7 +127,7 @@ Dark mode
 
 [Code Complete](https://www.youtube.com/watch?v=sy-rRtT84CQ)
 npm install use-local-storage (para ver las preferencias del sistema del usuario)
-# Clase 8 - Use effects - Vercel
+# Clase 8 - Use effects - [Vercel](https://d1lb3lf90ja1l2.cloudfront.net/81889724473/81889724473-meeting-db7dc408-1d06-4949-b55c-4aee87c16c88.mp4) 32:59
 
 
 
