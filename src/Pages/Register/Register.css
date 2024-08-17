@@ -8,14 +8,7 @@
 .container-form-register{
     height: 100vh;
 }
-.container-form{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: normal;
-    align-items: center;
-   
-}
+
 
 .container-register > .img-logo-register > .img > img {
     width: 9rem;
@@ -27,38 +20,28 @@
 }
 .container-form form{
     display: flex;
-    flex-direction: column;
+    
     justify-content: center;
     align-items: start;
     padding: 0 20px;
     width: 100%;
     gap: 20px;
 }
-.container-form .inputCheck{
-    color: white;
-    opacity: .5;
+
+.container-form form .inputForm{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 10px;
-    font-size: 12px;
-    padding-top: 1rem; 
-}
-.container-form form div{
-    display: flex;
-    flex-direction: column;
+    
     align-items: start;
     gap: 10px;
     width: 100%;
 }
-.container-form form div label{
+.container-form form .inputForm label{
     color: white;
     font-size: 12px;
     opacity: .7;
     text-transform: uppercase;
 }
-.container-form form div input{
+.container-form > form > .inputForm > input{
     background-color: #1e1f22;
     border: none;
     outline: none;
@@ -67,13 +50,13 @@
     height: 2.4rem;
     border-radius: 5px;
 } 
-/* .container-form > form > .link-submit {
+.container-form > form > .link-submit {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-} */
+}
 .container-form > form  > button{
     background-color: #444c95;
     font-weight: 700;
@@ -85,20 +68,20 @@
     cursor: pointer;
 }
 
-.check{
+/* .check{
     accent-color: #5865f2;
     width: 24px;
     height: 24px;
     border-radius: 50%;
     cursor: pointer;
-}
-.inputCheck > label {
+} */
+/* .inputCheck > label {
     cursor: pointer;
-}
+} */
 .alreadyAccount{
     width: 100%;
     padding-left: 12px;
-    padding-top: 15px;
+    padding-top: 45px;
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -113,7 +96,7 @@
 @media screen and (min-width: 1024px){
     .container-register{
         display: flex;
-        flex-direction: column;
+      
         justify-content: normal;
         align-items: first baseline;
         height: 100vh;
@@ -123,7 +106,7 @@
     }
     .container-form-register{
         display: flex;
-        flex-direction: column;
+        
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -135,7 +118,7 @@
         width: 480px;
         height: 702px;
         display: flex;
-        flex-direction: column;
+       
         justify-content: space-evenly;
         align-items: center;
         background-color: #313338;

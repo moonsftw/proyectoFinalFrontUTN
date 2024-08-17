@@ -106,3 +106,13 @@ navigation("/")
 import { createContext, useContext } from "react";
 
 const GlobalContext = createContext();
+
+# Clase 6 - Manejo de formularios
+
+Errores en formulario, diccionario de errores
+
+# Clase 7 - Context con localstorage
+
+# Clase 8 - Use effects - Vercel
+
+# Clase 9 - Repaso final

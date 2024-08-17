@@ -2,13 +2,13 @@ import React from "react";
 import "./Landing.css";
 import { IoMdDownload } from "./../../assets/icons";
 import { Footer, Header, VideoCards } from "../../Components";
-import {
-  DATA_VIDEO_CARDS_1 as videoCards1,
-  DATA_VIDEO_CARDS_2 as videoCards2,
-} from "../../Data";
+import { VIDEOS_CARDS } from "../../Data";
 import { Link } from "react-router-dom";
 
 const Landing = () => {
+  const [videos1, videos2] = VIDEOS_CARDS;
+  
+
   return (
     <div className="container-landing">
       <section className="heroLanding">
@@ -46,7 +46,7 @@ const Landing = () => {
           </div>
         </div>
       </section>
-      <VideoCards props={videoCards1} />
+      <VideoCards props={videos1} />
       <div className="wrapper">
         <div className="item item1 ">TALK</div>
         <div className="item item2 ">
@@ -65,7 +65,7 @@ const Landing = () => {
           <img src="/discordAnimate.webp" alt="" />
         </div>
       </div>
-      <VideoCards props={videoCards2} />
+      <VideoCards props={videos2} />
       <section className="download">
         <div className="remove-grid">
           <div className="download-container">
