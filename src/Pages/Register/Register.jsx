@@ -2,6 +2,7 @@ import React from "react";
 import "./Register.css";
 import Form from "../../Components/Form/Form";
 import { Link } from "react-router-dom";
+import { Form2 } from "../../Components";
 const Register = () => {
   const formContent = [
     {
@@ -36,7 +37,8 @@ const Register = () => {
       <div className="container-form-register">
         <div className="container-form">
           <h2>Create an account</h2>
-          <Form formContent={formContent} path={"/"} />
+          {/* <Form formContent={formContent} path={"/"} /> */}
+          <Form2></Form2>
           <div className="alreadyAccount">
             <Link to={"/login"} className="link-alreadyAccount">
               Already have an account?

@@ -51,6 +51,10 @@ const Discover = () => {
       icon: <FiMonitor />,
     },
   ];
+  const {username, display} = JSON.parse(localStorage.getItem("formValues"));
+ 
+  
+
   return (
     <div className="containerDiscover">
       <div>
@@ -71,9 +75,9 @@ const Discover = () => {
         <div className="containerImgProfile">
           <img src={lmfao} alt="" />
           <div>
-            <p className="profileName">Facundo</p>
-            <p className="profileId">#00000</p>
+            <p className="profileName">{display}</p>
           </div>
+            <p className="profileId">#{username}</p>
         </div>
         <div className="iconsProfileSett">
           <section>

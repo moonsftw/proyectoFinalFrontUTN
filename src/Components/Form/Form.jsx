@@ -9,6 +9,8 @@ const Form = ({ formContent, path }) => {
     display: "",
     username: "",
   };
+  const [isDisabled, setIsDisabled ] = useState([])
+  const [botonActivo, setBotonActivo] = useState(false);
   const navigation = useNavigate();
   const [formValues, setFormValues] = useState(initialStateForm);
   const handleChangeFormValue = (e) =>
@@ -21,9 +23,13 @@ const Form = ({ formContent, path }) => {
   };
 
   const handleError = ({ label }) => {
-    return formValues[label].length > 0 && formValues[label].length < 5;
+    const condicion = formValues[label].length > 0 && formValues[label].length < 5;
+    /* setIsDisabled(...isDisabled, [condicion]); */
+    return condicion;
   };
 
+
+  
   return (
     <>
       <form
@@ -39,7 +45,7 @@ const Form = ({ formContent, path }) => {
               id={label}
               value={formValues[label]}
               onChange={handleChangeFormValue}
-              onBlur={() => handleError({ label })}
+              /* onBlur={() => handleError({ label })} */
               required
               minLength={4}
               maxLength={30}
@@ -69,7 +75,7 @@ const Form = ({ formContent, path }) => {
             </label>
           </section>
         )}
-        <button disabled={false} type="submit">
+        <button disabled={botonActivo} type="submit">
           Continue
         </button>
       </form>

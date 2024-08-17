@@ -1,7 +1,68 @@
 import React, { useState } from "react";
 import "./Verification.css";
+import Form from "../../Components/Form/Form";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import Swal from "sweetalert2";
+
 const Verification = () => {
+    const valuesIniciales = {
+      email: "",
+      password:""
+    }
+    const navigate = useNavigate();
     const [mostrarComponente, setMostrarComponente] = useState(false);
+    const [values, setValues ] = useState(valuesIniciales)
+
+    const contentVerification = [
+      {
+        id: 1,
+        label: "email",
+        type: "email",
+        isLink: false,
+        link: "#",
+        anchor:"",
+      },
+      {
+        id: 2,
+        label: "password",
+        type: "password",
+        isLink: true,
+        link: "",
+        anchor:"Forgot your password?",
+      }
+    ]
+
+    const datos_guardados = localStorage.getItem("formValues");
+    const datosJSON = JSON.parse(datos_guardados);
+    console.log(datosJSON.email)
+    const handleClickVerify = (e) => {
+      if(datosJSON.email !== values.email || datosJSON.password !== values.password){
+        /* Swal.fire({
+          title: "Credenciales inválidas",
+          text: "😐",
+          icon: "warning",
+          showDenyButton: true,
+          denyButtonText: "Volver",
+          confirmButtonText: "Registrarme",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            navigate("/register")
+          } else if (result.isDenied) {
+            navigate("/home")
+          }
+        }) */
+          Swal.fire("Credenciales inválidas", "😐", 'warning')
+          navigate("/")
+      }
+      else{
+        Swal.fire("Me alegra que estés de vuelta", "😊", 'success')
+        navigate("/home")
+      }
+
+    }
+
+    
 
   return (
     <div className="container">
@@ -17,7 +78,7 @@ const Verification = () => {
           <a href="#">Learn More</a>
         </div>
         <div className="button-verificationRequired">
-          <button onClick={() => setMostrarComponente(!mostrarComponente)}>
+          <button onClick={() => setMostrarComponente(true)}>
             Verify by Email
           </button>
         </div>
@@ -33,21 +94,21 @@ const Verification = () => {
                   email address.
                 </p>
               </div>
-
+            {/* <Form formContent={contentVerification} path={"/home"}></Form> */}
               <form
                 action="
             "
               >
                 <div className="">
                   <label htmlFor="">EMAIL</label>
-                  <input type="email" />
+                  <input type="email" name="email" id="email" value={values.email} onChange={(e) => setValues({...values, email: e.target.value})}/>
                 </div>
                 <div>
                   <label htmlFor="">PASSWORD</label>
-                  <input type="password" />
+                  <input type="password" name="password" id="password"  value={values.password} onChange={(e) => setValues({...values, password: e.target.value})}/>
                 </div>
+                <button type="submit" onClick={handleClickVerify}>Verify Account</button>
               </form>
-              <button>Verify Account</button>
             </div>
           </>
         )}

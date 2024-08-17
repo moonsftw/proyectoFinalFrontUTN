@@ -113,6 +113,11 @@ Errores en formulario, diccionario de errores
 
 # Clase 7 - Context con localstorage
 
+renderizado condicional
+
+new FormData(), lo usamos para recopilar la info del form ver uso en [handleCreateUsuario](./src/Context/GlobalContext.jsx)
 # Clase 8 - Use effects - Vercel
 
 # Clase 9 - Repaso final
+
+Libreria Sweetalert2 > npm install sweetalert2
