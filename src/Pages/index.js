@@ -6,9 +6,10 @@ import Landing  from "./Landing/Landing"
 import Login from "./Login/Login"
 import NotFound from "./NotFound/NotFound"
 import Register from "./Register/Register"
+import Reviews from "../Components/Reviews/Reviews"
 import Servers from "./Servers/Servers"
 import Verification from "./Verification/Verification"
-Comunidad
+
 export{
     Comunidad,
     CardPage,
@@ -19,5 +20,6 @@ export{
     Register,
     Login,
     InviteInvalid,
-    Servers
+    Servers,
+    Reviews
 }

@@ -6,6 +6,7 @@ import { VIDEOS_CARDS } from "../../Data";
 import { Link } from "react-router-dom";
 import {motion as m } from "framer-motion";
 import { GiDuration } from "react-icons/gi";
+import Reviews from "../../Components/Reviews/Reviews";
 
 const Landing = () => {
   const [videos1, videos2] = VIDEOS_CARDS;
@@ -74,6 +75,11 @@ const Landing = () => {
         </div>
       </div>
       <VideoCards props={videos2} />
+      <section className="reviews">
+          <h2 className="primary-title">Ellos ya nos eligieron</h2>
+          <Reviews />
+
+      </section>
       <section className="download">
         <div className="remove-grid">
           <div className="download-container">

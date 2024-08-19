@@ -130,7 +130,10 @@ npm install use-local-storage (para ver las preferencias del sistema del usuario
 # Clase 8 - Use effects - [Vercel](https://d1lb3lf90ja1l2.cloudfront.net/81889724473/81889724473-meeting-db7dc408-1d06-4949-b55c-4aee87c16c88.mp4) 32:59
 
 
+Libreria Sweetalert2 > npm install sweetalert2
+
+[CSS - Tricks](https://css-tricks.com/)
+[Patterns Dev](https://www.patterns.dev/)
+[Frontend Mentor](https://www.frontendmentor.io/)
 
 # Clase 9 - Repaso final
-
-Libreria Sweetalert2 > npm install sweetalert2

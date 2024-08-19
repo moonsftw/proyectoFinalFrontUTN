@@ -11,9 +11,11 @@ import {
   Login,
   NotFound,
   Register,
+
   Servers,
   Verification,
 } from "./Pages";
+
 
 function App() {
   const rutas = [
@@ -76,6 +78,7 @@ function App() {
       id: 10
 
     },
+   
   ];
   return (
     <Router>
