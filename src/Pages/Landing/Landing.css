@@ -454,12 +454,12 @@
     animation-range: enter;
   }
 }
-@media (max-width: 1024px){
+/* @media (max-width: 1024px){
   .wrapper{
     display: none;
   }
   .reviews{
     display: none;
   }
-}
+} */
 
