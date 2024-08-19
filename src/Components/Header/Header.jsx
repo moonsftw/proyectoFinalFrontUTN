@@ -6,13 +6,14 @@ import { Link } from "react-router-dom";
 
 
 const Header = (props) => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(true)
+
   return (
     <header className={`${props.className} container`}>
       <Link to={"/"} className="logo">
         <img src="/modernLogo.svg" alt="" />
       </Link>
-     
+      <NavBar className={'visible'} />
       <div className="nav-items-right">
         {localStorage.getItem("formValues") ? (
           <Link to={"/@me"} className="btn-login">
@@ -25,17 +26,21 @@ const Header = (props) => {
         )}
         <span className="mobile-toggle">
           {
-            open ?
-            <button onClick={() => {setOpen(!open)}}>
+            !open ?
+              <>
 
-              <IoClose className="btn-close" />
-              <NavBar />
-            </button>
-            :
-            <button onClick={() => {setOpen(!open)}}>
+                <NavBar className={''}>
+                  <button onClick={() => { setOpen(!open) }}>
+                    <IoClose className="btn-close" />
+                  </button>
+                </NavBar >
+              </>
+              :
+                
+              <button onClick={() => { setOpen(!open) }}>
+                <IoMenu className="btn-open" />
 
-              <IoMenu className="btn-open" />
-            </button>
+              </button>
 
           }
         </span>

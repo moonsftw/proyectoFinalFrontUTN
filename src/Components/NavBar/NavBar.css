@@ -1,5 +1,7 @@
 .main-nav{
   display: flex;
+  flex-direction: row;
+  padding: 2.3rem;
 }
 .nav-list{
   display: flex;
@@ -13,13 +15,19 @@
 .nav-link:hover{
   text-decoration: underline;
 }
+.visible{
+  visibility: visible;
+}
 @media (max-width: 1240px){
+  .main-nav.visible{
+    visibility: hidden;
+  }
   .main-nav{
     position: fixed;
     inset: 0 0 0 50%;
     display: flex;
     flex-direction: column;
-    padding: min(30vh, 10rem) 2em;
+    /* padding: min(30vh, 10rem) 2em; */
     background: hsl(0 0% 0% / 0.5);
   }
 
@@ -30,11 +38,10 @@
     }
   }
   .nav-list{
-    padding-top: 10rem;
+    padding-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: left;
   }
   .nav-link{
     color: black;

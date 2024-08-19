@@ -79,12 +79,7 @@ div > .main-header{
     max-width: var(--container-width);
     margin: 0 auto;
 }
-.main-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem .5rem;
-}
+
 .logo{
   display: flex;  
   width: 6rem;
