@@ -454,12 +454,11 @@
     animation-range: enter;
   }
 }
-/* @media (max-width: 1024px){
-  .wrapper{
+@media (max-width: 1024px){
+  .wrapper,
+  .reviews > h2{
     display: none;
   }
-  .reviews{
-    display: none;
-  }
-} */
+  
+}
 
