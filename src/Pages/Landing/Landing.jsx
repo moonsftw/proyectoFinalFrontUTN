@@ -4,24 +4,46 @@ import { IoMdDownload } from "./../../assets/icons";
 import { Footer, Header, VideoCards } from "../../Components";
 import { VIDEOS_CARDS } from "../../Data";
 import { Link } from "react-router-dom";
-import {motion as m } from "framer-motion";
+import { motion as m } from "framer-motion";
 import { GiDuration } from "react-icons/gi";
 import Reviews from "../../Components/Reviews/Reviews";
 
 const Landing = () => {
   const [videos1, videos2] = VIDEOS_CARDS;
-  
+
 
   return (
-    <m.div 
-      initial={{opacity:0}} 
-      animate={{opacity:1}} 
-      exit={{opacity:0}} 
-      transition={{duration: 1.75}}
-      className="container-landing"
-    >
-      <section className="heroLanding">
-        <Header className="main-header" />
+    <>
+
+      <Header className="main-header" />
+      <section className="landing-hero">
+        <div className="landing-hero-content">
+
+          <article>
+            <h1 className="primary-title">GROUP CHAT THAT'S ALL FUN & GAMES</h1>
+            <p className="hero-description">Discord is great for playing games and chilling with friends, or
+              even building a worldwide community. Customize your own space to
+              talk, play, and hang out.</p>
+          </article>
+          <img src="664daa37ea162cadf9603500_Art.webp" alt="" />
+        </div>
+        <div className="hero-btn-group">
+          <div className="containerBtnDownload">
+            <IoMdDownload className="btn-download" />
+            Download for Windows
+          </div>
+
+          {localStorage.getItem("formValues") && (
+            <Link to={"/@me"}>
+              <div className="btn btn-large btn-dark">
+                Open Discord in your browser
+              </div>
+            </Link>
+          )}
+        </div>
+      </section>
+
+      {/* <section className="heroLanding">
         <div className="main-hero">
           <div className="hero-content-wrap">
             <div className="heroContainer">
@@ -54,7 +76,7 @@ const Landing = () => {
             )}
           </div>
         </div>
-      </section>
+      </section> */}
       <VideoCards props={videos1} />
       <div className="wrapper">
         <div className="item item1 ">TALK</div>
@@ -76,8 +98,8 @@ const Landing = () => {
       </div>
       <VideoCards props={videos2} />
       <section className="reviews">
-          <h2 className="primary-title">Ellos ya nos eligieron</h2>
-          <Reviews />
+        <h2 className="primary-title">Ellos ya nos eligieron</h2>
+        <Reviews />
 
       </section>
       <section className="download">
@@ -95,8 +117,9 @@ const Landing = () => {
         </div>
       </section>
 
-      <Footer className="found" />
-    </m.div>
+      {/*  <Footer className="found" /> */}
+
+    </>
   );
 };
 export default Landing;

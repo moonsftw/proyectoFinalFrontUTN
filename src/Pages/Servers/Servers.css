@@ -4,11 +4,13 @@
 }
 .hero-server-img {
   position: absolute;
-  background-color: red;
   top: 0;
   height: 400px;
   width: 100%;
-  z-index: -1;
+  z-index: -10;
+}
+main > .main-header{
+  background-color: #5125F3;
 }
 
 .fondo-servers {
@@ -89,7 +91,6 @@
   padding-block: 2rem;
   width: min(95%, 100rem);
   margin-inline: auto; */
-  background-color: red;
 }
 
 @media (min-width: 1024px) {

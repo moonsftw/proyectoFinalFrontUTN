@@ -89,9 +89,9 @@ const Servers = () => {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 1 }}
     >
-   
+
+        <Header className="main-header" />
       <div className="hero-servers">
-      <Header className="main-header" />
         <div className="hero-server-img">
           <img
             className="fondo-servers"
@@ -109,7 +109,7 @@ const Servers = () => {
             alt=""
           />
         </div>
-         <div className="hero-server-img-content">
+        <div className="hero-server-img-content">
           <h1 className="title-img">find your community on discord</h1>
           <p className="text-img">
             From gaming, to music, to learning, there's a place for you
@@ -129,7 +129,7 @@ const Servers = () => {
               <icons.search className="server-input-search-icon" />
             </button>
           </form>
-        </div> 
+        </div>
       </div>
       <div className="filter-servers">
         <ButtonList
@@ -137,10 +137,10 @@ const Servers = () => {
           categories={newCategories}
           filterCategory={filterCategory}
         />
-         <div className="servers-match">
+        <div className="servers-match">
           <CardServer servers={cardsServers} />
-        </div> 
-      </div> 
+        </div>
+      </div>
     </m.main>
   );
 };
