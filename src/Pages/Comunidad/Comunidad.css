@@ -44,6 +44,7 @@
   left: 10%;
   border-radius: 20px;
   height: 20rem;
+  object-fit: contain;
 }
 .comunidad-container-banner > .comunidad-logo {
   visibility: hidden;
