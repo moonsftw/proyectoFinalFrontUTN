@@ -458,5 +458,8 @@
   .wrapper{
     display: none;
   }
+  .reviews{
+    display: none;
+  }
 }
 
