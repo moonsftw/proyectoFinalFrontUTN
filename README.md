@@ -1,3 +1,11 @@
+>[!NOTE]
+> # TO DO
+> Estilo mobile hero landing
+> Estilo mobile register
+> Ver chats, mandar msjs del input
+> Configurar para que se vean los servers en el inicio de sesión
+> Estilos página de chats
+
 >[!IMPORTANT]
 >
 >ESTO ES UN PROYECTO PERSONAL PARA PRESENTAR EN LA DIPLOMATURA TAL, SOLO ME GUIÉ DEL DISEÑO DE LA PÁGINA DE DISCORD, NO BUSCO COPIAR CON MALAS INTENCIONES, SOLO SOY UN ESTUDIANTE QUE ADMIRA A DISCORD
