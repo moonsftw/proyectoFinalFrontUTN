@@ -2,16 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./Servers.css";
 import { DISCORD_SERVERS as servers } from "../../Data";
 import { ArticleList, ButtonList, Header } from "../../Components";
-import {motion as m } from "framer-motion";
+import { motion as m } from "framer-motion";
 
 import * as icons from "./../../../src/assets/icons";
 import CardServer from "../../Components/CardServer/CardServer";
 import { useGlobalContext } from "../../Context/GlobalContext";
 
-
-
 const Servers = () => {
- /*  const {handleChangeSearchTerm, searchTerm, servers} = useGlobalContext(); */
+  /*  const {handleChangeSearchTerm, searchTerm, servers} = useGlobalContext(); */
   const [searchTerm, setSearchTerm] = useState("");
 
   const allCategories = [
@@ -41,7 +39,7 @@ const Servers = () => {
   };
   const handleInputServers = (e) => {
     e.preventDefault();
-   /*  setCardsServers(
+    /*  setCardsServers(
       servers.filter(
         (server) =>
           console.log(
@@ -73,18 +71,27 @@ const Servers = () => {
     setSearchTerm(e.target.value);
   };
   useEffect(() => {
-    console.log(searchTerm)
-    if(searchTerm != ""){
-        setCardsServers(cardsServers.filter(server => server.title.toLowerCase().includes(searchTerm.toLowerCase())));
+    console.log(searchTerm);
+    if (searchTerm != "") {
+      setCardsServers(
+        cardsServers.filter((server) =>
+          server.title.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+      );
     } else {
-        setCardsServers(servers);
+      setCardsServers(servers);
     }
   }, [searchTerm]);
 
   return (
-    <m.main initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 1 }}>
+    <m.main
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 1 }}
+    >
+   
       <div className="hero-servers">
-        <Header className="main-header" />
+      <Header className="main-header" />
         <div className="hero-server-img">
           <img
             className="fondo-servers"
@@ -102,7 +109,7 @@ const Servers = () => {
             alt=""
           />
         </div>
-        <div className="hero-server-img-content">
+         <div className="hero-server-img-content">
           <h1 className="title-img">find your community on discord</h1>
           <p className="text-img">
             From gaming, to music, to learning, there's a place for you
@@ -122,17 +129,18 @@ const Servers = () => {
               <icons.search className="server-input-search-icon" />
             </button>
           </form>
-        </div>
+        </div> 
       </div>
       <div className="filter-servers">
         <ButtonList
+          className="btn-servers"
           categories={newCategories}
           filterCategory={filterCategory}
         />
-        <div className="servers-match">
+         <div className="servers-match">
           <CardServer servers={cardsServers} />
-        </div>
-      </div>
+        </div> 
+      </div> 
     </m.main>
   );
 };
