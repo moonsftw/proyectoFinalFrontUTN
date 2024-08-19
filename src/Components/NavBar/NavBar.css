@@ -20,13 +20,26 @@
     display: flex;
     flex-direction: column;
     padding: min(30vh, 10rem) 2em;
-    background-color: hsl(0 0% 100% / 0.1);
-    backdrop-filter: blur(1rem)
+    background: hsl(0 0% 0% / 0.5);
+  }
+
+  @supports (backdrop-filter: blur(1rem)){
+    .main-nav{
+      background: hsl(0 0% 100% / 0.1);
+      backdrop-filter: blur(1rem);
+    }
   }
   .nav-list{
+    padding-top: 10rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: left;
+  }
+  .nav-link{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
   }
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoMenu, IoClose } from "./../../assets/icons";
 import "./Header.css";
 import NavBar from "../NavBar/NavBar";
@@ -6,12 +6,13 @@ import { Link } from "react-router-dom";
 
 
 const Header = (props) => {
+  const [open, setOpen] = useState(false)
   return (
     <header className={`${props.className} container`}>
       <Link to={"/"} className="logo">
         <img src="/modernLogo.svg" alt="" />
       </Link>
-      <NavBar />
+     
       <div className="nav-items-right">
         {localStorage.getItem("formValues") ? (
           <Link to={"/@me"} className="btn-login">
@@ -23,8 +24,20 @@ const Header = (props) => {
           </Link>
         )}
         <span className="mobile-toggle">
-          <IoMenu className="btn-open" />
-          <IoClose className="btn-close" />
+          {
+            open ?
+            <button onClick={() => {setOpen(!open)}}>
+
+              <IoClose className="btn-close" />
+              <NavBar />
+            </button>
+            :
+            <button onClick={() => {setOpen(!open)}}>
+
+              <IoMenu className="btn-open" />
+            </button>
+
+          }
         </span>
       </div>
     </header>
