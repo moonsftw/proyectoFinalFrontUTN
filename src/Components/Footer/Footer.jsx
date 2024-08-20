@@ -8,8 +8,9 @@ import {
   FaFacebookSquare,
 } from "./../../assets/icons";
 import "./Footer.css";
-import GroupLinks from "../GroupLinks/GroupLinks";
+
 import { Link } from "react-router-dom";
+import { GroupLinks } from "@/Components";
 
 const Footer = (props) => {
   return (

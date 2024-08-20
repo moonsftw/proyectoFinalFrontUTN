@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IoMenu, IoClose } from "./../../assets/icons";
+import { IoMenu, IoClose } from "@/assets/icons";
 import "./Header.css";
 import NavBar from "../NavBar/NavBar";
 import { Link } from "react-router-dom";

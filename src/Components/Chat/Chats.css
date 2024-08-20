@@ -1,0 +1,23 @@
+.windows-chat{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    background-color: #393943;
+    height: 80vh;
+    gap: 10px;
+    padding: 2rem;
+    
+}
+.windows-chat > p {
+    padding: 1.5rem 2rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: left;
+    align-items: end;
+    text-align: left;
+    width: auto;
+   
+}

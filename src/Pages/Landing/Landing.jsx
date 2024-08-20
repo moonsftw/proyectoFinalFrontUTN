@@ -117,7 +117,7 @@ const Landing = () => {
         </div>
       </section>
 
-      {/*  <Footer className="found" /> */}
+       <Footer className="found" />
 
     </>
   );

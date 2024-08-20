@@ -10,6 +10,9 @@ export const GlobalContextProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [cardsServers, setCardsServers] = useState(servers);
 
+  const obtenerServerId = (id) => {
+    return servers.find((server) => Number(server.id) === Number(id));
+  }
   const handleChangeSearchTerm = (e) => {
     setSearchTerm(e.target.value);
   };
@@ -27,6 +30,7 @@ export const GlobalContextProvider = ({ children }) => {
         handleChangeSearchTerm,
         searchTerm,
         servers,
+        obtenerServerId
       }}
     >
       {children}

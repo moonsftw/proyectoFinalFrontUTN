@@ -145,3 +145,6 @@ Libreria Sweetalert2 > npm install sweetalert2
 [Frontend Mentor](https://www.frontendmentor.io/)
 
 # Clase 9 - Repaso final
+
+
+[Rutas absolutas](https://lenguajejs.com/javascript/modulos/alias-import/)

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import { FiSearch } from "../../assets/icons";
+import { FiSearch } from "@/assets/icons";
 const Hero = () => {
   return (
     <div className="containerHero">

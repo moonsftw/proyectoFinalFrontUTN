@@ -1,18 +1,17 @@
 import React from "react";
 import "./Comunidad.css";
-import { Footer, Header } from "../../Components";
-import * as icons from "./../../assets/icons";
+import { Footer, Header } from "@/Components";
+import * as icons from "@/assets/icons";
 import { Link, useParams } from "react-router-dom";
-import { DISCORD_SERVERS as servers} from "../../Data";
+import { DISCORD_SERVERS as servers} from "@/Data";
+import { useGlobalContext } from "../../Context/GlobalContext";
 
 const Comunidad = () => {
   const parametros = useParams();
-  const obtenerServerId = (id) => {
-    return servers.find((server) => Number(server.id) === Number(id));
-  }
 
+  const { obtenerServerId } = useGlobalContext();
   const comunidad = obtenerServerId(parametros.id)
-  console.log(comunidad)
+
 
   return (
     <>

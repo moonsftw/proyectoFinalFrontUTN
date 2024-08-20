@@ -1,20 +1,13 @@
-import React from "react";
-import {Groups, Discover, MainContent} from "../../Components"
+import React, { useEffect, useState } from "react";
+
+
 
 import './Home.css'
+import { Discover } from "../../Components";
 const Home = () => {
-  return (
-    <div className="home">
-      {/* Contacto + Grupos */}
-      <Groups />
-      {/* Discover */}
-      <Discover />
-      {/* Principal */}
-      <MainContent />
-      {/* Hero */}
-      {/* Featured */}
-    </div>
-  );
+  return(
+    <Discover />
+  )
 };
 
 export default Home;

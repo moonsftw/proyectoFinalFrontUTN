@@ -43,11 +43,12 @@ main > .main-header{
 .hero-server-img-content > p {
   width: 500px;
   text-align: center;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
  .form-server {
   position: absolute;
   left: 25%;
+  height: 100px;
   width: 50% ;
   display: flex;
   flex-direction: row;

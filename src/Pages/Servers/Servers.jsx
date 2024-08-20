@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Servers.css";
-import { DISCORD_SERVERS as servers } from "../../Data";
-import { ArticleList, ButtonList, Header } from "../../Components";
+import { DISCORD_SERVERS as servers } from "@/Data";
+import { ArticleList, ButtonList, Header } from "@/Components";
 import { motion as m } from "framer-motion";
 
-import * as icons from "./../../../src/assets/icons";
-import CardServer from "../../Components/CardServer/CardServer";
-import { useGlobalContext } from "../../Context/GlobalContext";
+import * as icons from "@/assets/icons";
+import CardServer from "@/Components/CardServer/CardServer";
+import { useGlobalContext } from "@/Context/GlobalContext";
 
 const Servers = () => {
   /*  const {handleChangeSearchTerm, searchTerm, servers} = useGlobalContext(); */
@@ -139,7 +139,7 @@ const Servers = () => {
           filterCategory={filterCategory}
         />
         <div className="servers-match">
-          <CardServer servers={cardsServers} />
+          <CardServer param={'server'} servers={cardsServers} />
         </div>
       </div>
     </m.main>

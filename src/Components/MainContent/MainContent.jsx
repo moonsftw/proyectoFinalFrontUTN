@@ -1,7 +1,7 @@
 import React from 'react'
 import './MainContent.css'
 
-import { Hero, Featured} from './../index.js'
+import { Hero, Featured} from '@/Components'
 
 
 const MainContent = () => {

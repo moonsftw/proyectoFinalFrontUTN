@@ -13,6 +13,10 @@ import ButtonList from "./ButtonList/ButtonList"
 import ArticleList from "./ArticleList/ArticleList"
 import Form from "./Form/Form"
 import Form2 from "./Form2/Form2"
+import GroupLinks from "./GroupLinks/GroupLinks"
+import CardServer from "./CardServer/CardServer"
 
 
-export { Form2, Form, ArticleList, ButtonList, Groups, Discover, MainContent,Hero,Featured,Card, Header, Footer, NavBar, VideoCards}
+
+
+export {CardServer, GroupLinks, Form2, Form, ArticleList, ButtonList, Groups, Discover, MainContent,Hero,Featured,Card, Header, Footer, NavBar, VideoCards}

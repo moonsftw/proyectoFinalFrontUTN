@@ -15,6 +15,8 @@ import {
   Servers,
   Verification,
 } from "./Pages";
+import { Discover } from "./Components";
+import Chat from "./Components/Chat/Chat";
 
 
 function App() {
@@ -26,7 +28,7 @@ function App() {
     },
     {
       path: "/home",
-      name: <Home /> ,
+      name: <Discover /> ,
       id: 2
 
     },
@@ -73,8 +75,14 @@ function App() {
 
     },
     {
-      path: "/card",
+      path: "/card/:id",
       name: <CardPage /> ,
+      id: 10
+
+    },
+    {
+      path: "/card/:id/chat",
+      name: <Chat /> ,
       id: 10
 
     },
