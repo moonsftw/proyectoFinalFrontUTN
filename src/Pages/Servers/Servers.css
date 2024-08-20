@@ -45,28 +45,31 @@ main > .main-header{
   text-align: center;
   padding-bottom: 1rem;
 }
-.hero-server-img-content > form {
-  width: 300px;
+ .form-server {
+  position: absolute;
+  left: 25%;
+  width: 50% ;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding-bottom: 5rem;
   gap: 0;
 }
 
-.hero-server-img-content > form > div {
+.form-server > div {
   width: 90%;
 }
 
-.hero-server-img-content > form > div > input {
+.form-server > div > input {
   height: 40px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   margin: 0;
   padding: 1rem;
+  z-index: 99999;
 }
-.hero-server-img-content > form > button {
+.form-server > button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,20 +81,14 @@ main > .main-header{
   border-bottom-left-radius: 0px;
   background-color: #1e1f22;
   padding: 0;
+  cursor: pointer;
 }
 .filter-servers {
   display: flex;
   flex-direction: column;
   padding-top: 7.8rem;
 }
-.server-match {
-/*   display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
-  padding-block: 2rem;
-  width: min(95%, 100rem);
-  margin-inline: auto; */
-}
+
 
 @media (min-width: 1024px) {
   .izq-servers {

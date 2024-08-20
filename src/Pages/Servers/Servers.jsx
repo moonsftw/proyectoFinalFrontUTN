@@ -90,7 +90,7 @@ const Servers = () => {
       exit={{ opacity: 1 }}
     >
 
-        <Header className="main-header" />
+      <Header className="main-header" />
       <div className="hero-servers">
         <div className="hero-server-img">
           <img
@@ -114,23 +114,24 @@ const Servers = () => {
           <p className="text-img">
             From gaming, to music, to learning, there's a place for you
           </p>
-          <form>
-            <div>
-              <input
-                type="text"
-                placeholder="Explore Communities"
-                name={"searchServer"}
-                id={"searchServer"}
-                onChange={handleChangeSearchTerm}
-                value={searchTerm}
-              />
-            </div>
-            <button>
-              <icons.search className="server-input-search-icon" />
-            </button>
-          </form>
+
         </div>
       </div>
+      <form className="form-server">
+        <div>
+          <input
+            type="text"
+            placeholder="Explore Communities"
+            name={"searchServer"}
+            id={"searchServer"}
+            onChange={handleChangeSearchTerm}
+            value={searchTerm}
+          />
+        </div>
+        <button>
+          <icons.search className="server-input-search-icon" />
+        </button>
+      </form>
       <div className="filter-servers">
         <ButtonList
           className="btn-servers"
