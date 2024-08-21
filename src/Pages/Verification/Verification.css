@@ -48,11 +48,25 @@
 }
 
 @media (min-width: 1024px){
+    
+    .container{
+        width: 100%;
+        background-color:#313338 ;
+    }
+    .verificationRequired{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-inline: auto;
+    }
     .body-verificationRequired{
-        width: 33rem;
-        text-align: center;
-        padding-bottom: 20px;
-        
+        width: 40rem;
+    }
+    .verification{
+        width: 100%;
+    }
+    .containerVerification > form > button{
+        width: 100%;
     }
    /*  .button-verification button {
         padding: 20px; */

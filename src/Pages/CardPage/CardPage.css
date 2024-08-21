@@ -1,4 +1,42 @@
 .card-page-container{
     background-color: #313338;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.card-page-container > .chat {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 35rem;
+}
+.card-page-container > .chat > .chat-title > h1{
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    text-align: center;
+    
+}
+.card-page-container > .chat > .chat-buttons{
+    display: flex;
+    gap: 10px;
+}
+.card-page-container > .chat > .chat-buttons > button:first-child {
+    background-color: #5865F2;
+}
+.card-page-container > .chat > .chat-buttons > button:last-child {
+    background-color: white;
+    color: black
+}
+.card-page-container > .chat > .chat-buttons > button:first-child:hover {
+    background-color: rgb(123, 133, 238);
+    color: rgb(56, 10, 116)
+}
+.card-page-container > .chat > .chat-buttons > button:last-child:hover {
+    background-color: rgb(199, 198, 198);
+    color: rgb(56, 10, 116)
 }

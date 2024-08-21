@@ -45,23 +45,13 @@ const Discover = () => {
     <main className="discover">
       <section className="discover-contacts">
         <Groups></Groups>
-        {/* <div className="discover-contacts-img">
-          <img src={lmfao} alt="" />
-        </div> */}
       </section>
-      <section className="discover-categories">
-        <ButtonList
-          className="btn-servers"
-          categories={newCategories}
-          filterCategory={filterCategory}
-        />
-      </section>
+
       <section className="discover-comunidad">
         <div className="discover-comunidad-img">
           <img src="/servers/main/fondoServers.svg" alt="" />
           <form className="form-server">
             <div>
-              
               <input
                 type="text"
                 placeholder="Find your Community"
@@ -76,7 +66,15 @@ const Discover = () => {
             </button>
           </form>
         </div>
-        <CardServer param={'card'} servers={cardsServers} />
+        <ButtonList
+          className="btn-servers"
+          categories={newCategories}
+          filterCategory={filterCategory}
+        />
+        <div className="discover-container-cards">
+
+        <CardServer param={"card"} servers={cardsServers} />
+        </div>
       </section>
     </main>
   );

@@ -11,6 +11,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/bloxFtruits.jpg",
     logo: "/servers/logos/bloxFtruits.jpg",
+    color: "#30BAFA"
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ export const DISCORD_SERVERS = [
     partnered: true,
     banner: "/servers/banners/valorant.jpg",
     logo: "/servers/logos/valorant.jpg",
+    color: "#AF6FCE",
   },
   {
     id: 3,
@@ -37,6 +39,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/fortnite.jpg",
     logo: "/servers/logos/fortnite.jpg",
+    color: "#FD753C",
   },
   {
     id: 4,
@@ -49,6 +52,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/helldivers.jpg",
     logo: "/servers/logos/helldivers.jpg",
+    color: "#FFE80A"
   },
   /* {
         id: 5,
@@ -73,6 +77,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/viggle.jpg",
     logo: "/servers/logos/viggle.jpg",
+    color: "#2C360F",
   },
   {
     id: 7,
@@ -86,6 +91,7 @@ export const DISCORD_SERVERS = [
     partnered: true,
     banner: "/servers/banners/nohesi.jpg",
     logo: "/servers/logos/nohesi.jpg",
+    color: "#9C55A6",
   },
   {
     id: 8,
@@ -98,6 +104,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/belugang.jpg",
     logo: "/servers/logos/belugang.jpg",
+    color: "#FFDA96",
   },
   {
     id: 9,
@@ -111,6 +118,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/limewire.jpg",
     logo: "/servers/logos/limewire.jpg",
+    color:"#C2F100"
   },
   {
     id: 10,
@@ -124,6 +132,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/studytogether.jpg",
     logo: "/servers/logos/studytogether.jpg",
+    color: "#D0522F"
   },
   {
     id: 11,
@@ -137,6 +146,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/python.jpg",
     logo: "/servers/logos/python.jpg",
+    color: "#E99EAF"
   },
   {
     id: 12,
@@ -150,6 +160,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/bnbchain.jpg",
     logo: "/servers/logos/bnbchain.jpg",
+    color: "#EDBD0A"
   },
   {
     id: 13,
@@ -163,6 +174,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/leonardo.jpg",
     logo: "/servers/logos/leonardo.jpg",
+    color: "#47A29A"
   },
   {
     id: 14,
@@ -176,6 +188,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/adobe.jpg",
     logo: "/servers/logos/adobe.jpg",
+    color: "#F79078"
   },
   {
     id: 15,
@@ -189,6 +202,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/aihub.jpg",
     logo: "/servers/logos/aihub.jpg",
+    color: "#20CAFF"
   },
   /*   {
         id: 16,
@@ -214,6 +228,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/lofi.jpg",
     logo: "/servers/logos/lofi.jpg",
+    color: "#8A322A"
   },
   {
     id: 18,
@@ -227,6 +242,7 @@ export const DISCORD_SERVERS = [
     partnered: true,
     banner: "/servers/banners/mythpat.jpg",
     logo: "/servers/logos/mythpat.jpg",
+    color: "#978DFD"
   },
   {
     id: 19,
@@ -240,6 +256,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/rythm.jpg",
     logo: "/servers/logos/rythm.jpg",
+    color: "#226EFF"
   },
   {
     id: 20,
@@ -253,5 +270,6 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/soundboard.jpg",
     logo: "/servers/logos/soundboard.jpg",
+    color: "#A9A9A9"
   },
 ];

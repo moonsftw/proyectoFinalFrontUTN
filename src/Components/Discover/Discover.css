@@ -19,12 +19,13 @@
     position: fixed;
     z-index: 10;
     
+    
 }
-.discover-categories > .categories{
+.discover-comunidad > .categories{
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 0;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem;
   
 }
 .discover-categories > .categories > .btn-category {
@@ -60,16 +61,20 @@
     /* align-items: center; */
     /* justify-content: center; */
 }
-.discover-comunidad > .link-a-comunidad > .server{
+.discover-comunidad>.discover-container-cards > .link-a-comunidad > .server{
     width: 55rem;
     color: white;
 
 }
-.discover-comunidad > .link-a-comunidad > .server:hover{
+.discover-comunidad>.discover-container-cards > .link-a-comunidad > .server:hover{
     color: black;
 }
-.discover-comunidad > .link-a-comunidad > .server > .server-content > .server-content-descrip > .server-content-descrip-insignias > .verified{
+.discover-comunidad >.discover-container-cards > .link-a-comunidad > .server > .server-content > .server-content-descrip > .server-content-descrip-insignias > .verified{
     background-color: rgb(170, 159, 159);
     color: rgb(58, 45, 45);
     font-weight: 700;
+}
+.discover-container-cards{
+    display: grid;
+    grid-template-columns: repeat(3, min(0, 1fr));
 }

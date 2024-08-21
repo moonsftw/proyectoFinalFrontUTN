@@ -1,10 +1,14 @@
-.windows-chat{
+.chat-container{
+    background-color: #393943;
+    height: 100vh;
+}
+.chat-container > .windows-chat{
     display: flex;
     flex-direction: column;
     align-items: end;
     justify-content: end;
     background-color: #393943;
-    height: 80vh;
+    height: 90vh;
     gap: 10px;
     padding: 2rem;
     
@@ -20,4 +24,31 @@
     text-align: left;
     width: auto;
    
+}
+.chat-container > form > .input-chat{
+    padding: 0;
+    display: flex;
+    
+}
+.chat-container > .container-chat-form > .form-chat{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-container > .container-chat-form > .form-chat > .input-chat{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+.chat-container > .container-chat-form > .form-chat > .input-chat > input{
+    height: auto;
+    width: 95%;
+}
+.chat-container > .container-chat-form > .form-chat > .input-chat > .btn-chat{
+    cursor: pointer;
+    width: 5%;
 }
