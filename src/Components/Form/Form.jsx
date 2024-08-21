@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Form.css";
 
@@ -9,27 +9,47 @@ const Form = ({ formContent, path }) => {
     display: "",
     username: "",
   };
-  const [isDisabled, setIsDisabled ] = useState([])
-  const [botonActivo, setBotonActivo] = useState(false);
-  const navigation = useNavigate();
+  const inputsGuardados = JSON.parse(localStorage.getItem("inputs")) || [];
+  const [inputs, setInputs] = useState(inputsGuardados);
   const [formValues, setFormValues] = useState(initialStateForm);
+
+
+  const navigation = useNavigate();
+
   const handleChangeFormValue = (e) =>
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
 
   const handleFormSubmit = (e, valoresForm) => {
     e.preventDefault();
     localStorage.setItem("formValues", JSON.stringify(valoresForm));
-    navigation(path);
-  };
+    const formulario = e.target;
+    const formularioValores = new FormData(formulario);
+    const nombre = formularioValores.get("email");
+    if(inputs.includes(formularioValores.get("email")) ){
+        alert('email ya registrado')
+    } else{
+        setInputs([...inputs, nombre]);
+        formulario.reset();
+        alert('email registrado con exito')
+      
 
+    }
+    
+    
+    
+  };
+  useEffect(() => {
+      
+    localStorage.setItem("inputs", JSON.stringify(inputs));
+    
+}, [inputs])
   const handleError = ({ label }) => {
-    const condicion = formValues[label].length > 0 && formValues[label].length < 5;
+    const condicion =
+      formValues[label].length > 0 && formValues[label].length < 5;
     /* setIsDisabled(...isDisabled, [condicion]); */
     return condicion;
   };
 
-
-  
   return (
     <>
       <form
@@ -47,7 +67,7 @@ const Form = ({ formContent, path }) => {
               onChange={handleChangeFormValue}
               /* onBlur={() => handleError({ label })} */
               required
-              minLength={4}
+              minLength={5}
               maxLength={30}
             />
             {handleError({ label }) && (
@@ -75,7 +95,7 @@ const Form = ({ formContent, path }) => {
             </label>
           </section>
         )}
-        <button disabled={botonActivo} type="submit">
+        <button onClick={() => navigation(path)} type="submit">
           Continue
         </button>
       </form>

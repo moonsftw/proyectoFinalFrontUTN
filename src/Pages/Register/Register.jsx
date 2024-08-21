@@ -37,8 +37,8 @@ const Register = () => {
       <div className="container-form-register">
         <div className="container-form">
           <h2>Create an account</h2>
-          {/* <Form formContent={formContent} path={"/"} /> */}
-          <Form2></Form2>
+          <Form formContent={formContent} path={"/"} />
+          {/* <Form2></Form2> */}
           <div className="alreadyAccount">
             <Link to={"/login"} className="link-alreadyAccount">
               Already have an account?

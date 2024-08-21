@@ -13,6 +13,7 @@ const Verification = () => {
     const navigate = useNavigate();
     const [mostrarComponente, setMostrarComponente] = useState(false);
     const [values, setValues ] = useState(valuesIniciales)
+    
 
     const contentVerification = [
       {
@@ -81,6 +82,7 @@ const Verification = () => {
           <button onClick={() => setMostrarComponente(true)}>
             Verify by Email
           </button>
+          <button onClick={() => navigate("/register")}>Sign Up</button>
         </div>
       </section>
       <section className={mostrarComponente ? "verification" : "no-display"}>
@@ -108,6 +110,7 @@ const Verification = () => {
                   <input type="password" name="password" id="password"  value={values.password} onChange={(e) => setValues({...values, password: e.target.value})}/>
                 </div>
                 <button type="submit" onClick={handleClickVerify}>Verify Account</button>
+                
               </form>
             </div>
           </>

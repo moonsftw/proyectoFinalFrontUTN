@@ -37,16 +37,22 @@
     color: #00a8fc;
    line-height: 0;
 }
-
+.button-verificationRequired {
+    display: flex;
+    gap: 10px;
+}
 .button-verificationRequired > button {
     border: none;
     padding: 10px;
     background-color: #5865f2;
     color: white;
     cursor: pointer;
-    width: 200px;
+    width: 150px;
+ 
 }
-
+.button-verificationRequired > button:hover{
+    background-color: #7f89f7;
+}
 @media (min-width: 1024px){
     
     .container{
@@ -67,6 +73,9 @@
     }
     .containerVerification > form > button{
         width: 100%;
+    }
+    .button-verificationRequired {
+        gap: 10px;
     }
    /*  .button-verification button {
         padding: 20px; */

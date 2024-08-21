@@ -17,6 +17,7 @@ import {
 } from "./Pages";
 import { Discover } from "./Components";
 import Chat from "./Components/Chat/Chat";
+import Probando from "./Pages/Probando/Probando";
 
 
 function App() {
@@ -77,13 +78,19 @@ function App() {
     {
       path: "/card/:id",
       name: <CardPage /> ,
-      id: 10
+      id: 10,
 
     },
     {
       path: "/card/:id/chat",
       name: <Chat /> ,
-      id: 10
+      id: 11,
+
+    },
+    {
+      path: "/probando",
+      name: <Probando /> ,
+      id: 12,
 
     },
    

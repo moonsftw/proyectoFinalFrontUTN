@@ -9,6 +9,16 @@ const GlobalContext = createContext();
 export const GlobalContextProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [cardsServers, setCardsServers] = useState(servers);
+  const [isLogged, setIsLogged] = useState(false);
+  const [isRegistered, setIsRegistered] = useState(false);
+
+  
+  const handleRegistered = () => {
+
+  }
+  const handleLogged = () => {
+
+  }
 
   const obtenerServerId = (id) => {
     return servers.find((server) => Number(server.id) === Number(id));
