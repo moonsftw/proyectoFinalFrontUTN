@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import "./Chats.css";
-import { useGlobalContext } from "../../Context/GlobalContext";
+import { useGlobalContext } from "@/Context/GlobalContext";
 import { IoMdSend } from "@/assets/icons";
 const Chat = () => {
   const navigate = useNavigate();

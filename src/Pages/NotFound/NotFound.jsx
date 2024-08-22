@@ -1,15 +1,8 @@
 import React from "react";
-import {
-  IoChevronDownSharp,
-  BsTwitterX,
-  FaInstagram,
-  FaFacebookSquare,
-  FaYoutube,
-  FaTiktok,
-} from "./../../assets/icons";
+
 import "./NotFound.css";
-import Header from "../../Components/Header/Header";
-import Footer from "../../Components/Footer/Footer";
+import Header from "@/Components/Header/Header";
+import Footer from "@/Components/Footer/Footer";
 const NotFound = () => {
   return (
     <>

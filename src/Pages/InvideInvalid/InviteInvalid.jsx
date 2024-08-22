@@ -1,5 +1,5 @@
-import React from 'react'
-import "./InviteInvalid.css"
+import React from "react";
+import "./InviteInvalid.css";
 const InviteInvalid = () => {
   return (
     <section className="container-invite">
@@ -7,26 +7,24 @@ const InviteInvalid = () => {
         <img src="/modernLogo.svg" alt="" />
       </div>
       <div className="container-form-invite">
-
-      <div
-        className="container-form
+        <div
+          className="container-form
       "
-      >
-        <div className='welcomeBack'>
+        >
+          <div className="welcomeBack">
+            <img src="/inviteInvalid.svg" alt="" />
+            <h2> Invite Invalid</h2>
+            <p>
+              This invite may be expired, or you might not have permission to
+              join.
+            </p>
+          </div>
 
-        <img src="/inviteInvalid.svg" alt="" />
-        <h2> Invite Invalid</h2>
-        <p>This invite may be expired, or you might not have permission to join.</p>
+          <button>Continue to Discord</button>
         </div>
-        
-        
-      
-        <button>Continue to Discord</button>
-      </div>
-      
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default InviteInvalid
+export default InviteInvalid;

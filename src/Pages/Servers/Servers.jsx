@@ -1,33 +1,40 @@
 import React, { useEffect, useState } from "react";
 import "./Servers.css";
 import { DISCORD_SERVERS as servers } from "@/Data";
-import { ArticleList, ButtonList, Header } from "@/Components";
+import {  ButtonList, Header } from "@/Components";
 import { motion as m } from "framer-motion";
 
 import * as icons from "@/assets/icons";
-import CardServer from "@/Components/CardServer/CardServer";
-import { useGlobalContext } from "@/Context/GlobalContext";
+import { CardServer } from "../../Components";
+
+
 
 const Servers = () => {
-  /*  const {handleChangeSearchTerm, searchTerm, servers} = useGlobalContext(); */
-  const [searchTerm, setSearchTerm] = useState("");
-
+  const { username, display } = JSON.parse(localStorage.getItem("formValues"));
   const allCategories = [
     "all",
     ...new Set(servers.map((server) => server.category)),
   ];
+  const [searchTerm, setSearchTerm] = useState("");
 
   const [newCategories, setNewCategories] = useState(allCategories);
   const [cardsServers, setCardsServers] = useState(servers);
-  const [categorySeleccionada, setCategorySeleccionada] = useState({
-    all: true,
-    gaming: false,
-    entertainment: false,
-    education: false,
-    music: false,
-    science: false,
-  });
-  /*  const [datosFiltrados, setDatosFiltrados] = useState([]); */
+
+  const handleChangeSearchTerm = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  useEffect(() => {
+    if (searchTerm !== "") {
+      setCardsServers(
+        servers.filter((server) =>
+          server.title.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+      );
+    } else {
+      setCardsServers(servers);
+    }
+  }, [searchTerm, servers]);
 
   const filterCategory = (category) => {
     if (category === "all") {
@@ -37,57 +44,12 @@ const Servers = () => {
     const filteredData = servers.filter((card) => card.category === category);
     setCardsServers(filteredData);
   };
-  const handleInputServers = (e) => {
-    e.preventDefault();
-    /*  setCardsServers(
-      servers.filter(
-        (server) =>
-          console.log(
-            e.target.value
-          ) 
-      )
-    ); */
-  };
-
-  /*   const handleOnCheckbox = (e) => {
-    setCategorySeleccionada({
-      ...categorySeleccionada,
-      [e.target.value]: e.target.checked,
-      all: false,
-    });
-    if (e.target.checked) {
-      const resultadoCategory = servers.filter((server) => {
-        return server.category === e.target.value;
-      });
-      setDatosFiltrados([...datosFiltrados, ...resultadoCategory]);
-    } else {
-      const resultadoCategory = datosFiltrados.filter((server) => {
-        return server.category !== e.target.value;
-      });
-      setDatosFiltrados([...resultadoCategory]);
-    }
-  }; */
-  const handleChangeSearchTerm = (e) => {
-    setSearchTerm(e.target.value);
-  };
-  useEffect(() => {
-    console.log(searchTerm);
-    if (searchTerm != "") {
-      setCardsServers(
-        cardsServers.filter((server) =>
-          server.title.toLowerCase().includes(searchTerm.toLowerCase())
-        )
-      );
-    } else {
-      setCardsServers(servers);
-    }
-  }, [searchTerm]);
 
   return (
     <m.main
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0.5 }}
     >
       <Header className="main-header" color="#000" />
       <div className="hero-servers">
@@ -123,9 +85,10 @@ const Servers = () => {
                 id={"searchServer"}
                 onChange={handleChangeSearchTerm}
                 value={searchTerm}
+                required
               />
             </div>
-            <button>
+            <button type="submit">
               <icons.search className="server-input-search-icon" />
             </button>
           </form>

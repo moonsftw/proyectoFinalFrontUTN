@@ -8,7 +8,7 @@ const CardPage = () => {
   const { obtenerServerId } = useGlobalContext();
   const chat = obtenerServerId(parametros.id);
   const navigate = useNavigate();
-  console.log(chat);
+  
   return (
     <main className="card-page-container">
       <section className="chat">

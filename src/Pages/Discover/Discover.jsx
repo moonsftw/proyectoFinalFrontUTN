@@ -12,9 +12,24 @@ const Discover = () => {
     ...new Set(servers.map((server) => server.category)),
   ];
   const [searchTerm, setSearchTerm] = useState("");
-
   const [newCategories, setNewCategories] = useState(allCategories);
   const [cardsServers, setCardsServers] = useState(servers);
+
+  const handleChangeSearchTerm = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  useEffect(() => {
+    if (searchTerm !== "") {
+      setCardsServers(
+        servers.filter((server) =>
+          server.title.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+      );
+    } else {
+      setCardsServers(servers);
+    }
+  }, [searchTerm, servers]);
 
   const filterCategory = (category) => {
     if (category === "all") {
@@ -24,20 +39,7 @@ const Discover = () => {
     const filteredData = servers.filter((card) => card.category === category);
     setCardsServers(filteredData);
   };
-  const handleChangeSearchTerm = (e) => {
-    setSearchTerm(e.target.value);
-  };
-  useEffect(() => {
-    if (searchTerm != "") {
-      setCardsServers(
-        cardsServers.filter((server) =>
-          server.title.toLowerCase().includes(searchTerm.toLowerCase())
-        )
-      );
-    } else {
-      setCardsServers(servers);
-    }
-  }, [searchTerm]);
+
   return (
     <main className="discover">
       <section className="discover-contacts">
@@ -48,13 +50,9 @@ const Discover = () => {
         <div className="discover-comunidad-img">
           <h1>Encuentra tu comunidad</h1>
           <img src="/iconCube.webp" alt="" />
-        
         </div>
         <div className="discover-container-cards">
-          <ButtonList
-          categories={newCategories}
-          filterCategory={filterCategory}
-        />
+          <ButtonList categories={newCategories} filterCategory={filterCategory} />
           <CardServer param={"card"} servers={cardsServers} />
         </div>
       </section>
