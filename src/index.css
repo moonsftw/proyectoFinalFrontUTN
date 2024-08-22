@@ -1,4 +1,47 @@
-#root{
-  margin:0;
+#root {
+  margin: 0;
   padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+.btn {
+  font-family: var(--main-font-family-bold);
+  transition: background-color 0.5s;
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 1.8rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover{
+  box-shadow: 0 .8rem 1.5rem rgba(0, 0, 0, .2);
+}
+
+.btn-light {
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-dark {
+  background-color: #161cbb;
+  color: var(--light-clr);
+}
+.btn-brand {
+  background-color: #5865f2;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }

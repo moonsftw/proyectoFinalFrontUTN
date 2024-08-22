@@ -8,11 +8,12 @@ import {
   FaFacebookSquare,
 } from "./../../assets/icons";
 import "./Footer.css";
-
-import { Link } from "react-router-dom";
+import "@/index.css"
+import { Link, useNavigate } from "react-router-dom";
 import { GroupLinks } from "@/Components";
 
 const Footer = (props) => {
+  const navigate = useNavigate()
   return (
     <footer className={`main-footer ${props.className}`}>
       <div className="container-footer">
@@ -49,13 +50,15 @@ const Footer = (props) => {
           <img src="/modernLogo.svg" alt="" className="logo-up" onClick={() => window.scrollTo(0, 0)}/>
         
         {localStorage.getItem("formValues") ? (
-          <Link to={"/@me"} className="btn-brand">
+          <button onClick={() => navigate("/@me")} className="btn btn-brand">
             Open Discord
-          </Link>
+          </button>
+          
         ) : (
-          <Link to={"/register"} className="btn-brand">
-            Login
-          </Link>
+          <button onClick={() => navigate("/register")} className="btn btn-light">
+            Registrarse
+          </button>
+          
         )}
         {/* <button className="btn-brand">Open Discord</button> */}
       </div>

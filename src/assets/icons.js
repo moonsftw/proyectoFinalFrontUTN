@@ -1,5 +1,5 @@
 import { CiSearch } from "react-icons/ci";
-import { FiSearch } from "react-icons/fi";
+import { FiPlus, FiSearch } from "react-icons/fi";
 import { IoMdDownload } from "react-icons/io";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { IoChevronDownSharp } from "react-icons/io5";
@@ -23,4 +23,4 @@ import { IoSettingsSharp } from "react-icons/io5";
 import { GiAbstract010 } from "react-icons/gi";
 
 
-export {GiAbstract010, FaRegCircleCheck, CiSearch as search, FiSearch, IoMdDownload, IoMenu,IoClose, IoChevronDownSharp, BsTwitterX, FaInstagram, FaYoutube, FaTiktok, FaFacebookSquare,AiFillCompass, GiConsoleController, BsMusicNoteBeamed, BsFillPlayCircleFill, BsFillEmojiSmileFill, FaGraduationCap, TbAtom, FiMonitor, MdKeyboardVoice, FaHeadphones, IoSettingsSharp}
+export {FiPlus, GiAbstract010, FaRegCircleCheck, CiSearch as search, FiSearch, IoMdDownload, IoMenu,IoClose, IoChevronDownSharp, BsTwitterX, FaInstagram, FaYoutube, FaTiktok, FaFacebookSquare,AiFillCompass, GiConsoleController, BsMusicNoteBeamed, BsFillPlayCircleFill, BsFillEmojiSmileFill, FaGraduationCap, TbAtom, FiMonitor, MdKeyboardVoice, FaHeadphones, IoSettingsSharp}

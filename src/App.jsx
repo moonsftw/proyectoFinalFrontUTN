@@ -1,112 +1,84 @@
 import "./App.css";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import {
   CardPage,
   Comunidad,
-  Home,
+  Discover,
   InviteInvalid,
   Landing,
   Login,
   NotFound,
   Register,
-
   Servers,
   Verification,
 } from "./Pages";
-import { Discover } from "./Components";
-import Chat from "./Components/Chat/Chat";
-import Probando from "./Pages/Probando/Probando";
 
+import Chat from "./Components/Chat/Chat";
 
 function App() {
   const rutas = [
     {
       path: "/",
-      name: <Landing /> ,
-      id: 1
+      name: <Landing />,
+      id: 1,
     },
     {
       path: "/home",
-      name: <Discover /> ,
-      id: 2
-
+      name: <Discover />,
+      id: 2,
     },
     {
       path: "/@me",
-      name: <Verification /> ,
-      id: 3
-
+      name: <Verification />,
+      id: 3,
     },
     {
       path: "/register",
-      name: <Register /> ,
-      id: 4
-
+      name: <Register />,
+      id: 4,
     },
     {
       path: "/login",
-      name: <Login /> ,
-      id: 5
-
+      name: <Login />,
+      id: 5,
     },
     {
       path: "/*",
-      name: <NotFound /> ,
-      id: 6
-
+      name: <NotFound />,
+      id: 6,
     },
     {
       path: "/invite",
-      name: <InviteInvalid/> ,
-      id: 7
-
+      name: <InviteInvalid />,
+      id: 7,
     },
     {
       path: "/servers",
-      name: <Servers /> ,
-      id: 8
-
+      name: <Servers />,
+      id: 8,
     },
     {
       path: "/server/:id",
-      name: <Comunidad /> ,
-      id: 9
-
+      name: <Comunidad />,
+      id: 9,
     },
     {
       path: "/card/:id",
-      name: <CardPage /> ,
+      name: <CardPage />,
       id: 10,
-
     },
     {
       path: "/card/:id/chat",
-      name: <Chat /> ,
+      name: <Chat />,
       id: 11,
-
     },
-    {
-      path: "/probando",
-      name: <Probando /> ,
-      id: 12,
-
-    },
-   
   ];
   return (
     <Router>
       <Routes>
-        {
-          rutas.map(({ path, name, id }) => (
-            <Route
-              path={path}
-              element={name}
-              key={id}
-            />
-          ))
-        }
+        {rutas.map(({ path, name, id }) => (
+          <Route path={path} element={name} key={id} />
+        ))}
       </Routes>
     </Router>
   );

@@ -1,48 +1,45 @@
 import React from "react";
 import "./Groups.css";
-import img1 from "/img1.png";
-import img2 from "/img2.png";
-import img3 from "/img3.png";
-import img4 from "/img4.png";
-import dc from "/dc.png";
-import { FiPlus } from "react-icons/fi";
-import { AiFillCompass } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import img1 from "/groups/img1.png";
+import img2 from "/groups/img2.png";
+import img3 from "/groups/img3.png";
+import img4 from "/groups/img4.png";
+import dc from "/groups/dc.png";
+
+import { useNavigate } from "react-router-dom";
+import { FiPlus, AiFillCompass } from "@/assets/icons";
 
 const Groups = () => {
   const groups = [img1, img2, img3, img4];
+  const navigate = useNavigate();
+  const { username, display } = JSON.parse(localStorage.getItem("formValues"));
   return (
-    <div className="containerGroup">
-      {/* Groups */}
-      <div className="groups">
-        {/* Discord */}
-        <Link to={"/"}>
-        <div className="iconDiscord">
-          <img src={dc} alt="icon discord" className="discord" />
-        </div>
-        </Link>
-        {/* Compass */}
-        <div className="iconCompass">
-          <AiFillCompass className="compass" />
-        </div>
+    <>
+      {username && (
+        <div className="containerGroup">
+          <div className="iconsGroup">
+            <div>
+              <button onClick={() => navigate("/")} className="iconDiscord">
+                <img src={dc} alt="icon discord" className="discord" />
+              </button>
+            </div>
+            <div>
+              <button className="iconCompass">
+                <AiFillCompass className="compass" />
+              </button>
 
-        {/* Group */}
-        
-          {groups.map((group) => {
-            return (
-              <div className="group">
-                <img className="groupImg" src={group} alt="" key={group} />
-              </div>
-            );
-          })}
-       
-
-        {/* Plus */}
-        <div className="iconPlus">
-          <FiPlus className="plus" />
+              <button className="iconPlus">
+                <FiPlus className="plus" />
+              </button>
+            </div>
+          </div>
+          <div className="containerDatosUsuario">
+            <h4>{username}</h4>
+            <p>#{display}</p>
+          </div>
         </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 

@@ -13,11 +13,9 @@ const Form = ({ formContent, path }) => {
   const [inputs, setInputs] = useState(inputsGuardados);
   const [formValues, setFormValues] = useState(initialStateForm);
 
-
   const navigation = useNavigate();
 
-  const handleChangeFormValue = (e) =>
-    setFormValues({ ...formValues, [e.target.name]: e.target.value });
+  const handleChangeFormValue = (e) => setFormValues({ ...formValues, [e.target.name]: e.target.value });
 
   const handleFormSubmit = (e, valoresForm) => {
     e.preventDefault();
@@ -25,24 +23,17 @@ const Form = ({ formContent, path }) => {
     const formulario = e.target;
     const formularioValores = new FormData(formulario);
     const nombre = formularioValores.get("email");
-    if(inputs.includes(formularioValores.get("email")) ){
-        alert('email ya registrado')
-    } else{
-        setInputs([...inputs, nombre]);
-        formulario.reset();
-        alert('email registrado con exito')
-      
-
+    if (inputs.includes(formularioValores.get("email"))) {
+      alert("email ya registrado");
+    } else {
+      setInputs([...inputs, nombre]);
+      formulario.reset();
+      alert("email registrado con exito");
     }
-    
-    
-    
   };
   useEffect(() => {
-      
     localStorage.setItem("inputs", JSON.stringify(inputs));
-    
-}, [inputs])
+  }, [inputs]);
   const handleError = ({ label }) => {
     const condicion =
       formValues[label].length > 0 && formValues[label].length < 5;
@@ -65,7 +56,6 @@ const Form = ({ formContent, path }) => {
               id={label}
               value={formValues[label]}
               onChange={handleChangeFormValue}
-              /* onBlur={() => handleError({ label })} */
               required
               minLength={5}
               maxLength={30}
@@ -95,7 +85,7 @@ const Form = ({ formContent, path }) => {
             </label>
           </section>
         )}
-        <button onClick={() => navigation(path)} type="submit">
+        <button type="submit">
           Continue
         </button>
       </form>

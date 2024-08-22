@@ -1,179 +1,148 @@
-/* .container{
-    position: absolute;
-} */
-.verificationRequired{
-    background-color: #313338;
-    height: 100vh;
-    color: #dbdee1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.verificationRequired {
+  background-color: #313338;
+  height: 100vh;
+  color: #dbdee1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.no-display{
-    display: none;
+.no-display {
+  display: none;
 }
-.image-castillo{
-    width: 400px;
-    height: 300px;
-    background-image: url(/castillo.svg);
-    background-repeat: no-repeat;
-
+.image-castillo {
+  width: 400px;
+  height: 300px;
+  background-image: url(/castillo.svg);
+  background-repeat: no-repeat;
 }
 
-.title-verificationRequired{
-    font-size: 24px;
-    padding-top: 3rem;
-    padding-bottom: 1rem;
-    opacity: .9;
+.title-verificationRequired {
+  font-size: 24px;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  opacity: 0.9;
 }
-.body-verificationRequired{
-    font-size: 16px;
-    line-height: 25px;
-    opacity: .5;
+.body-verificationRequired {
+  font-size: 16px;
+  line-height: 25px;
+  opacity: 0.5;
 }
-.body-verificationRequired a{
-    padding: 10px;
-    color: #00a8fc;
-   line-height: 0;
+.body-verificationRequired a {
+  padding: 10px;
+  color: #00a8fc;
+  line-height: 0;
 }
 .button-verificationRequired {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 .button-verificationRequired > button {
-    border: none;
-    padding: 10px;
-    background-color: #5865f2;
-    color: white;
-    cursor: pointer;
-    width: 150px;
- 
+  border: none;
+  padding: 10px;
+  background-color: #5865f2;
+  color: white;
+  cursor: pointer;
+  width: 150px;
 }
-.button-verificationRequired > button:hover{
-    background-color: #7f89f7;
-}
-@media (min-width: 1024px){
-    
-    .container{
-        width: 100%;
-        background-color:#313338 ;
-    }
-    .verificationRequired{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-inline: auto;
-    }
-    .body-verificationRequired{
-        width: 40rem;
-    }
-    .verification{
-        width: 100%;
-    }
-    .containerVerification > form > button{
-        width: 100%;
-    }
-    .button-verificationRequired {
-        gap: 10px;
-    }
-   /*  .button-verification button {
-        padding: 20px; */
+.button-verificationRequired > button:hover {
+  background-color: #7f89f7;
 }
 
-.verification{
-    background-color: #0f0f11;
-    height: 100vh;
-    color: #dbdee1;
+.verification {
+  background-color: #0f0f11;
+  height: 100vh;
+  color: #dbdee1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.4;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+.containerVerification {
+  background-color: #313338;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.text-verification {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.body-verification {
+  opacity: 0.6;
+}
+.containerVerification > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+  gap: 1rem;
+}
+.containerVerification > form > .form-verification {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  width: 100%;
+}
+.containerVerification > form > .form-verification > label {
+  font-size: 12px;
+  opacity: 0.5;
+}
+.containerVerification > form > .form-verification > input {
+  background-color: #1e1f22;
+  border: none;
+  outline: none;
+  color: white;
+  height: 2.4rem;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.containerVerification > form > button {
+  background-color: #444c95;
+  color: white;
+  border: none;
+  padding: 15px 0px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .verificationRequired {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: 0;
-    animation-name: fadeIn;
-    animation-duration: .5s;
-    animation-fill-mode: both;
-    
-}
+    margin-inline: auto;
+  }
 
-@keyframes fadeIn{
-
-
-    0%{
-        opacity: 0.4;
-    }
-    40%{
-        opacity: 0.6;
-    }
-    80%{
-        opacity: 1;
-    }
-   
-}
-.containerVerification{
-    background-color: #313338;
-    width: 30%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
-    text-align: center;
-    border-radius: 5px;
-}
-.text-verification{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .button-verificationRequired {
     gap: 10px;
-    padding: 20px;
-}
-.title-verification{
-    padding-bottom: 1rem;
-}
-.body-verification{
-    width: 70%;
-    opacity: .6;
-}
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    padding: 0 20px;
-    width: 100%;
-    height: 40%;
-    gap: 50px;
-}
-form div{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 10px;
-    width: 100%;
-}
-form div label{
-    font-size: 12px;
-    opacity: .5;
-}
-form div input{
-    background-color: #1e1f22;
-    border: none;
-    outline: none;
-    color: white;
-    width: 100%;
-    height: 2.4rem;
-    border-radius: 5px;
-}
-
-.containerVerification button{
-    background-color: #444c95;
-    color: white;
-    width: 90%;
-    border: none;
-    padding: 15px;
-    border-radius: 3px;
+  }
+  /*  .button-verification button {
+          padding: 20px; */
 }

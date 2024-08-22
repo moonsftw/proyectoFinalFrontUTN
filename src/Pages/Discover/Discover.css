@@ -1,10 +1,13 @@
-.discover{
-    display: flex;
-    flex-direction: row;
+.discover {
+  background-color: red;
+  display: flex;
+  margin-inline: auto;
+}
+.discover > .discover-comunidad {
+  padding-left: 8rem;
 }
 
-
-.discover-contacts{
+/* .discover-contacts{
     width: 5%;
     height: 100%;
     background-color: #47494e;
@@ -58,8 +61,7 @@
     display: flex;
     flex-direction: row;
     left: 30%;
-    /* align-items: center; */
-    /* justify-content: center; */
+
 }
 .discover-comunidad>.discover-container-cards > .link-a-comunidad > .server{
     width: 55rem;
@@ -77,4 +79,4 @@
 .discover-container-cards{
     display: grid;
     grid-template-columns: repeat(3, min(0, 1fr));
-}
+} */

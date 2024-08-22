@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { ITEMS_NAV_BAR } from "../../Data";
 import { IoMenu, IoClose } from "./../../assets/icons";
 import "./NavBar.css";
-const NavBar = ({children, className}) => {
+import "@/index.css"
+const NavBar = ({children, className, color}) => {
   const itemsNav = ITEMS_NAV_BAR;
   const [open, setOpen] = useState(true)
   const [btnCerrar, setBtnCerrar] = useState(false)
@@ -14,12 +15,12 @@ const NavBar = ({children, className}) => {
         {children}
         <ul className="nav-list">
               {btnCerrar &&
-                <button onClick={() => setOpen(false)}><IoClose className="btn-close" /></button>
+                <button onClick={() => setOpen(false)}><IoClose /></button>
                }
           {itemsNav.map((item) => {
             return (
               <li className="nav-item" key={item.id}>
-                <Link to={item.url} className={`${item.className} nav-link`}>
+                <Link style={{color: color}} to={item.url} className={`${item.className} nav-link`}>
                   {item.title}
                 </Link>
               </li>

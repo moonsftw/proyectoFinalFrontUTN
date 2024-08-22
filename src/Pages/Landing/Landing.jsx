@@ -3,80 +3,50 @@ import "./Landing.css";
 import { IoMdDownload } from "./../../assets/icons";
 import { Footer, Header, VideoCards } from "../../Components";
 import { VIDEOS_CARDS } from "../../Data";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion as m } from "framer-motion";
 import { GiDuration } from "react-icons/gi";
 import Reviews from "../../Components/Reviews/Reviews";
-
+import '@/index.css'
 const Landing = () => {
   const [videos1, videos2] = VIDEOS_CARDS;
-
+  const navigate = useNavigate();
 
   return (
     <>
-
-      <Header className="main-header" />
+      <Header className="main-header" color={"#fff"} />
       <section className="landing-hero">
         <div className="landing-hero-content">
-
           <article>
             <h1 className="primary-title">GROUP CHAT THAT'S ALL FUN & GAMES</h1>
-            <p className="hero-description">Discord is great for playing games and chilling with friends, or
+            <p className="hero-description">
+              Discord is great for playing games and chilling with friends, or
               even building a worldwide community. Customize your own space to
-              talk, play, and hang out.</p>
+              talk, play, and hang out.
+            </p>
           </article>
-          <img src="664daa37ea162cadf9603500_Art.webp" alt="" />
+          <img
+            src="/image-hero.webp"
+            alt="imagen de una pantalla con algunos personajes representativos de discord"
+          />
         </div>
         <div className="hero-btn-group">
-          <div className="containerBtnDownload">
-            <IoMdDownload className="btn-download" />
+          <button
+            onClick={() => navigate("/register")}
+            className="btn btn-light"
+          >
+            <IoMdDownload />
             Download for Windows
-          </div>
+          </button>
 
           {localStorage.getItem("formValues") && (
-            <Link to={"/@me"}>
-              <div className="btn btn-large btn-dark">
-                Open Discord in your browser
-              </div>
-            </Link>
+            <button onClick={() => navigate("/@me")} className="btn btn-dark">
+              Open Discord in your browser
+            </button>
           )}
         </div>
       </section>
 
-      {/* <section className="heroLanding">
-        <div className="main-hero">
-          <div className="hero-content-wrap">
-            <div className="heroContainer">
-              <h1 className="title primary-title">
-                GROUP CHAT THAT'S ALL FUN & GAMES
-              </h1>
-
-              <p className="hero-description">
-                Discord is great for playing games and chilling with friends, or
-                even building a worldwide community. Customize your own space to
-                talk, play, and hang out.
-              </p>
-            </div>
-            <div className="hero-image">
-              <img src="664daa37ea162cadf9603500_Art.webp" alt="" />
-            </div>
-          </div>
-          <div className="hero-btn-group">
-            <div className="containerBtnDownload">
-              <IoMdDownload className="btn-download" />
-              Download for Windows
-            </div>
-
-            {localStorage.getItem("formValues") && (
-              <Link to={"/@me"}>
-                <div className="btn btn-large btn-dark">
-                  Open Discord in your browser
-                </div>
-              </Link>
-            )}
-          </div>
-        </div>
-      </section> */}
       <VideoCards props={videos1} />
       <div className="wrapper">
         <div className="item item1 ">TALK</div>
@@ -100,7 +70,6 @@ const Landing = () => {
       <section className="reviews">
         <h2 className="primary-title">Ellos ya nos eligieron</h2>
         <Reviews />
-
       </section>
       <section className="download">
         <div className="remove-grid">
@@ -108,17 +77,17 @@ const Landing = () => {
             <h2 className="title-download">
               YOU CAN'T SCROLL ANIMORE. BETTER GO CHAT.
             </h2>
-            <a href="#" className="btn btn-large btn-brand">
-              <IoMdDownload className="btn-download" />
+            <button className="btn btn-brand">
+              <IoMdDownload />
               Download for Windows
-            </a>
+            </button>
+            
           </div>
           <img src="/lastBanner.webp" alt="" className="download-image" />
         </div>
       </section>
 
-       <Footer className="found" />
-
+      <Footer className="found" />
     </>
   );
 };

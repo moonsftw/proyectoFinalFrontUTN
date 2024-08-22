@@ -72,15 +72,7 @@
     height: 2.4rem;
     border-radius: 5px;
 } 
- button{
-    background-color: #444c95;
-    font-weight: 700;
-    color: white;
-    width: 90%;
-    border: none;
-    padding: 15px;
-    border-radius: 3px;
-}
+
 .needAccount{
    
     width: 100%;

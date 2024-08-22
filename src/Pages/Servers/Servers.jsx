@@ -90,7 +90,7 @@ const Servers = () => {
       exit={{ opacity: 1 }}
     >
 
-      <Header className="main-header" />
+      <Header className="main-header" color="#000"/>
       <div className="hero-servers">
         <div className="hero-server-img">
           <img

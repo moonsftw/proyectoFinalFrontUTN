@@ -1,30 +1,28 @@
-.main-header{
-    padding: 0 2.4rem;
-   
-/*     background: linear-gradient(135deg, #ffffff4d, #ffffff0d), linear-gradient(261deg, #2e1a8e, #0e0e5c);
- */}
-.main-header-not-found{
-    background-color: #23272a;
-    padding: 0 2.4rem;
+.main-header {
+  padding: 2rem 1.4rem;
+  background-color: #21177c;
+}
+.main-header-not-found {
+  background-color: #23272a;
+  padding: 0 2.4rem;
 }
 .container > .logo {
-    width: 8rem;
+  display: flex;
+  width: 8rem;
 }
-.container{
-    display: flex;
-    justify-content: space-between;   
+.container {
+  display: flex;
+  justify-content: space-between;
 }
-.btn-open{
-    width: 100px;
+
+.btn-menu {
+  padding: 1rem;
+  color: white;
+  background-color: transparent;
 }
-.btn-login{
-    background-color: #FFFFFF;
-    padding: .7rem .5rem;
-    border-radius: 20px;
-    color: black;
-    text-decoration: none;
-    font-weight: 600;
-}
-.btn-login:hover{
-    color: #542FDF;
+
+@media (min-width: 1240px){
+  .mobile-toggle {
+    display: none;
+  }
 }

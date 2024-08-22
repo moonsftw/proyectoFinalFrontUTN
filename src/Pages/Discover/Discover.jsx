@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Discover.css";
-import lmfao from "/lmfao.jpg";
+
 import * as icons from "@/assets/icons";
-import ButtonList from "../ButtonList/ButtonList";
+import { ButtonList, CardServer, Groups } from "@/Components";
 import { DISCORD_SERVERS as servers } from "@/Data";
-import CardServer from "../CardServer/CardServer";
-import Groups from "../Groups/Groups";
 
 const Discover = () => {
   const { username, display } = JSON.parse(localStorage.getItem("formValues"));
@@ -30,7 +28,6 @@ const Discover = () => {
     setSearchTerm(e.target.value);
   };
   useEffect(() => {
-    console.log(searchTerm);
     if (searchTerm != "") {
       setCardsServers(
         cardsServers.filter((server) =>
@@ -44,7 +41,7 @@ const Discover = () => {
   return (
     <main className="discover">
       <section className="discover-contacts">
-        <Groups></Groups>
+        <Groups />
       </section>
 
       <section className="discover-comunidad">
@@ -72,8 +69,7 @@ const Discover = () => {
           filterCategory={filterCategory}
         />
         <div className="discover-container-cards">
-
-        <CardServer param={"card"} servers={cardsServers} />
+          <CardServer param={"card"} servers={cardsServers} />
         </div>
       </section>
     </main>
