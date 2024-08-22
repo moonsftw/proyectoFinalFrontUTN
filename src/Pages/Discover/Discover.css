@@ -1,82 +1,52 @@
 .discover {
-  background-color: red;
   display: flex;
-  margin-inline: auto;
+  width: 100%;
 }
 .discover > .discover-comunidad {
-  padding-left: 8rem;
-}
-
-/* .discover-contacts{
-    width: 5%;
-    height: 100%;
-    background-color: #47494e;
-    position: fixed;
-    z-index: 11;
-}
-.discover-categories{
-    width: 20%;
-    background-color: #3c3d41;
-    height: 100%;
-    padding-left: 200px;
-    position: fixed;
-    z-index: 10;
-    
-    
-}
-.discover-comunidad > .categories{
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 1rem;
-  
-}
-.discover-categories > .categories > .btn-category {
-    border: none;
-    background-color: #3c3d41;
-    display: flex;
-    justify-content: left;
-    text-transform: capitalize;
-    background-color: transparent;
-    color: white;
-    
-}
-.discover-categories > .categories > .btn-category:hover{
-    background-color: #3c3d41;
-}
-.discover-comunidad{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 6rem;
     width: 100%;
-    background-color: #47494e;
+    background-color: antiquewhite;
+}
+.discover > .discover-comunidad >.discover-comunidad-img{
+    background-image: url("/servers/main/fondoServers.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.discover > .discover-comunidad >.discover-comunidad-img > h1{
+    font-family: 'GG Sans Bold', sans-serif;
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+}
+.discover > .discover-comunidad > .discover-comunidad-img > img{
+    width: 10rem;
+}
+
+
+.discover > .discover-comunidad > .discover-container-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
 }
 
-.discover-comunidad > .discover-comunidad-img > img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+@media (min-width: 1024px) {
+  .discover > .discover-comunidad {
+    padding-left: 7rem;
+  }
+.discover > .discover-comunidad >.discover-comunidad-img > h1{
+    font-size: 3rem;
 }
-
-.discover-comunidad > .discover-comunidad-img > form{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    left: 30%;
-
 }
-.discover-comunidad>.discover-container-cards > .link-a-comunidad > .server{
-    width: 55rem;
-    color: white;
-
-}
-.discover-comunidad>.discover-container-cards > .link-a-comunidad > .server:hover{
-    color: black;
-}
-.discover-comunidad >.discover-container-cards > .link-a-comunidad > .server > .server-content > .server-content-descrip > .server-content-descrip-insignias > .verified{
-    background-color: rgb(170, 159, 159);
-    color: rgb(58, 45, 45);
-    font-weight: 700;
-}
-.discover-container-cards{
-    display: grid;
-    grid-template-columns: repeat(3, min(0, 1fr));
-} */

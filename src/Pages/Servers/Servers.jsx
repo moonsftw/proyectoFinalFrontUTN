@@ -89,8 +89,7 @@ const Servers = () => {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 1 }}
     >
-
-      <Header className="main-header" color="#000"/>
+      <Header className="main-header" color="#000" />
       <div className="hero-servers">
         <div className="hero-server-img">
           <img
@@ -108,30 +107,30 @@ const Servers = () => {
             src="/servers/main/rightServers.svg"
             alt=""
           />
-        </div>
-        <div className="hero-server-img-content">
-          <h1 className="title-img">find your community on discord</h1>
+          <h1 className="title-img">Find your community on discord</h1>
           <p className="text-img">
             From gaming, to music, to learning, there's a place for you
           </p>
+        </div>
 
+        <div className="hero-server-input">
+          <form className="form-server">
+            <div>
+              <input
+                type="text"
+                placeholder="Explore Communities"
+                name={"searchServer"}
+                id={"searchServer"}
+                onChange={handleChangeSearchTerm}
+                value={searchTerm}
+              />
+            </div>
+            <button>
+              <icons.search className="server-input-search-icon" />
+            </button>
+          </form>
         </div>
       </div>
-      <form className="form-server">
-        <div>
-          <input
-            type="text"
-            placeholder="Explore Communities"
-            name={"searchServer"}
-            id={"searchServer"}
-            onChange={handleChangeSearchTerm}
-            value={searchTerm}
-          />
-        </div>
-        <button>
-          <icons.search className="server-input-search-icon" />
-        </button>
-      </form>
       <div className="filter-servers">
         <ButtonList
           className="btn-servers"
@@ -139,7 +138,7 @@ const Servers = () => {
           filterCategory={filterCategory}
         />
         <div className="servers-match">
-          <CardServer param={'server'} servers={cardsServers} />
+          <CardServer param={"server"} servers={cardsServers} />
         </div>
       </div>
     </m.main>

@@ -1,87 +1,101 @@
-.link-a-comunidad {
-  text-decoration: none;
-  color: black;
-  display: flex;
-  justify-content: center;
-}
-.server {
+.card-server-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  height: 250px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-}
-.server:hover{
-  background-color: #ebebeb
-}
-.server > .server-img-banner > img {
-  width: 250px;
-  border-radius: 10px;
-}
-.server > .server-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  width: 550px;
-  padding: 10px;
-  text-align: left;
-}
-.server > .server-content > .server-content-logo {
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 5px;
-  width: 250px;
+  margin: 1rem;
+  border-radius: 1rem;
+  background-color: #1e1f22;
+  padding: 1rem;
+  cursor: pointer;
   gap: 1rem;
 }
-.server > .server-content > .server-content-logo > img {
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-
+.card-server-container:hover {
+  background-color: #34363b;
 }
-.server > .server-content > .server-content-descrip {
+.card-server-container > .server-img-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-server-container > .server-img-banner > img {
+  border-radius: 10px;
+}
+.card-server-container > .server-content {
   display: flex;
   flex-direction: column;
-  width: 250px;
   text-align: left;
-  opacity: .7;
+  gap: 1rem;
 }
-.verified {
+.card-server-container > .server-content > .server-content-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.card-server-container > .server-content > .server-content-logo > img {
+  border-radius: 0.5rem;
+  width: 3rem;
+}
+.card-server-container > .server-content > .server-content-logo > h1 {
+  color: white;
+}
+.card-server-container > .server-content > .server-content-descrip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  opacity: 0.7;
+  gap: 1rem;
+  color: white;
+  font-size: 12px;
+}
+.card-server-container > .server-content > .server-content-descrip > .server-content-descrip-details {
+  display: flex;
+  gap: .5rem;
+}
+.card-server-container > .server-content > .server-content-descrip > .server-content-descrip-insignias > .verified {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  width: 100px;
-  height: 30px;
-  border-radius: 5px;
+  gap: .3rem;
+  border-radius: .5rem;
   background-color: #d9d9d9;
+  color: black;
+  padding: .3rem;
+  font-weight: 900;
 }
 .check {
   fill: green;
-  width: 15px;
 }
 .abstract {
   fill: purple;
-  width: 15px;
 }
 @media (min-width: 1024px) {
-  .server {
+  .card-server-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rem;
+    width: 75rem;
   }
-  .server > .server-content > .server-content-logo,
-  .server > .server-content > .server-content-descrip {
-    width: 520px;
+  .card-server-container > .server-img-banner > img {
+    border-radius: 5rem;
+    width: 45rem;
+    height: 25rem;
+    padding: 1rem;
   }
-  .server > .server-content > .server-content-descrip {
-    gap: 10px;
+  .card-server-container > .server-content > .server-content-logo > img {
+    width: 6rem;
+    border-radius: 1rem;
+  }
+  .card-server-container > .server-content > .server-content-logo > h1 {
+  font-size: 2rem;
+  }
+  .card-server-container > .server-content > .server-content-descrip {
+      font-size: 1rem;
   }
 }
-
-

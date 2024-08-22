@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import "./Chats.css";
 import { useGlobalContext } from "../../Context/GlobalContext";
+import { IoMdSend } from "@/assets/icons";
 const Chat = () => {
+  const navigate = useNavigate();
   const parametros = useParams();
   const id = parametros.id;
   for (let index = 1; index < 21; index++) {
@@ -38,7 +40,13 @@ const Chat = () => {
         {chats.length === 0 ? (
           <h1>{`Bienvenido a ${comunidad.title}`}</h1>
         ) : (
-          chats.map((chat, index) => <p key={index}>{chat}</p>)
+          chats.map((chat, index) => {
+            return (
+              <div>
+                <p key={index}>{chat}</p>
+              </div>
+            );
+          })
         )}
       </div>
       <div className="container-chat-form">
@@ -52,11 +60,15 @@ const Chat = () => {
               placeholder="Comienza una conversación..."
               required
             />
+
             <button type="submit" className="btn-chat">
-              Enviar
+              <IoMdSend style={{ fontSize: "1.5rem", opacity:".6" }} className="btn-chat-icon-send" />
             </button>
-            <Link className="btn-chat-volver" to={`/home`} style={{ color: "white", textDecoration: "none", backgroundColor: "#7289da", padding: ".8rem", borderRadius: "5px"}}>Volver</Link>
+            <button className="btn-chat-volver" onClick={() => navigate(`/home`)}>
+              Volver
+            </button>
           </div>
+         
         </form>
       </div>
     </main>

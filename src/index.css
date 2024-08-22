@@ -1,3 +1,20 @@
+@font-face {
+  font-family: "GG Sans Regular";
+  src: url("@/assets/fonts/ggsansRegular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "GG Sans Medium";
+  src: url("@/assets/fonts/ggsansMedium.ttf") format("ttf");
+}
+@font-face {
+  font-family: "GG Sans Bold";
+  src: url("@/assets/fonts/ggsansBold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "GG Sans SemiBold";
+  src: url("@/assets/fonts/ggsansSemibold.ttf") format("ttf");
+}
+
 #root {
   margin: 0;
   padding: 0;

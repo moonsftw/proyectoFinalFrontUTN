@@ -11,7 +11,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/bloxFtruits.jpg",
     logo: "/servers/logos/bloxFtruits.jpg",
-    color: "#30BAFA"
+    color: "#30BAFA",
   },
   {
     id: 2,
@@ -52,20 +52,9 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/helldivers.jpg",
     logo: "/servers/logos/helldivers.jpg",
-    color: "#FFE80A"
+    color: "#FFE80A",
   },
-  /* {
-        id: 5,
-        category: "entertainment",
-        title: "Midjourney",
-        description: "The official server for Midjourney, a text-to-image AI where your imagination is the only limit.",
-        online: "1,310,787 Online",
-        members: "20,833,104 Members",
-        verified: true,
-        partnered: false,
-        banner: "/servers/banners/midjourney.jpg",
-        logo: "/servers/logos/midjourney.jpg",
-    }, */
+
   {
     id: 6,
     category: "entertainment",
@@ -118,7 +107,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/limewire.jpg",
     logo: "/servers/logos/limewire.jpg",
-    color:"#C2F100"
+    color: "#C2F100",
   },
   {
     id: 10,
@@ -132,7 +121,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/studytogether.jpg",
     logo: "/servers/logos/studytogether.jpg",
-    color: "#D0522F"
+    color: "#D0522F",
   },
   {
     id: 11,
@@ -146,7 +135,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/python.jpg",
     logo: "/servers/logos/python.jpg",
-    color: "#E99EAF"
+    color: "#E99EAF",
   },
   {
     id: 12,
@@ -160,7 +149,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/bnbchain.jpg",
     logo: "/servers/logos/bnbchain.jpg",
-    color: "#EDBD0A"
+    color: "#EDBD0A",
   },
   {
     id: 13,
@@ -174,7 +163,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/leonardo.jpg",
     logo: "/servers/logos/leonardo.jpg",
-    color: "#47A29A"
+    color: "#47A29A",
   },
   {
     id: 14,
@@ -188,7 +177,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/adobe.jpg",
     logo: "/servers/logos/adobe.jpg",
-    color: "#F79078"
+    color: "#F79078",
   },
   {
     id: 15,
@@ -202,20 +191,9 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/aihub.jpg",
     logo: "/servers/logos/aihub.jpg",
-    color: "#20CAFF"
+    color: "#20CAFF",
   },
-  /*   {
-        id: 16,
-        category: "science",
-        title: "Suno",
-        description: "Make any song you can imagine",
-        online: "33,185 Online",
-        members: "385,836 Members",
-        verified: true,
-        partnered: false,
-        banner: "/servers/banners/suno.jpg",
-        logo: "/servers/logos/suno.jpg",
-    }, */
+
   {
     id: 17,
     category: "music",
@@ -228,7 +206,7 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/lofi.jpg",
     logo: "/servers/logos/lofi.jpg",
-    color: "#8A322A"
+    color: "#8A322A",
   },
   {
     id: 18,
@@ -242,7 +220,7 @@ export const DISCORD_SERVERS = [
     partnered: true,
     banner: "/servers/banners/mythpat.jpg",
     logo: "/servers/logos/mythpat.jpg",
-    color: "#978DFD"
+    color: "#978DFD",
   },
   {
     id: 19,
@@ -256,12 +234,12 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/rythm.jpg",
     logo: "/servers/logos/rythm.jpg",
-    color: "#226EFF"
+    color: "#226EFF",
   },
   {
     id: 20,
     category: "music",
-    title: "Soundboard Community | VOICE CHATS • SOUNDBOARDS • GIVEAWAYS",
+    title: "Soundboard Community",
     description:
       "⭐ The Discord server for soundboards ✨ sharing sounds & making  friends 🎉 Active Giveaways 💬Active chats & voice chats",
     online: "106,456 Online",
@@ -270,6 +248,6 @@ export const DISCORD_SERVERS = [
     partnered: false,
     banner: "/servers/banners/soundboard.jpg",
     logo: "/servers/logos/soundboard.jpg",
-    color: "#A9A9A9"
+    color: "#A9A9A9",
   },
 ];

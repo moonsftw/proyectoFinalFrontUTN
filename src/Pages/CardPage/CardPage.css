@@ -23,7 +23,17 @@
 }
 .card-page-container > .chat > .chat-buttons{
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
+}
+.card-page-container > .chat > .chat-buttons > button {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 .card-page-container > .chat > .chat-buttons > button:first-child {
     background-color: #5865F2;

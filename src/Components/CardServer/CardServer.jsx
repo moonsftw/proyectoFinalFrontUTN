@@ -1,14 +1,14 @@
 import React from "react";
 import * as icons from "@/assets/icons";
 import "./CardServer.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const CardServer = ({ param, servers, handleInputServers }) => {
 
 
   return servers.map((server) => {
+    const navigate = useNavigate();
     return (
-      <Link to={`/${param}/${server.id}`} key={server.id} className="link-a-comunidad">
-        <div className="server" key={server.id}>
+        <div onClick={() => navigate(`/${param}/${server.id}`)} className="card-server-container" key={server.id}>
           <div className="server-img-banner">
             <img src={server.banner} alt="" />
           </div>
@@ -38,7 +38,8 @@ const CardServer = ({ param, servers, handleInputServers }) => {
             </div>
           </div>
         </div>
-      </Link>
+
+
     );
   });
 };

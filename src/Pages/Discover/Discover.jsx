@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Discover.css";
-
+import "@/index.css"
 import * as icons from "@/assets/icons";
 import { ButtonList, CardServer, Groups } from "@/Components";
 import { DISCORD_SERVERS as servers } from "@/Data";
@@ -46,29 +46,15 @@ const Discover = () => {
 
       <section className="discover-comunidad">
         <div className="discover-comunidad-img">
-          <img src="/servers/main/fondoServers.svg" alt="" />
-          <form className="form-server">
-            <div>
-              <input
-                type="text"
-                placeholder="Find your Community"
-                name={"searchServer"}
-                id={"searchServer"}
-                onChange={handleChangeSearchTerm}
-                value={searchTerm}
-              />
-            </div>
-            <button>
-              <icons.search className="server-input-search-icon" />
-            </button>
-          </form>
+          <h1>Encuentra tu comunidad</h1>
+          <img src="/iconCube.webp" alt="" />
+        
         </div>
-        <ButtonList
-          className="btn-servers"
+        <div className="discover-container-cards">
+          <ButtonList
           categories={newCategories}
           filterCategory={filterCategory}
         />
-        <div className="discover-container-cards">
           <CardServer param={"card"} servers={cardsServers} />
         </div>
       </section>

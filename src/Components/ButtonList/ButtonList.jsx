@@ -1,6 +1,5 @@
 import React from "react";
 import "./ButtonList.css";
-import { Link } from "react-router-dom";
 const ButtonList = ({ categories, filterCategory }) => {
   return (
     <div className="categories">
