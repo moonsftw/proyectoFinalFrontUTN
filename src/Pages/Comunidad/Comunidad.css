@@ -1,62 +1,34 @@
-.comunidad-container {
-  width: 100%;
-
-  /* height: 105rem; */
-  position: relative;
-  gap: 100px;
-  height: 92rem;
-}
-.comunidad-section-1 {
-  background-color: blue;
-  /* height: 10rem; */
-  height: 6rem;
-}
-
-.comunidad-section-2 {
-  background-color: blue;
-  position: absolute;
-  height: 10rem;
-  width: 100%;
-}
-
-.comunidad-section-3 {
-  position: absolute;
-  height: 40rem;
-  width: 100%;
-}
-
 .comunidad-section-4 {
-  width: 70%;
+  width: 100%;
   height: 68rem;
-  position: absolute;
-  bottom: 0%;
-  left: 15%;
   display: flex;
-  /* flex-direction: row; */
   flex-direction: column;
-  padding-top: 10px;
+  align-items: center;
+  padding: 6rem 3rem 0rem 3rem ;
+
 }
+
 .comunidad-container-banner {
+  background-color: blue;
   position: relative;
+  height: 20rem;
 }
 .comunidad-container-banner > .comunidad-banner {
   position: absolute;
+  top: 70%;
   left: 10%;
-  border-radius: 20px;
-  height: 20rem;
-  object-fit: contain;
+  border-radius: 1rem;
 }
+
 .comunidad-container-banner > .comunidad-logo {
   visibility: hidden;
-  /*  width: 100px;
-  position: absolute;
-  left: 15%;
-  bottom: 0;
-  border: 10px solid white;
-  border-radius: 15px; */
 }
 .comunidad-info-container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
 }
 .comunidad-title-container > .comunidad-logo {
   width: 100px;
@@ -130,11 +102,12 @@
   line-height: 1.5rem;
 }
 .comunidad-buttons {
-  display: flex;
+  display: fixed;
   flex-direction: column;
   align-items: end;
-  gap: 10px;
+  gap: 1rem;
   width: 100%;
+  padding: 1rem;
 }
 .comunidad-btn-share {
   display: none;
@@ -142,28 +115,32 @@
 .comunidad-btn-join {
   background-color: #5865f2;
   width: 100%;
+  padding: 1rem .5rem;
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 700;
+  border: none;
+  border-radius: 1rem;
 }
 @media (min-width: 1024px) {
-/*   .comunidad-section-3 {
+  /*   .comunidad-section-3 {
     max-width: 2000px;
   } */
   .comunidad-section-4 {
     flex-direction: row;
-   /*  max-width: 1800px; */
+  padding: 6rem 10rem 0rem 10rem ;
+  justify-content: baseline;
+  align-items: start;
+  padding-top: 20rem;
+
+    /*  max-width: 1800px; */
   }
-  .comunidad-container-banner {
-    height: 24.5rem;
-    /* max-width: 2000px; */
-  }
+
   .comunidad-info-container {
     width: 100%;
     /* padding-left: 31rem; */
   }
   .comunidad-container {
     height: 105rem;
-
   }
   .comunidad-title-container > .comunidad-logo {
     display: none;
@@ -177,12 +154,7 @@
     opacity: 0.6;
     padding-bottom: 2rem;
   }
-  .comunidad-container-banner > .comunidad-banner {
-    object-fit: cover;
-    /* left: 50%; */
-    left: 10%;
-    
-  }
+
   .comunidad-online,
   .comunidad-members {
     font-size: 1.2rem;
@@ -204,10 +176,10 @@
   .comunidad-container-banner > .comunidad-logo {
     visibility: visible;
     width: 100px;
-    position: absolute;
-    /* left: 55%; */
+    position: relative;
+
     left: 15%;
-    bottom: 0;
+    top: 33rem;
     border: 10px solid white;
     border-radius: 15px;
   }
@@ -223,21 +195,29 @@
     display: flex;
     flex-direction: column;
     align-items: end;
-    gap: 10px;
+    gap: 1rem;
     width: 25%;
   }
   .comunidad-btn-join {
     background-color: #5865f2;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
+    border: none;
+    border-radius: 1rem;
+
   }
   .comunidad-btn-share {
     display: flex;
     justify-content: center;
     background-color: #80848e;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
     width: 100%;
+    border: none;
+    padding: 1rem .5rem;
+    border-radius: 1rem;
+
+
   }
 
   .comunidad-btn-join:hover {
@@ -245,5 +225,11 @@
   }
   .comunidad-btn-share:hover {
     background-color: #9ca1af;
+  }
+  .comunidad-container-banner > .comunidad-banner {
+    top: 30%;
+    width: 80rem;
+    height: 30rem;
+    border-radius: 3rem;
   }
 }

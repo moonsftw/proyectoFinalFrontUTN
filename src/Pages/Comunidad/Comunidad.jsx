@@ -2,7 +2,7 @@ import React from "react";
 import "./Comunidad.css";
 import { Footer, Header } from "@/Components";
 import * as icons from "@/assets/icons";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { DISCORD_SERVERS as servers} from "@/Data";
 import { useGlobalContext } from "../../Context/GlobalContext";
 
@@ -12,15 +12,14 @@ const Comunidad = () => {
   const { obtenerServerId } = useGlobalContext();
   const comunidad = obtenerServerId(parametros.id)
 
+  const navigate = useNavigate();
 
   return (
     <>
+      <Header className="main-header" />
       <main className="comunidad-container">
-        <section className="comunidad-section-1">
-          <Header className="main-header" />
-        </section>
-        <section className="comunidad-section-2"></section>
-        <section className="comunidad-section-3"></section>
+       
+      
         <section className="comunidad-container-banner">
           <img
             className="comunidad-banner"
@@ -62,7 +61,7 @@ const Comunidad = () => {
             <p className="comunidad-languages-description">English</p>
           </div>
           <div className="comunidad-buttons">
-            <Link style={{ width: "100%" }} to={'/invite'}><button className="comunidad-btn-join">Join Server</button></Link>
+            <button onClick={() => navigate("/invite")} className="comunidad-btn-join">Join Server</button>
             <button className="comunidad-btn-share">Share Server</button>
           </div>
         </section>

@@ -5,7 +5,7 @@ main > .main-header {
 .hero-servers > .hero-server-img {
   position: relative;
   top: 0;
-  height: 400px;
+  height:40rem;
   width: 100%;
   z-index: -10;
 }
@@ -28,7 +28,7 @@ main > .main-header {
   position: absolute;
   top: 25%;
 
-  z-index: 9999;
+  z-index: 3;
   text-transform: uppercase;
   color: white;
   font-size: 2.5rem;
@@ -39,7 +39,8 @@ main > .main-header {
   top: 60%;
   left: 30%;
   width: 11rem;
-  z-index: 9999;
+  z-index: 3;
+
   display: flex;
   color: white;
   font-size: 1rem;
@@ -91,23 +92,26 @@ main > .main-header {
   justify-content: center;
 }
 @media (min-width: 1024px) {
+  
   .hero-servers > .hero-server-img > .izq-servers {
     visibility: visible;
     position: absolute;
     left: 0;
     bottom: 0;
     z-index: 3;
-    width: 100px;
-    width: 25%;
+    
+    width:35rem;
   }
+ 
   .hero-servers > .hero-server-img > .dcha-servers {
     visibility: visible;
     position: absolute;
     right: 0;
     bottom: 0;
     z-index: 3;
-    width: 100px;
-    width: 25%;
+    width:35rem;
+    
+   
   }
   .hero-servers > .hero-server-img > .title-img {
     left: 28%;

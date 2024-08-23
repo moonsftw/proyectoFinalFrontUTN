@@ -1,6 +1,8 @@
 import React from "react";
 import "./InviteInvalid.css";
+import { useNavigate } from "react-router-dom";
 const InviteInvalid = () => {
+  const navigate = useNavigate();
   return (
     <section className="container-invite">
       <div className="img-logo-invite">
@@ -20,7 +22,7 @@ const InviteInvalid = () => {
             </p>
           </div>
 
-          <button>Continue to Discord</button>
+          <button onClick={() => navigate("/")}  className="btn-back-invalid">Continue to Discord</button>
         </div>
       </div>
     </section>
