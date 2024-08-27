@@ -9,87 +9,99 @@ const Form = ({ formContent, path }) => {
     display: "",
     username: "",
   };
-  const inputsGuardados = JSON.parse(localStorage.getItem("inputs")) || [];
-  const [inputs, setInputs] = useState(inputsGuardados);
+
   const [formValues, setFormValues] = useState(initialStateForm);
+  const [inputs, setInputs] = useState(() => {
+    const savedInputs = localStorage.getItem("inputs");
+    return savedInputs ? JSON.parse(savedInputs) : [];
+  });
 
   const navigation = useNavigate();
 
-  const handleChangeFormValue = (e) => setFormValues({ ...formValues, [e.target.name]: e.target.value });
+  const handleChangeFormValue = (e) => {
+    setFormValues({ ...formValues, [e.target.name]: e.target.value });
+  };
 
-  const handleFormSubmit = (e, valoresForm) => {
+  const handleFormSubmitLogin = (e) => {
     e.preventDefault();
-    localStorage.setItem("formValues", JSON.stringify(valoresForm));
-    const formulario = e.target;
-    const formularioValores = new FormData(formulario);
-    const nombre = formularioValores.get("email");
-    if (inputs.includes(formularioValores.get("email"))) {
-      alert("email ya registrado");
+    const email = formValues.email;
+
+    if (inputs.includes(email)) {
+      navigation(path)
     } else {
-      setInputs([...inputs, nombre]);
-      formulario.reset();
-      alert("email registrado con exito");
+      alert("Email no registrado"); 
+    }
+  }
+  const handleFormSubmitRegister = (e) => {
+    e.preventDefault();
+
+    localStorage.setItem("formValues", JSON.stringify(formValues));
+
+    const email = formValues.email;
+
+    if (inputs.includes(email)) {
+      alert("Email ya registrado");
+    } else {
+      const newInputs = [...inputs, email];
+      setInputs(newInputs);
+      localStorage.setItem("inputs", JSON.stringify(newInputs));
+      navigation(path);
     }
   };
+
   useEffect(() => {
     localStorage.setItem("inputs", JSON.stringify(inputs));
+    console.log("Inputs guardados en localStorage:", inputs);
   }, [inputs]);
-  const handleError = ({ label }) => {
-    const condicion =
+
+  const handleError = (label) => {
+    const condition =
       formValues[label].length > 0 && formValues[label].length < 5;
-    /* setIsDisabled(...isDisabled, [condicion]); */
-    return condicion;
+    return condition;
   };
 
   return (
-    <>
-      <form
-        className="formContainer"
-        onSubmit={(e) => handleFormSubmit(e, { ...formValues })}
-      >
-        {formContent.map(({ type, label, id }) => (
-          <div className="inputForm" key={id}>
-            <label htmlFor={label}>{label}</label>
-            <input
-              type={type}
-              name={label}
-              id={label}
-              value={formValues[label]}
-              onChange={handleChangeFormValue}
-              required
-              minLength={5}
-              maxLength={30}
-            />
-            {handleError({ label }) && (
-              <p
-                style={{ color: "#C23854", fontSize: "12px", padding: "0px" }}
-                className="error"
-              >
-                Must be at least 5 characters
-              </p>
-            )}
-          </div>
-        ))}
-        {path === "/" && (
-          <section className="inputCheck">
-            <input
-              required
-              type="checkbox"
-              id="check"
-              name="check"
-              className="check"
-            />
-            <label htmlFor="check">
-              I have read and agree to Discord's Terms of Service and Privacy
-              Policy
-            </label>
-          </section>
-        )}
-        <button type="submit">
-          Continue
-        </button>
-      </form>
-    </>
+    <form className="formContainer" onSubmit={path === "/" ? handleFormSubmitRegister : handleFormSubmitLogin}>
+      {formContent.map(({ type, label, id }) => (
+        <div className="inputForm" key={id}>
+          <label htmlFor={label}>{label}</label>
+          <input
+            type={type}
+            name={label}
+            id={label}
+            value={formValues[label]}
+            onChange={handleChangeFormValue}
+            required
+            minLength={5}
+            maxLength={30}
+          />
+          {handleError(label) && (
+            <p
+              style={{ color: "#C23854", fontSize: "12px", padding: "0px" }}
+              className="error"
+            >
+              Must be at least 5 characters
+            </p>
+          )}
+        </div>
+      ))}
+      {path === "/" && (
+        <section className="inputCheck">
+          <input
+            required
+            type="checkbox"
+            id="check"
+            name="check"
+            className="check"
+          />
+          <label htmlFor="check">
+            I have read and agree to Discord's Terms of Service and Privacy
+            Policy
+          </label>
+        </section>
+      )}
+      <button type="submit">Continue</button>
+    </form>
   );
 };
 
